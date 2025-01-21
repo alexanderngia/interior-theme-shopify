@@ -1,0 +1,834 @@
+<style>
+  :root {
+    --header-is-sticky: {% if section.settings.enable_sticky %}1{% else %}0{% endif %};
+  }
+
+  #shopify-section-{{ section.id }} {
+    --header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
+    --header-padding-block: 1rem;
+    --header-transparent-header-text-color: {{ section.settings.transparent_header_text_color.rgb }};
+    --header-separation-border-color: {% if section.settings.show_separation_border %}var(--border-color){% else %}0 0 0 / 0{% endif %};
+
+    position: relative;
+    z-index: 5;
+  }
+
+  @media screen and (min-width: 700px) {
+    #shopify-section-{{ section.id }} {
+      --header-padding-block: {% if section.settings.reduce_padding %}1.2rem{% else %}1.6rem{% endif %};
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #shopify-section-{{ section.id }} {
+      {%- case section.settings.layout -%}
+        {%- when 'logo_left_navigation_inline' -%}
+          --header-grid: "logo primary-nav secondary-nav" / auto minmax(0, 1fr) auto;
+
+        {%- when 'logo_left_navigation_center' -%}
+          --header-grid: "logo primary-nav secondary-nav" / minmax(max-content, 1fr) auto minmax(max-content, 1fr);
+
+        {%- when 'logo_center_navigation_below' -%}
+          --header-grid: ". logo secondary-nav" "primary-nav primary-nav primary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
+      {%- endcase -%}
+    }
+  }
+
+  {%- if section.settings.enable_sticky -%}
+    #shopify-section-{{ section.id }} {
+      position: sticky;
+      top: 0;
+    }
+
+    .shopify-section--announcement-bar ~ #shopify-section-{{ section.id }} {
+      top: calc(var(--announcement-bar-is-sticky, 0) * var(--announcement-bar-height, 0px));
+    }
+  {%- endif -%}
+
+  {%- if section.settings.logo != blank -%}
+    #shopify-section-{{ section.id }} {
+      --header-logo-width: {{ section.settings.logo_mobile_max_width }}px;
+      --header-logo-height: {{ section.settings.logo_mobile_max_width | divided_by: section.settings.logo.aspect_ratio | round }}px;
+    }
+
+    @media screen and (min-width: 700px) {
+      #shopify-section-{{ section.id }} {
+        --header-logo-width: {{ section.settings.logo_max_width }}px;
+        --header-logo-height: {{ section.settings.logo_max_width | divided_by: section.settings.logo.aspect_ratio | round }}px;
+      }
+    }
+  {%- endif -%}
+</style>
+
+<height-observer variable="header">
+  {%- assign top_menu = section.settings.top_menu -%}
+  {%- if section.settings.enable_top_menu and top_menu.links.size > 0 -%}
+    <x-header class="header header--top-menu rowabi-py-[10px] md:rowabi-pt-[22px] md:rowabi-pb-[16px]">
+      <nav class="header__primary-nav header__primary-nav--center" aria-label="{{ 'header.general.primary_navigation' | t | escape }}">
+        <ul class="contents unstyled-list">
+          {%- for link in top_menu.links -%}
+            {%- capture _nofollow -%}
+            {%- render 'link-nofollow', link: link.url -%}
+            {%- endcapture -%}
+            <li class="header__primary-nav-item header__top-menu-nav-item" data-title="{{ link.title | escape }}">
+              <a href="{{ link.url }}" class="block h6" {% if link.current %}aria-current="page"{% endif %} {% if _nofollow == 'true' %}rel="nofollow"{% endif %}>{{ link.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    </x-header>
+  {%- endif -%}
+  
+  <!-- Mobile version -->
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'item' -%}
+    <div class="rowabi-grid rowabi-grid-cols-1 md:rowabi-grid-cols-4 rowabi-bg-[#434139] rowabi-text-white md:rowabi-hidden">
+      <div class="rowabi-py-3 rowabi-text-center">
+        <div class="{% if block.settings.number_of_column > 1 %}md:rowabi-border-r md:rowabi-border-white{% endif %}">
+          <p class="rowabi-font-bold rowabi-text-[14px]">{{ block.settings.heading1 }}</p>
+          <a {% if block.settings.klaviyo_id_1 != blank %}href="javascript:void(0)" onClick="klaviyoClick('{{ block.settings.klaviyo_id_1 }}')" {% else %} href="{{ block.settings.link1 }}" {% endif %}
+            class="rowabi-click rowabi-flex rowabi-justify-center rowabi-items-center rowabi-gap-2">
+            <p class="rowabi-text-[13px] rowabi-font-normal">{{ block.settings.title1 }}</p>
+            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_479_2593)"><path d="M5.57275 2.60144C5.79948 2.79957 5.80095 3.15168 5.57588 3.35169L2.74634 5.86617C2.64933 5.95238 2.52406 6 2.39428 6C1.9069 6 1.6779 5.39758 2.04222 5.07383L3.98013 3.35169C4.2052 3.15168 4.20373 2.79957 3.977 2.60144L2.05321 0.920346C1.68805 0.601246 1.91373 -3.99405e-08 2.39868 -6.11381e-08C2.52573 -6.66917e-08 2.64847 0.0460724 2.74414 0.129673L5.57275 2.60144Z" fill="#F9F9F9"/></g><defs><clipPath id="clip0_479_2593"><rect width="8" height="6" fill="white"/></clipPath></defs></svg>
+          </a>
+        </div>
+      </div>
+      {% if block.settings.number_of_column > 1 %}
+      <div class="rowabi-py-3 rowabi-text-center rowabi-hidden md:rowabi-block">
+        <div class="{% if block.settings.number_of_column > 2 %}rowabi-border-r rowabi-border-white{% endif %}">
+          <p class="rowabi-font-bold rowabi-text-[14px]">{{ block.settings.heading2 }}</p>
+          <a {% if block.settings.klaviyo_id_2 != blank %}href="javascript:void(0)" onClick="klaviyoClick('{{ block.settings.klaviyo_id_2 }}')" {% else %} href="{{ block.settings.link2 }}" {% endif %} 
+            class="rowabi-click rowabi-flex rowabi-justify-center rowabi-items-center rowabi-gap-2">
+            <p class="rowabi-text-[13px] rowabi-font-normal">{{ block.settings.title2 }}</p>
+            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_479_2593)"><path d="M5.57275 2.60144C5.79948 2.79957 5.80095 3.15168 5.57588 3.35169L2.74634 5.86617C2.64933 5.95238 2.52406 6 2.39428 6C1.9069 6 1.6779 5.39758 2.04222 5.07383L3.98013 3.35169C4.2052 3.15168 4.20373 2.79957 3.977 2.60144L2.05321 0.920346C1.68805 0.601246 1.91373 -3.99405e-08 2.39868 -6.11381e-08C2.52573 -6.66917e-08 2.64847 0.0460724 2.74414 0.129673L5.57275 2.60144Z" fill="#F9F9F9"/></g><defs><clipPath id="clip0_479_2593"><rect width="8" height="6" fill="white"/></clipPath></defs></svg>
+          </a>
+        </div>
+      </div>
+      {% endif %}
+      {% if block.settings.number_of_column > 2 %}
+      <div class="rowabi-py-3 rowabi-text-center rowabi-hidden md:rowabi-block">
+        <div class="{% if block.settings.number_of_column > 3 %}rowabi-border-r rowabi-border-white{% endif %}">
+          <p class="rowabi-font-bold rowabi-text-[14px]">{{ block.settings.heading3 }}</p>
+          <a {% if block.settings.klaviyo_id_3 != blank %}href="javascript:void(0)" onClick="klaviyoClick('{{ block.settings.klaviyo_id_3 }}')" {% else %} href="{{ block.settings.link3 }}" {% endif %} 
+            class="rowabi-click rowabi-flex rowabi-justify-center rowabi-items-center rowabi-gap-2">
+            <p class="rowabi-text-[13px] rowabi-font-normal">{{ block.settings.title3 }}</p>
+            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_479_2593)"><path d="M5.57275 2.60144C5.79948 2.79957 5.80095 3.15168 5.57588 3.35169L2.74634 5.86617C2.64933 5.95238 2.52406 6 2.39428 6C1.9069 6 1.6779 5.39758 2.04222 5.07383L3.98013 3.35169C4.2052 3.15168 4.20373 2.79957 3.977 2.60144L2.05321 0.920346C1.68805 0.601246 1.91373 -3.99405e-08 2.39868 -6.11381e-08C2.52573 -6.66917e-08 2.64847 0.0460724 2.74414 0.129673L5.57275 2.60144Z" fill="#F9F9F9"/></g><defs><clipPath id="clip0_479_2593"><rect width="8" height="6" fill="white"/></clipPath></defs></svg>
+          </a>
+        </div>
+      </div>
+      {% endif %}
+      {% if block.settings.number_of_column > 3 %}
+      <div class="rowabi-mx-auto rowabi-py-3 rowabi-text-center rowabi-hidden md:rowabi-block">
+        <p class="rowabi-font-bold rowabi-text-[14px]">{{ block.settings.heading4 }}</p>
+        <a {% if block.settings.klaviyo_id_4 != blank %}href="javascript:void(0)" onClick="klaviyoClick('{{ block.settings.klaviyo_id_4 }}')" {% else %} href="{{ block.settings.link4 }}" {% endif %} 
+          class="rowabi-click rowabi-flex rowabi-justify-center rowabi-items-center rowabi-gap-2">
+          <p class="rowabi-text-[13px] rowabi-font-normal">{{ block.settings.title4 }}</p>
+          <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_479_2593)"><path d="M5.57275 2.60144C5.79948 2.79957 5.80095 3.15168 5.57588 3.35169L2.74634 5.86617C2.64933 5.95238 2.52406 6 2.39428 6C1.9069 6 1.6779 5.39758 2.04222 5.07383L3.98013 3.35169C4.2052 3.15168 4.20373 2.79957 3.977 2.60144L2.05321 0.920346C1.68805 0.601246 1.91373 -3.99405e-08 2.39868 -6.11381e-08C2.52573 -6.66917e-08 2.64847 0.0460724 2.74414 0.129673L5.57275 2.60144Z" fill="#F9F9F9"/></g><defs><clipPath id="clip0_479_2593"><rect width="8" height="6" fill="white"/></clipPath></defs></svg>
+        </a>
+      </div>
+      {% endif %}
+    </div>   
+    {%- endif -%}
+  {%- endfor -%}
+  
+  <x-header class="header md:rowabi-px-[60px] md:rowabi-pt-[42px] rowabi-none-border-mb">
+    <!-- <input placeholder="Search" /> -->
+    <div class="rowabi-hidden md:rowabi-block">
+      {% render 'rowabi-search' %}
+    </div>
+    <button type="button" aria-controls="sidebar-menu" {% unless section.settings.layout == 'drawer' %}class="md:hidden"{% endunless %}>
+      <span class="sr-only">{{ 'header.general.open_menu' | t }}</span>
+       {%- render 'icon' with 'hamburger', class: 'header__nav-icon' -%}
+    </button>
+    {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    LOGO AREA
+    --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    {%- capture logo_content -%}
+      {%- if section.settings.logo -%}
+        {%- capture sizes -%}{{ section.settings.logo_max_width }}px{%- endcapture -%}
+        {%- capture widths -%}{{ section.settings.logo_max_width | times: 2 | at_most: section.settings.logo.width }}, {{ section.settings.logo_max_width | times: 3 | at_most: section.settings.logo.width }}{%- endcapture -%}
+
+        <span class="sr-only">{{ shop.name }}</span>
+        {{- section.settings.logo | image_url: width: section.settings.logo.width | image_tag: sizes: sizes, widths: widths, class: 'header__logo-image' -}}
+
+        {%- if section.settings.transparent_logo -%}
+          {{- section.settings.transparent_logo | image_url: width: section.settings.transparent_logo.width | image_tag: sizes: sizes, widths: widths, class: 'header__logo-image header__logo-image--transparent' -}}
+        {%- endif -%}
+      {%- else -%}
+        <span class="header__logo-text h5">{{ shop.name }}</span>
+      {%- endif -%}
+    {%- endcapture -%}
+
+    {%- if request.page_type == 'index' -%}
+      <h1 class="">
+        <a href="{{ routes.root_url }}">{{ logo_content }}</a>
+      </h1>
+    {% else %}
+      <a href="{{ routes.root_url }}" class="">{{ logo_content }}</a>
+    {% endif %}
+
+
+    {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    SECONDARY NAVIGATION AREA
+    --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <nav class="header__secondary-nav rowabi-gap-x-[30px]" aria-label="{{ 'header.general.secondary_navigation' | t | escape }}">
+      {%- if section.settings.show_country_selector and localization.available_countries.size > 1 -%}
+        {%- assign show_country_selector = true -%}
+      {%- endif -%}
+
+      {%- if section.settings.show_locale_selector and localization.available_languages.size > 1 -%}
+        {%- assign show_locale_selector = true -%}
+      {%- endif -%}
+
+      {%- if show_country_selector or show_locale_selector -%}
+        <div class="localization-selectors md-max:hidden">
+          {%- if show_country_selector -%}
+            {%- render 'localization-selector', type: 'country', placement: 'bottom-end', show_country_name: section.settings.show_country_name, show_country_flag: section.settings.show_country_flag, id_prefix: 'header-nav' -%}
+          {%- endif -%}
+
+          {%- if show_locale_selector -%}
+            {%- render 'localization-selector', type: 'locale', placement: 'bottom-end', id_prefix: 'header-nav' -%}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%}Offer a hook for apps to integrate into the header to add their own icon, for instance{%- endcomment -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == '@app' -%}
+          {%- render block -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if shop.customer_accounts_enabled -%}
+        <a href="{{ routes.account_url }}" class="sm-max:hidden">
+          <span class="sr-only">{{ 'header.general.open_account' | t }}</span>
+
+          {%- if section.settings.show_icons -%}
+            {%- render 'icon' with 'account', class: 'header__nav-icon' -%}
+          {%- else -%}
+            <span class="md:hidden">{%- render 'icon' with 'account', class: 'header__nav-icon' -%}</span>
+            <span class="h6 link-faded md-max:hidden">{{ 'header.general.account' | t }}</span>
+          {%- endif -%}
+        </a>
+      {%- endif -%}
+
+      <!-- {%- if section.settings.enable_search -%}
+        <a href="{{ routes.search_url }}" aria-controls="header-search-{{ section.id }}">
+          <span class="sr-only">{{ 'header.general.open_search' | t }}</span>
+
+          {%- if section.settings.show_icons -%}
+            {%- render 'icon' with 'search', class: 'header__nav-icon' -%}
+          {%- else -%}
+            <span class="md:hidden">{%- render 'icon' with 'search', class: 'header__nav-icon' -%}</span>
+            <span class="h6 link-faded md-max:hidden">{{ 'header.general.search' | t }}</span>
+          {%- endif -%}
+        </a>
+      {%- endif -%} -->
+
+      <a href="{{ routes.cart_url }}" class="relative" {% if settings.cart_type != 'page' and request.page_type != 'cart' %}aria-controls="cart-drawer"{% endif %}>
+        <span class="sr-only">{{ 'header.general.open_cart' | t }}</span>
+
+        {%- if section.settings.show_icons -%}
+          {%- render 'icon' with 'cart', class: 'header__nav-icon' -%}
+        {%- else -%}
+          <span class="md:hidden">{%- render 'icon' with 'cart', class: 'header__nav-icon' -%}</span>
+          <span class="h6 link-faded md-max:hidden">{{ 'header.general.cart' | t }} (<cart-count>{{ cart.item_count }}</cart-count>)</span>
+        {%- endif -%}
+
+        <cart-dot class="header__cart-dot {% unless cart.empty? %}is-visible{% endunless %} {% unless section.settings.show_icons %}md:hidden{% endunless %}"></cart-dot>
+      </a>
+    </nav>
+
+    <!-- {%- if section.settings.enable_search -%}
+      {%- render 'header-search' -%}
+    {%- endif -%} -->
+
+    {%- assign sidebar_menu = section.settings.sidebar_menu | default: section.settings.menu -%}
+
+    {%- if sidebar_menu.links.size > 0 -%}
+      {%- render 'header-sidebar', menu: sidebar_menu, enable_top_menu: section.settings.enable_top_menu, top_menu: top_menu ,show_dividers: section.settings.sidebar_show_dividers -%}
+    {%- endif -%}
+  </x-header>
+
+  <x-header class="header rowabi-py-[10px] md:rowabi-py-[20px] rowabi-none-border-mb">
+  {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    PRIMARY NAVIGATION AREA
+    --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    {%- assign menu = section.settings.menu -%}
+    {%- assign sidebar_menu = section.settings.sidebar_menu -%}
+
+    {%- if menu.links.size > 0 or sidebar_menu.links.size > 0 -%}
+      <nav class="header__primary-nav rowabi-h-[45px] md:rowabi-h-auto {% if section.settings.layout == 'logo_center_navigation_below' or section.settings.layout == 'logo_left_navigation_center' %}header__primary-nav--center{% endif %}" aria-label="{{ 'header.general.primary_navigation' | t | escape }}">
+        <div class="md:rowabi-hidden">
+          {% render 'rowabi-search' %}
+        </div>
+
+        {%- if menu.links.size > 0 and section.settings.layout != 'drawer' -%}
+          <ul class="contents unstyled-list md-max:hidden">
+            {%- for link in menu.links -%}
+              {% liquid
+                assign link_title_downcase = link.title | strip | downcase
+                assign mega_menu_block = ''
+
+                for block in section.blocks
+                  assign menu_item_downcase = block.settings.menu_item | strip | downcase
+
+                  if menu_item_downcase == link_title_downcase
+                    assign mega_menu_block = block
+                    break
+                  endif
+
+                endfor
+              %}
+
+              {%- capture _nofollow -%}
+              {%- render 'link-nofollow', link: link.url -%}
+              {%- endcapture -%}
+
+              <li class="header__primary-nav-item {% if link.url contains '/collections/sales' %}nav-item--sale{% endif %}" data-title="{{ link.title | escape }}">
+                {%- if link.levels == 0 and mega_menu_block == '' -%}
+                  <a href="{{ link.url }}" class="block h6" {% if link.current %}aria-current="page"{% endif %} {% if _nofollow == 'true' %}rel="nofollow"{% endif %}>{{ link.title }}</a>
+                {%- else -%}
+                  <details is="{% if mega_menu_block != '' %}mega-menu-disclosure{% else %}dropdown-menu-disclosure{% endif %}" class="header__menu-disclosure" follow-summary-link trigger="{{ section.settings.menu_open_trigger }}">
+                    <summary data-follow-link="{{ link.url }}" class="h6">
+                      {{- link.title -}}
+                    </summary>
+
+                    {%- if mega_menu_block != '' -%}
+                      {%- render 'mega-menu', link: link, block: mega_menu_block -%}
+                    {%- else -%}
+                      <ul class="header__dropdown-menu {% if link.levels <= 1 %}header__dropdown-menu--restrictable{% endif %} unstyled-list" role="list">
+                        {%- for sub_link in link.links -%}
+                          {%- capture _nofollow -%}
+                          {%- render 'link-nofollow', link: sub_link.url -%}
+                          {%- endcapture -%}
+                          <li>
+                            {%- if sub_link.levels == 0 -%}
+                              <a href="{{ sub_link.url }}" class="link-faded-reverse" {% if sub_link.current %}aria-current="page"{% endif %} {% if _nofollow == 'true' %}rel="nofollow"{% endif %}>{{ sub_link.title }}</a>
+                            {%- else -%}
+                              <details is="dropdown-menu-disclosure" class="header__menu-disclosure" follow-summary-link trigger="{{ section.settings.menu_open_trigger }}">
+                                <summary data-follow-link="{{ sub_link.url }}" class="link-faded-reverse">
+                                  <div class="h-stack gap-4 justify-between">
+                                    {{- sub_link.title -}}
+                                    {%- render 'icon' with 'arrow-right', width: 8, direction_aware: true -%}
+                                  </div>
+                                </summary>
+
+                                <ul class="header__dropdown-menu unstyled-list" role="list">
+                                  {%- for sub_sub_link in sub_link.links -%}
+                                    {%- capture _nofollow -%}
+                                    {%- render 'link-nofollow', link: sub_sub_link.url -%}
+                                    {%- endcapture -%}
+                                    <li>
+                                      <a href="{{ sub_sub_link.url }}" class="link-faded-reverse" {% if sub_sub_link.current %}aria-current="page"{% endif %} {% if _nofollow == 'true' %}rel="nofollow"{% endif %}>{{ sub_sub_link.title }}</a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              </details>
+                            {%- endif -%}
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+                  </details>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </nav>
+    {%- endif -%}
+
+    </x-header>
+
+</height-observer>
+
+{%- for block in section.blocks -%}
+{%- if block.type == 'item' -%}
+<div class="rowabi-hidden md:rowabi-grid rowabi-grid-cols-1 md:rowabi-grid-cols-{{ block.settings.number_of_column }} rowabi-bg-[#434139] rowabi-text-white">
+  <div class="rowabi-py-3 rowabi-text-center">
+    <div class="{% if block.settings.number_of_column > 1 %}md:rowabi-border-r md:rowabi-border-white{% endif %}">
+      <p class="rowabi-font-bold rowabi-text-[14px]">{{ block.settings.heading1 }}</p>
+      <a {% if block.settings.klaviyo_id_1 != blank %}href="javascript:void(0)" onClick="klaviyoClick('{{ block.settings.klaviyo_id_1 }}')" {% else %} href="{{ block.settings.link1 }}" {% endif %}
+        class="rowabi-click rowabi-flex rowabi-justify-center rowabi-items-center rowabi-gap-2">
+        <p class="rowabi-text-[13px] rowabi-font-normal">{{ block.settings.title1 }}</p>
+        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_479_2593)"><path d="M5.57275 2.60144C5.79948 2.79957 5.80095 3.15168 5.57588 3.35169L2.74634 5.86617C2.64933 5.95238 2.52406 6 2.39428 6C1.9069 6 1.6779 5.39758 2.04222 5.07383L3.98013 3.35169C4.2052 3.15168 4.20373 2.79957 3.977 2.60144L2.05321 0.920346C1.68805 0.601246 1.91373 -3.99405e-08 2.39868 -6.11381e-08C2.52573 -6.66917e-08 2.64847 0.0460724 2.74414 0.129673L5.57275 2.60144Z" fill="#F9F9F9"/></g><defs><clipPath id="clip0_479_2593"><rect width="8" height="6" fill="white"/></clipPath></defs></svg>
+      </a>
+    </div>
+  </div>
+  {% if block.settings.number_of_column > 1 %}
+  <div class="rowabi-py-3 rowabi-text-center rowabi-hidden md:rowabi-block">
+    <div class="{% if block.settings.number_of_column > 2 %}rowabi-border-r rowabi-border-white{% endif %}">
+      <p class="rowabi-font-bold rowabi-text-[14px]">{{ block.settings.heading2 }}</p>
+      <a {% if block.settings.klaviyo_id_2 != blank %}href="javascript:void(0)" onClick="klaviyoClick('{{ block.settings.klaviyo_id_2 }}')" {% else %} href="{{ block.settings.link2 }}" {% endif %} 
+        class="rowabi-click rowabi-flex rowabi-justify-center rowabi-items-center rowabi-gap-2">
+        <p class="rowabi-text-[13px] rowabi-font-normal">{{ block.settings.title2 }}</p>
+        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_479_2593)"><path d="M5.57275 2.60144C5.79948 2.79957 5.80095 3.15168 5.57588 3.35169L2.74634 5.86617C2.64933 5.95238 2.52406 6 2.39428 6C1.9069 6 1.6779 5.39758 2.04222 5.07383L3.98013 3.35169C4.2052 3.15168 4.20373 2.79957 3.977 2.60144L2.05321 0.920346C1.68805 0.601246 1.91373 -3.99405e-08 2.39868 -6.11381e-08C2.52573 -6.66917e-08 2.64847 0.0460724 2.74414 0.129673L5.57275 2.60144Z" fill="#F9F9F9"/></g><defs><clipPath id="clip0_479_2593"><rect width="8" height="6" fill="white"/></clipPath></defs></svg>
+      </a>
+    </div>
+  </div>
+  {% endif %}
+  {% if block.settings.number_of_column > 2 %}
+  <div class="rowabi-py-3 rowabi-text-center rowabi-hidden md:rowabi-block">
+    <div class="{% if block.settings.number_of_column > 3 %}rowabi-border-r rowabi-border-white{% endif %}">
+      <p class="rowabi-font-bold rowabi-text-[14px]">{{ block.settings.heading3 }}</p>
+      <a {% if block.settings.klaviyo_id_3 != blank %}href="javascript:void(0)" onClick="klaviyoClick('{{ block.settings.klaviyo_id_3 }}')" {% else %} href="{{ block.settings.link3 }}" {% endif %} 
+        class="rowabi-click rowabi-flex rowabi-justify-center rowabi-items-center rowabi-gap-2">
+        <p class="rowabi-text-[13px] rowabi-font-normal">{{ block.settings.title3 }}</p>
+        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_479_2593)"><path d="M5.57275 2.60144C5.79948 2.79957 5.80095 3.15168 5.57588 3.35169L2.74634 5.86617C2.64933 5.95238 2.52406 6 2.39428 6C1.9069 6 1.6779 5.39758 2.04222 5.07383L3.98013 3.35169C4.2052 3.15168 4.20373 2.79957 3.977 2.60144L2.05321 0.920346C1.68805 0.601246 1.91373 -3.99405e-08 2.39868 -6.11381e-08C2.52573 -6.66917e-08 2.64847 0.0460724 2.74414 0.129673L5.57275 2.60144Z" fill="#F9F9F9"/></g><defs><clipPath id="clip0_479_2593"><rect width="8" height="6" fill="white"/></clipPath></defs></svg>
+      </a>
+    </div>
+  </div>
+  {% endif %}
+  {% if block.settings.number_of_column > 3 %}
+  <div class="rowabi-mx-auto rowabi-py-3 rowabi-text-center rowabi-hidden md:rowabi-block">
+    <p class="rowabi-font-bold rowabi-text-[14px]">{{ block.settings.heading4 }}</p>
+    <a {% if block.settings.klaviyo_id_4 != blank %}href="javascript:void(0)" onClick="klaviyoClick('{{ block.settings.klaviyo_id_4 }}')" {% else %} href="{{ block.settings.link4 }}" {% endif %} 
+      class="rowabi-click rowabi-flex rowabi-justify-center rowabi-items-center rowabi-gap-2">
+      <p class="rowabi-text-[13px] rowabi-font-normal">{{ block.settings.title4 }}</p>
+      <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_479_2593)"><path d="M5.57275 2.60144C5.79948 2.79957 5.80095 3.15168 5.57588 3.35169L2.74634 5.86617C2.64933 5.95238 2.52406 6 2.39428 6C1.9069 6 1.6779 5.39758 2.04222 5.07383L3.98013 3.35169C4.2052 3.15168 4.20373 2.79957 3.977 2.60144L2.05321 0.920346C1.68805 0.601246 1.91373 -3.99405e-08 2.39868 -6.11381e-08C2.52573 -6.66917e-08 2.64847 0.0460724 2.74414 0.129673L5.57275 2.60144Z" fill="#F9F9F9"/></g><defs><clipPath id="clip0_479_2593"><rect width="8" height="6" fill="white"/></clipPath></defs></svg>
+    </a>
+  </div>
+  {% endif %}
+</div>   
+{%- endif -%}
+
+<script type="text/javascript">
+  function klaviyoClick(id) {
+    window._klOnsite = window._klOnsite || [];
+    window._klOnsite.push(['openForm', id]);
+}
+
+</script> 
+{%- endfor -%}
+
+{% if template contains 'index' %}
+<div class="md:rowabi-h-[60px]"> </div>
+{% endif %}
+<script>
+  document.documentElement.style.setProperty('--header-height', `${Math.round(document.getElementById('shopify-section-{{ section.id }}').clientHeight)}px`);
+</script>
+
+        
+        
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "class": "shopify-section--header",
+  "tag": "header",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_sticky",
+      "label": "t:sections.header.enable_sticky_header",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_separation_border",
+      "label": "t:sections.header.show_separation_border",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "reduce_padding",
+      "label": "t:sections.header.reduce_padding",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Top menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_top_menu",
+      "label": "Enable top menu",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "top_menu",
+      "label": "Menu"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.logo_category"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "t:global.image.image",
+      "info": "t:sections.header.logo_size_recommendation"
+    },
+    {
+      "type": "range",
+      "id": "logo_max_width",
+      "min": 20,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "label": "t:global.image.width",
+      "default": 140
+    },
+    {
+      "type": "range",
+      "id": "logo_mobile_max_width",
+      "min": 20,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "t:global.image.mobile_width",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.navigation_category"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "t:sections.header.menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "sidebar_menu",
+      "label": "t:sections.header.mobile_menu"
+    },
+    {
+      "type": "select",
+      "id": "menu_open_trigger",
+      "label": "t:sections.header.menu_open_trigger",
+      "info": "t:sections.header.menu_open_trigger_info",
+      "options": [
+        {
+          "value": "hover",
+          "label": "t:sections.header.menu_open_trigger_options.hover"
+        },
+        {
+          "value": "click",
+          "label": "t:sections.header.menu_open_trigger_options.click"
+        }
+      ],
+      "default": "hover"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_search",
+      "label": "t:sections.header.enable_search",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.sidebar_navigation_category"
+    },
+    {
+      "type": "select",
+      "id": "sidebar_text_font",
+      "label": "t:sections.header.sidebar_text_font",
+      "options": [
+        {
+          "value": "heading",
+          "label": "t:sections.header.sidebar_text_font_options.heading"
+        },
+        {
+          "value": "body",
+          "label": "t:sections.header.sidebar_text_font_options.body"
+        }
+      ],
+      "default": "heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "sidebar_show_dividers",
+      "label": "t:sections.header.sidebar_show_dividers",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.desktop_category"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.header.layout",
+      "options": [
+        {
+          "value": "logo_left_navigation_inline",
+          "label": "t:sections.header.layout_options.logo_left_navigation_inline"
+        },
+        {
+          "value": "logo_left_navigation_center",
+          "label": "t:sections.header.layout_options.logo_left_navigation_center"
+        },
+        {
+          "value": "logo_center_navigation_inline",
+          "label": "t:sections.header.layout_options.logo_center_navigation_inline"
+        },
+        {
+          "value": "logo_center_navigation_below",
+          "label": "t:sections.header.layout_options.logo_center_navigation_below"
+        },
+        {
+          "value": "drawer",
+          "label": "t:sections.header.layout_options.drawer"
+        }
+      ],
+      "default": "logo_left_navigation_inline"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icons",
+      "label": "t:sections.header.show_icons",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:global.localization.country_region_selector_category",
+      "info": "t:global.localization.country_region_selector_category_info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_selector",
+      "label": "t:global.localization.show_country_region_selector",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_name",
+      "label": "t:global.localization.show_country_name",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_flag",
+      "label": "t:global.localization.show_country_flag",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:global.localization.language_selector_category",
+      "info": "t:global.localization.language_selector_category_info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "label": "t:global.localization.show_locale_selector",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.transparent_header_category"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.header.transparent_header_info"
+    },
+    {
+      "type": "color",
+      "id": "transparent_header_text_color",
+      "label": "t:global.colors.text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "transparent_logo",
+      "label": "t:sections.header.transparent_header_logo_image",
+      "info": "t:sections.header.transparent_header_logo_size_recommendation"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "mega_menu",
+      "name": "t:sections.header.blocks.mega_menu.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menu_item",
+          "label": "t:sections.header.blocks.mega_menu.menu_item",
+          "info": "t:sections.header.blocks.mega_menu.menu_item_info"
+        },
+        {
+          "type": "select",
+          "id": "images_position",
+          "label": "t:sections.header.blocks.mega_menu.images_position",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:global.position.left"
+            },
+            {
+              "value": "right",
+              "label": "t:global.position.right"
+            }
+          ],
+          "default": "right"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.header.blocks.mega_menu.image_1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "t:global.image.image",
+          "info": "t:sections.header.blocks.mega_menu.image_size_recommendation"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "image_1_heading",
+          "label": "t:global.text.heading"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "image_1_text",
+          "label": "t:global.text.text"
+        },
+        {
+          "type": "url",
+          "id": "image_1_link",
+          "label": "t:global.text.link"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.header.blocks.mega_menu.image_2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "t:global.image.image",
+          "info": "t:sections.header.blocks.mega_menu.image_size_recommendation"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "image_2_heading",
+          "label": "t:global.text.heading"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "image_2_text",
+          "label": "t:global.text.text"
+        },
+        {
+          "type": "url",
+          "id": "image_2_link",
+          "label": "t:global.text.link"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "item",
+      "settings": [
+        {
+          "type": "range",
+          "id": "number_of_column",
+          "min": 1,
+          "max": 4,
+          "step": 1,
+          "label": "Column per row",
+          "default": 4
+        },
+        {
+          "type": "text",
+          "id": "klaviyo_id_1",
+          "label": "Klaviyo ID 1"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "Link 1"
+        },
+        {
+          "type": "text",
+          "id": "heading1",
+          "label": "Heading 1",
+          "default": "Fall Savings Up to 40% Off"
+        },
+        {
+          "type": "text",
+          "id": "title1",
+          "label": "Title 1",
+          "default": "Shop Lighting"
+        },
+        {
+          "type": "text",
+          "id": "klaviyo_id_2",
+          "label": "Klaviyo ID 2"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "Link 2"
+        },
+        {
+          "type": "text",
+          "id": "heading2",
+          "label": "Heading 2",
+          "default": "New Arrivals Are Here"
+        },
+        {
+          "type": "text",
+          "id": "title2",
+          "label": "Title 2",
+          "default": "Shop Now"
+        },
+        {
+          "type": "text",
+          "id": "klaviyo_id_3",
+          "label": "Klaviyo ID 3"
+        },
+        {
+          "type": "url",
+          "id": "link3",
+          "label": "Link 3"
+        },
+        {
+          "type": "text",
+          "id": "heading3",
+          "label": "Heading 3",
+          "default": "Free Shipping on 100s of Items"
+        },
+        {
+          "type": "text",
+          "id": "title3",
+          "label": "Title 3",
+          "default": "Shop Lighting"
+        },
+        {
+          "type": "text",
+          "id": "klaviyo_id_4",
+          "label": "Klaviyo ID 4"
+        },
+        {
+          "type": "url",
+          "id": "link4",
+          "label": "Link 4"
+        },
+        {
+          "type": "text",
+          "id": "heading4",
+          "label": "Heading 4",
+          "default": "In-Stock and Quick Ship Furniture"
+        },
+        {
+          "type": "text",
+          "id": "title4",
+          "label": "Title 4",
+          "default": "Delivered in 1-5 Weeks"
+        },
+      ]
+    }
+    
+  ]
+}
+{% endschema %}

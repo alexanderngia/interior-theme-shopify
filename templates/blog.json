@@ -1,0 +1,45 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "a70f4543-1fc3-4346-91a4-a7034cdbaa67": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 15,
+        "padding_bottom": 15
+      }
+    },
+    "main": {
+      "type": "rowabi-main-blog",
+      "settings": {
+        "show_blog_title": true,
+        "show_rss_feed": true,
+        "show_tags": false,
+        "blog1": "business-offer",
+        "tab1": "News",
+        "blog2": "lab-of-wabi-sabi-blogs",
+        "tab2": "Discount",
+        "blog3": "business-offer",
+        "tab3": "Tips",
+        "product_list": [
+          "abandon-lace-rattan-light-pendant-80086",
+          "abyssal-pendant-light",
+          "althea-rattan-bowl-pendant-light-bundle",
+          "yen-artisans-crafted-wall-decoration"
+        ],
+        "product_list_title": "New product"
+      }
+    }
+  },
+  "order": [
+    "a70f4543-1fc3-4346-91a4-a7034cdbaa67",
+    "main"
+  ]
+}

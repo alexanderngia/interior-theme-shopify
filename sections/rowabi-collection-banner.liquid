@@ -1,0 +1,158 @@
+<div class="rowabi-flex rowabi-flex-col rowabi-items-center rowabi-h-[470px] md:rowabi-h-[525px] rowabi-relative">
+  <div class="rowabi-text-center rowabi-bg-[#F4EFE4] rowabi-w-full rowabi-min-h-[299px]">
+    <{{ section.settings.heading_tag }} style='font-family: "Sainte Colombe", serif;' class="rowabi-text-[20px] md:rowabi-text-3xl rowabi-text-center rowabi-text-[#444139] rowabi-uppercase rowabi-mt-[20px] md:rowabi-mt-[40px]">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
+  </div>
+  <div
+    id="collection-banner-{{ section.id }}"
+    class="rowabi-absolute rowabi-bg-white rowabi-top-[12%] md:rowabi-top-[20%] rowabi-p-3 md:rowabi-py-4 md:rowabi-px-[11px] rowabi-mx-4 md:rowabi-mx-[100px] rowabi-w-[370px] md:rowabi-w-auto {% if section.settings.klaviyo_form_id != blank %} klaviyo-form-trigger {% endif %}"
+    {% if section.settings.klaviyo_form_id != blank %}
+    data-klaviyo-id="{{ section.settings.klaviyo_form_id }}"
+    {% endif %}>
+
+    {% if section.settings.klaviyo_form_id == blank %}
+      {% if section.settings.banner_link != blank %}
+        <a href="{{ section.settings.banner_link }}">
+      {% endif %}
+    {% endif %}
+
+
+    <img
+      class="rowabi-hidden md:rowabi-block rowabi-h-[350px]  {% if section.settings.klaviyo_form_id != blank %} rowabi-cursor-pointer {% endif %}>"
+      width="100%"
+      height="auto"
+      src="{{ section.settings.image | img_url: 'master' }}" />
+    <img
+      class="md:rowabi-hidden rowabi-h-[350px]"
+      width="100%"
+      height="auto"
+      src="{{ section.settings.image_mb | img_url: 'master' }}" />
+    {% if section.settings.klaviyo_form_id == blank %}
+      {% if section.settings.banner_link != blank %}
+
+        </a>
+      {% endif %}
+    {% endif %}
+
+    <p style="font-family: Sainte Colombe" class="rowabi-text-[13px] rowabi-leading-[20px] rowabi-font-[400] md:rowabi-text-[20px] md:rowabi-leading-[25px] rowabi-text-center rowabi-text-[{{ section.settings.subheading_text_color }}] rowabi-mt-[16px] md:rowabi-mt-[32px]">
+      {{ section.settings.subheading }}
+    </p>
+  </div>
+</div>
+
+{% if section.settings.show_border == true %}
+  <div class="rowabi-h-[1px] rowabi-bg-[#44413933] rowabi-w-full rowabi-mt-[32px] md:rowabi-mt-[40px]"></div>
+{% endif %}
+
+<style>
+  #collection-banner-{{ section.id }}> p > a > strong {
+    font-size: inherit;
+    font-family: Sainte Colombe
+  }
+  #collection-banner-{{ section.id }}
+  > p > a {
+    text-decoration: underline;
+  }
+</style>
+{% if section.settings.klaviyo_form_id != blank %}
+  <script type="text/javascript">
+      document.querySelectorAll('.klaviyo-form-trigger').forEach((element) => {
+    element.addEventListener('click', function (){
+      console.log('Element clicked, attempting to open form:', this.getAttribute('data-klaviyo-id'));
+      window._klOnsite = window._klOnsite || [];	
+      window._klOnsite.push(['openForm', this.getAttribute('data-klaviyo-id')]);
+    });
+      });
+  </script>
+{% endif %}
+{% schema %}
+  {
+    "name": "Rowabi collection banner",
+    "class": "rowabi-pb-8 md:rowabi-pb-1 md:rowabi-mb-14",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "select",
+        "id": "heading_tag",
+        "label": "Heading tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "H1"
+          },
+          {
+            "value": "h2",
+            "label": "H2"
+          },
+          {
+            "value": "h3",
+            "label": "H3"
+          },
+          {
+            "value": "h4",
+            "label": "H4"
+          },
+          {
+            "value": "h5",
+            "label": "H5"
+          },
+          {
+            "value": "h6",
+            "label": "H6"
+          },
+          {
+            "value": "p",
+            "label": "P"
+          }
+        ],
+        "default": "h1"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_border",
+        "label": "Separate section with border",
+        "default": false
+      },
+      {
+        "type": "inline_richtext",
+        "id": "title",
+        "label": "Heading",
+        "default": "NEW ARRIVALS"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "Discover the latest trends with our new arrivals—fresh styles that will redefine your space"
+      },
+      {
+        "type": "color",
+        "id": "subheading_text_color",
+        "label": "Subheading text color",
+        "default": "#595343"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }, {
+        "type": "image_picker",
+        "id": "image_mb",
+        "label": "Image Mobile"
+      }, {
+        "type": "url",
+        "id": "banner_link",
+        "label": "Banner Link"
+      }, {
+        "type": "text",
+        "id": "klaviyo_form_id",
+        "label": "Klaviyo Form ID",
+        "info": "If you use the popup form, the banner link will be disabled."
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Rowabi collection banner"
+      }
+    ]
+  }
+{% endschema %}

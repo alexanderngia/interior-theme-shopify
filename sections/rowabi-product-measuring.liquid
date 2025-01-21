@@ -1,0 +1,155 @@
+<div class="rowabi-h-[1px] rowabi-bg-[#44413933] rowabi-mt-[32px] md:rowabi-mt-[60px]"> </div>
+
+<div class="rowabi-mt-[32px] md:rowabi-mt-[60px]">
+  <{{ section.settings.heading_tag }} class="rowabi-text-base md:rowabi-text-2xl rowabi-font-bold rowabi-text-center rowabi-text-[#444139]" style="font-family: 'Sainte Colombe'">{{ section.settings.heading }}</{{ section.settings.heading_tag }}>
+  <div class="rowabi-grid rowabi-grid-cols-1 md:rowabi-grid-cols-2 md:rowabi-px-[98px] rowabi-mt-4 md:rowabi-mt-9">
+    <div class="rowabi-flex rowabi-flex-col rowabi-items-center rowabi-justify-between rowabi-px-[16px] md:rowabi-px-[0px]">
+      {% for block in section.blocks %}
+        <div class="rowabi-flex rowabi-items-center rowabi-justify-between md:rowabi-justify-start rowabi-text-sm md:rowabi-text-base rowabi-text-[#444139] rowabi-py-[16px] md:rowabi-py-[32px] md:rowabi-px-[19px] rowabi-border-t rowabi-border-[#44413933] rowabi-w-[100%] md:rowabi-w-[85%]">
+          <span id="title-{{ forloop.index }}" style="font-family: 'Sainte Colombe';cursor: pointer;">{{ block.settings.title }}</span>
+          <span class="md:rowabi-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <g id="Icon/Arrow/Up">
+              <mask id="mask0_340_496" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12">
+              <rect id="Rectangle 28463" y="12" width="12" height="12" transform="rotate(-90 0 12)" fill="#C4C4C4"/>
+              </mask>
+              <g mask="url(#mask0_340_496)">
+              <path id="Shape" d="M4.26638 1.49353C4.39762 1.49173 4.52561 1.53256 4.62966 1.60943L10.2795 5.8716C10.3473 5.9228 10.4023 5.98797 10.4404 6.06233C10.4786 6.13669 10.4989 6.21835 10.5 6.3013C10.501 6.38425 10.4827 6.46639 10.4464 6.54169C10.4102 6.61698 10.3568 6.68351 10.2903 6.73639L4.77273 11.1158C4.71416 11.1622 4.64669 11.197 4.57416 11.2183C4.50163 11.2396 4.42546 11.2469 4.35001 11.2399C4.19763 11.2257 4.0574 11.1539 3.96018 11.0402C3.86296 10.9264 3.81671 10.7802 3.8316 10.6336C3.84648 10.4869 3.9213 10.3519 4.03958 10.2583L9.00308 6.31948L3.917 2.48511C3.82301 2.41432 3.75421 2.31716 3.72011 2.20708C3.68602 2.09699 3.6883 1.97939 3.72666 1.87054C3.76501 1.76168 3.83754 1.66695 3.93422 1.59941C4.03091 1.53187 4.14697 1.49488 4.26638 1.49353Z" fill="#595343" stroke="#595343" stroke-width="0.2"/>
+              </g>
+              </g>
+            </svg>
+          </span>
+        </div>
+      {% endfor %}
+      <span class="rowabi-border-t rowabi-border-[#44413933] rowabi-w-[85%] rowabi-hidden md:rowabi-block"> </span>
+    </div>
+
+    {% for block in section.blocks %}            
+    <img id="img-{{ forloop.index }}" width="100%" height="auto" class="rowabi-h-[415px] {% unless forloop.first %}rowabi-hidden{% endunless %}" src="{{ block.settings.image | img_url: 'master' }}" />
+    {% endfor %}
+  </div>
+  
+</div>
+
+<div class="rowabi-h-[1px] rowabi-bg-[#44413933] rowabi-my-[32px] md:rowabi-my-[60px]"> </div>
+
+{% if section.settings.show_hover == true %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const titles = document.querySelectorAll("[id^='title-']"); // Lấy tất cả các tiêu đề
+    const images = document.querySelectorAll("[id^='img-']");   // Lấy tất cả các hình ảnh
+
+    // Hàm đặt lại trạng thái mặc định
+    function resetImages() {
+        images.forEach((img, index) => {
+            if (index === 0) {
+                img.classList.remove("rowabi-hidden"); // Hiển thị img-1
+            } else {
+                img.classList.add("rowabi-hidden"); // Ẩn các img còn lại
+            }
+        });
+    }
+
+    // Đặt trạng thái mặc định ban đầu
+    // resetImages();
+
+    // Lặp qua tất cả các tiêu đề
+    titles.forEach((title, index) => {
+        title.addEventListener("mouseenter", function () {
+            images.forEach((img, imgIndex) => {
+                if (imgIndex === index) {
+                    img.classList.remove("rowabi-hidden"); // Hiển thị ảnh tương ứng
+                } else {
+                    img.classList.add("rowabi-hidden"); // Ẩn các ảnh khác
+                }
+            });
+        });
+
+        title.addEventListener("mouseleave", function () {
+            resetImages(); // Trở lại trạng thái mặc định khi rời chuột khỏi tiêu đề
+        });
+    });
+  });
+</script>
+{% endif %}
+                
+{% schema %}
+{
+  "name": "Rowabi Measuring Product",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "P"
+        }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "heading",
+      "default": "Measuring For Pendant Lighting"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hover",
+      "label": "Show hover",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "t:sections.timeline.blocks.item.name",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "t:sections.timeline.blocks.item.label",
+          "default": "Pendant Lights"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rowabi Measuring Product",
+    }
+  ]
+}
+{% endschema %}

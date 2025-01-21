@@ -1,0 +1,31 @@
+<div class="rowabi-grid rowabi-grid-cols-1 rowabi-mt-[20px] md:rowabi-mt-[22px] rowabi-mb-[16px] md:rowabi-mt-[20px]">
+  <p class="rowabi-text-xs md:rowabi-text-base rowabi-text-center rowabi-text-[#8C6F51] roawbi-mt-1 md:rowabi-mt-4">{{ section.settings.subheading }}</p>
+  <img class="rowabi-h-[420px]" width="100%" height="auto" src="{{ section.settings.image_pc | img_url: 'master' }}" />
+  
+</div>
+
+
+{% schema %}
+{
+  "name": "Rowabi Select Cord",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "heading",
+    },
+    {
+      "type": "image_picker",
+      "id": "image_pc",
+      "label": "Image Desktop"
+    }
+  ],
+  
+  "presets": [
+    {
+      "name": "Rowabi Select Cord",
+    }
+  ]
+}
+{% endschema %}

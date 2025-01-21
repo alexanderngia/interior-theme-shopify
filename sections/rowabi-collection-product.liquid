@@ -1,0 +1,135 @@
+<style>
+  .rowabi-collection-product .swiper {
+      width: 100%;
+      padding-top: 38px;
+      padding-bottom: 60px;
+    }
+
+    .rowabi-collection-product .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media only screen and (max-width: 768px) {
+      .rowabi-collection-product .swiper-slide {
+        width: 57%;
+      }
+      .rowabi-collection-product .swiper {
+        padding-top: 20px;
+        padding-bottom: 32px;
+      }
+    }
+
+    .rowabi-collection-product .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+</style>
+<div class="rowabi-mx-[16px] md:rowabi-mx-[98px] rowabi-flex rowabi-flex-col md:rowabi-flex-row rowabi-justify-between rowabi-items-center rowabi-gap-[13px] rowabi-mt-[32px] md:rowabi-mt-[60px]">
+  <{{ section.settings.heading_tag }} style='font-family: "Sainte Colombe", serif;' class="rowabi-text-xl rowabi-font-[500] md:rowabi-text-2xl rowabi-text-[#444139] rowabi-uppercase">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
+  <a href="{{ section.settings.collection.url }}" class="rowabi-text-xs md:rowabi-text-sm rowabi-text-[#444139] rowabi-font-bold rowabi-uppercase rowabi-border-b rowabi-border-[#595343] rowabi-my-auto rowabi-w-max rowabi-pb-[4px] md:rowabi-pb-[6px]">{{ section.settings.collection-name }} ({{ section.settings.collection.all_products_count }})</a>
+</div>
+<div class="rowabi-px-[98px] rowabi-hidden md:rowabi-grid rowabi-grid-cols-4 rowabi-gap-x-[30px] rowabi-gap-y-[36px] rowabi-pt-[36px] rowabi-pb-[60px]">
+  {% for product in section.settings.collection.products limit: 12%}
+      {%- render 'product-card', product: product -%}
+  {% endfor %}
+</div>
+<!-- mobile -->
+<div class="rowabi-px-[16px] md:rowabi-hidden">
+  <div class="swiper myCollectionProduct-{{ section.id }}" >
+    <div class="swiper-wrapper">
+      {% for product in section.settings.collection.products %}
+        <div class="swiper-slide">
+          {%- render 'product-card', product: product -%}
+        </div>
+      {% endfor %}
+     </div>
+  </div>
+</div>
+
+{% if section.settings.show_border == true %}
+<div class="rowabi-h-[1px] rowabi-bg-[#44413933] md:rowabi-mx-[98px]"> </div>
+{% endif %}
+
+<script>
+  var swiper = new Swiper(".myCollectionProduct-{{ section.id }}", {
+    slidesPerView: "auto",
+    spaceBetween: 16,
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Rowabi product",
+  "class": "rowabi-collection-product",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "P"
+        }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_border",
+      "label": "Separate section with border",
+      "default": false
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:global.text.heading",
+      "default": "Best-Selling"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "collection-name",
+      "label": "t:global.text.heading",
+      "default": "Shop Best-Selling"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rowabi collection product",
+    }
+  ]
+}
+{% endschema %}

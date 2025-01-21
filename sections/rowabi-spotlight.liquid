@@ -1,0 +1,175 @@
+
+<div class="rowabi-grid rowabi-grid-cols-1 md:rowabi-grid-cols-2 rowabi-my-[32px] md:rowabi-my-[60px]">
+  <div class="rowabi-flex rowabi-flex-col rowabi-items-center rowabi-justify-center rowabi-gap-5 md:rowabi-gap-9 md:rowabi-ml-[105px] md:rowabi-mr-[67px]">
+    <div class="rowabi-max-w-max rowabi-flex rowabi-flex-col rowabi-items-center rowabi-justify-center">
+      <{{ section.settings.heading_tag }} style='font-family: "Sainte Colombe", serif;' class="rowabi-leading-[27px] rowabi-text-lg md:rowabi-text-[32px] md:rowabi-leading-[45px] rowabi-font-medium rowabi-text-center rowabi-text-[#444139] rowabi-uppercase md:rowabi-max-w-[323px]">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
+      <p class="rowabi-text-[13px] md:rowabi-text-base rowabi-font-normal rowabi-text-center rowabi-text-[#8C6F51] rowabi-mt-1 md:rowabi-mt-4">{{ section.settings.subheading }}</p>
+      <a href="{{ section.settings.button_link }}" class="rowabi-font-bold rowabi-text-center rowabi-text-white rowabi-text-xs md:rowabi-text-base rowabi-bg-[#444139] rowabi-px-[12px] rowabi-py-[10px] md:rowabi-px-[30px] md:rowabi-py-[12px] rowabi-mt-5 md:rowabi-mt-6">
+          {{ section.settings.button_content }}
+      </a>
+    </div>
+
+    {% for block in section.blocks %}
+      <div class="rowabi-flex rowabi-flex-col rowabi-bg-[#F9F9F9] rowabi-p-[16px] rowabi-text-center md:rowabi-hidden">
+        <img width="100%" height="333px" src="{{ block.settings.image | img_url: 'master'}}" />
+        <p style='font-family: "Sainte Colombe", serif;' class="rowabi-text-[18px] rowabi-leading-[23px] rowabi-font-[500] rowabi-capitalize md:rowabi-text-[32px] md:rowabi-leading-[45px] rowabi-text-center rowabi-text-[#444139] rowabi-mt-[16px] md:rowabi-mt-4">{{ block.settings.title }}</p>
+        <p class="rowabi-text-[13px] rowabi-font-[400] rowabi-leading-[24px] md:rowabi-text-base rowabi-text-center rowabi-text-[#8C6F51] rowabi-mt-1">{{ block.settings.subheading }}</p>
+      </div>
+    {% endfor %}
+    <div class="rowabi-grid rowabi-grid-cols-2 rowabi-gap-[9px] md:rowabi-gap-[30px] rowabi-px-[16px] md:rowabi-px-0">
+      <div class="rowabi-flex rowabi-flex-col">
+        <img width="100%" height="auto" class="rowabi-" src="{{ section.settings.image-left | img_url: 'master'}}" />
+        <a href="{{ section.settings.link-image-left }}" class="rowabi-flex rowabi-justify-center rowabi-mt-[12px] md:rowabi-mt-[17px]">
+          <p class="rowabi-pt-0 rowabi-font-bold rowabi-text-center rowabi-text-[#444139] rowabi-text-xs md:rowabi-text-sm rowabi-w-max rowabi-border-b rowabi-border-[#595343] rowabi-py-[4px] md:rowabi-pb-[6px]">{{ section.settings.title-image-left }}</p>
+        </a>
+      </div>
+      
+      <div class="rowabi-flex rowabi-flex-col">
+        <img width="100%" height="auto" class="rowabi-" src="{{ section.settings.image-right | img_url: 'master'}}" />
+        <a href="{{ section.settings.link-image-right }}" class="rowabi-flex rowabi-justify-center rowabi-mt-[12px] md:rowabi-mt-[17px]">
+          <p class="rowabi-pt-0 rowabi-font-bold rowabi-text-center rowabi-text-[#444139] rowabi-text-xs md:rowabi-text-sm rowabi-w-max rowabi-border-b rowabi-border-[#595343] rowabi-py-[4px] md:rowabi-pb-[6px]">{{ section.settings.title-image-right }}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  {% for block in section.blocks %}
+    <div class="rowabi-hidden md:rowabi-flex rowabi-flex-col rowabi-bg-[#F9F9F9] rowabi-p-[60px] rowabi-text-center rowabi-mr-[95px]">
+      <img width="100%" height="333px" src="{{ block.settings.image | img_url: 'master'}}" />
+      <p style='font-family: "Sainte Colombe", serif;' class="md:rowabi-text-[32px] md:rowabi-leading-[45px] rowabi-text-center rowabi-text-[#444139] rowabi-mt-8">{{ block.settings.title }}</p>
+      <p class="rowabi-text-xs md:rowabi-text-base rowabi-text-center rowabi-text-[#8C6F51] rowabi-mt-2">{{ block.settings.subheading }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+
+{% schema %}
+{
+  "name": "Rowabi Spotlight",
+  "tag": "section",
+  "max_blocks": 1,
+  "settings": [
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "P"
+        }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "heading",
+      "default": "Spotlight on Polished Nickel"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "subheading",
+      "default": "This season, make room for joyful connection"
+    },
+    {
+       "type": "url",
+       "id": "button_link",
+       "label": "Button url"
+     },
+    {
+      "type": "inline_richtext",
+      "id": "button_content",
+      "label": "Button Content",
+      "default": "EXPLORE THE LOOKBOOK"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-left",
+      "label": "Image left"
+    },
+    {
+       "type": "url",
+       "id": "link-image-left",
+       "label": "Link image left"
+     },
+    {
+      "type": "inline_richtext",
+      "id": "title-image-left",
+      "label": "Title image left",
+      "default": "LIGHTS FOR KITCHEN"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-right",
+      "label": "Image right"
+    },
+    {
+       "type": "url",
+       "id": "link-image-right",
+       "label": "Link image right"
+     },
+    {
+      "type": "inline_richtext",
+      "id": "title-image-right",
+      "label": "Title image right",
+      "default": "LIGHTS FOR DINING ROOM"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "t:sections.timeline.blocks.item.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:global.image.image",
+          "info": "t:sections.timeline.blocks.item.image_info"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "heading",
+          "default": "Gather in Style"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "subheading",
+          "label": "subheading",
+          "default": "This season, make room for joyful connection"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rowabi Spotlight",
+    }
+  ]
+}
+{% endschema %}

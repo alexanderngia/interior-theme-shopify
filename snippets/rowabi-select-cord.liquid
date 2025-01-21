@@ -1,0 +1,19 @@
+<div class="rowabi-grid rowabi-grid-cols-1 rowabi-mt-[20px] md:rowabi-mt-[22px] rowabi-mb-[16px] md:rowabi-mt-[20px]">
+  <p id="select-cord" class="rowabi-text-[13px] rowabi-font-bold rowabi-text-left rowabi-text-[#8C6F51] roawbi-mb-[12px] rowabi-flex rowabi-items-center rowabi-gap-[4px] rowabi-cursor-pointer">
+    How To Select Your Cord
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="6" viewBox="0 0 8 6" fill="none">
+        <path d="M4.1925 4.99942C4.00328 5.17046 3.71566 5.17166 3.52502 5.00221L0.448153 2.26721C0.328481 2.16084 0.26001 2.00836 0.26001 1.84825C0.26001 1.36457 0.831477 1.10795 1.19298 1.42928L3.52502 3.50221C3.71566 3.67166 4.00328 3.67046 4.1925 3.49942L6.47054 1.44018C6.8283 1.11677 7.40001 1.37064 7.40001 1.85291C7.40001 2.01022 7.33342 2.16017 7.21673 2.26565L4.1925 4.99942Z" fill="#8C6F51"/>
+      </svg>
+    </span>
+  </p>
+  <img id="image-cord" class="md:rowabi-h-[279px] md:rowabi-w-[375px] md:rowabi-h-[365px] md:rowabi-w-[490px] rowabi-hidden" width="100%" height="auto" src="https://cdn.shopify.com/s/files/1/0629/8576/5122/files/1_c113c54a-dd91-4925-bc93-0735d2683970.png?v=1732082044" />
+  
+</div>
+
+<script>
+  document.getElementById('select-cord').onclick = function() {
+      const imgElement = document.querySelector('#image-cord');
+      imgElement.classList.toggle('rowabi-hidden');
+  };
+</script>

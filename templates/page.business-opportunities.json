@@ -1,0 +1,1372 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "page_width": "xs"
+      }
+    },
+    "3fff800e-1c20-42b8-91d5-97f06940c1df": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16878644658434__3fff800e-1c20-42b8-91d5-97f06940c1df-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/business_opportunities-desktop-banner.jpg",
+            "mobile_image": "shopify://shop_images/business_opportunities-mobile.jpg",
+            "subheading": "",
+            "subheading_below": false,
+            "title": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_text_position": "sm:place-self-end-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "REGISTER NOW",
+            "button_1_link": "",
+            "klaviyo_form_trigger": "",
+            "button_1_style": "solid",
+            "button_1_background": "#fcf9f5",
+            "button_1_text_color": "#49392b",
+            "button_2_text": "VISIT OUR PORTFOLIO",
+            "button_2_link": "",
+            "button_2_style": "solid",
+            "button_2_background": "#fcf9f5",
+            "button_2_text_color": "#49392b",
+            "background": "#000000",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "template--16878644658434__3fff800e-1c20-42b8-91d5-97f06940c1df-image-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff"
+      }
+    },
+    "3fff800e-1c20-42b8-91d5-97f06940c1de": {
+      "type": "slideshow-popup",
+      "blocks": {
+        "template--16878644658434__3fff800e-1c20-42b8-91d5-97f06940c1df-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/business-exclusive-offer-web-banner.jpg",
+            "mobile_image": "shopify://shop_images/business-exclusive-offer-mobile.jpg",
+            "subheading": "",
+            "subheading_below": false,
+            "title": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_text_position": "sm:place-self-end-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "REGISTER NOW",
+            "button_1_popup": true,
+            "button_1_link": "",
+            "klaviyo_form_trigger": "",
+            "button_1_style": "solid",
+            "button_1_background": "#705840",
+            "button_1_text_color": "#fcf9f5",
+            "button_2_text": "VISIT OUR PORTFOLIO",
+            "button_2_popup": false,
+            "button_2_link": "https://drive.google.com/file/d/18_bMXAqCMC3Kxma4ZURjxfJGFyjXpyBh/view",
+            "button_2_style": "solid",
+            "button_2_background": "#705840",
+            "button_2_text_color": "#fcf9f5",
+            "background": "#000000",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "rgba(0,0,0,0)",
+            "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "template--16878644658434__3fff800e-1c20-42b8-91d5-97f06940c1df-image-1"
+      ],
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": false,
+        "media_size": "sm",
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 4,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "form_show": false,
+        "form_delay": 0,
+        "form_heading": "REGISTRATION FORM",
+        "field_title_1": "Business Focus *",
+        "field_values_1": "Interior Designers/ Architects; Furniture Dealer/ Online Retailer; Restaurants/ Cafes/ Tea Houses; Builders/ Real Estate Construction/ Brokers; Hotels/ Resorts/ Airbnb;Spa & Health Retreats; Others",
+        "field_required_1": true,
+        "field_title_2": "Type of collab *",
+        "field_values_2": "Trade Program; Wholesale; Consignment Program; Partnership; Franchise/ Agency; White Label; Others",
+        "field_required_2": true,
+        "field_title_3": "How did you hear about us? *",
+        "field_values_3": "Search Engine; Social Media; Friend/ Family recommendation; Other",
+        "field_required_3": true,
+        "field_title_4": "I would like to receive catalog *",
+        "field_values_4": "Digital Catalog; Physical Catalog; I Don't Need It",
+        "field_required_4": true
+      }
+    },
+    "f43911df-2a11-47bb-82e0-011781235c47": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17018929217794__f43911df-2a11-47bb-82e0-011781235c47-heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>WHY ROWABI</strong>",
+            "heading_tag": "h1",
+            "h1_tag": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17018929217794__f43911df-2a11-47bb-82e0-011781235c47-heading-1"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "background": ""
+      }
+    },
+    "0a0ceab2-ad5c-4f1c-ae4a-a0a55ba520e2": {
+      "type": "multi-column",
+      "blocks": {
+        "template--17001912369410__0a0ceab2-ad5c-4f1c-ae4a-a0a55ba520e2-image_with_text-1": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/stock-guaranteed.png",
+            "title": "<strong>Stock Guaranteed</strong>",
+            "heading_tag": "h4",
+            "content": "<h5>Always Stocked with Our Bestsellers for Your Business.</h5>",
+            "link_url": "",
+            "blank": false,
+            "link_text": ""
+          }
+        },
+        "template--17001912369410__0a0ceab2-ad5c-4f1c-ae4a-a0a55ba520e2-image_with_text-2": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/dedicated-start-to-finish-support-icon.png",
+            "title": "<strong>Dedicated Start-To-Finish Support</strong>",
+            "heading_tag": "h4",
+            "content": "<h5>Seamless Buying Experience: Guiding Your Journey from Beginning to End.</h5>",
+            "link_url": "",
+            "blank": false,
+            "link_text": ""
+          }
+        },
+        "template--17001912369410__0a0ceab2-ad5c-4f1c-ae4a-a0a55ba520e2-image_with_text-3": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/minimal-import-duties-icon.png",
+            "title": "<strong>Minimal Import Duties</strong>",
+            "heading_tag": "h4",
+            "content": "<h5>Shop Smart: Minimize Import Duties, Maximize Savings.</h5>",
+            "link_url": "",
+            "blank": false,
+            "link_text": ""
+          }
+        },
+        "33e4bd19-8c19-4d81-abea-4b87b9e2732e": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/your-benefits-swift-delivery.png",
+            "title": "<strong>Fast Shipping</strong>",
+            "heading_tag": "h4",
+            "content": "<h5>3-day Free Shipping within US.</h5>",
+            "link_url": "",
+            "blank": false,
+            "link_text": ""
+          }
+        },
+        "95e06331-8a31-4140-b190-79c5913168c5": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/your-benefits-assured-quality.png",
+            "title": "<strong>A-Grade Material</strong>",
+            "heading_tag": "h4",
+            "content": "<h5>Unmatched Quality, Timeless Beauty.</h5>",
+            "link_url": "",
+            "blank": false,
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17001912369410__0a0ceab2-ad5c-4f1c-ae4a-a0a55ba520e2-image_with_text-1",
+        "template--17001912369410__0a0ceab2-ad5c-4f1c-ae4a-a0a55ba520e2-image_with_text-2",
+        "template--17001912369410__0a0ceab2-ad5c-4f1c-ae4a-a0a55ba520e2-image_with_text-3",
+        "33e4bd19-8c19-4d81-abea-4b87b9e2732e",
+        "95e06331-8a31-4140-b190-79c5913168c5"
+      ],
+      "disabled": true,
+      "settings": {
+        "separate_section_with_border": true,
+        "columns_per_row": 5,
+        "stack_on_mobile": true,
+        "overlap_image": false,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "md",
+        "subheading": "",
+        "title": "<strong>WHY ROWABI</strong>",
+        "content": "",
+        "column_width_tablet": 38,
+        "column_width_mobile": 53,
+        "spacing_desktop": 56,
+        "spacing_mobile": 36
+      }
+    },
+    "721e627d-13b4-43ca-8835-a18a8410d791": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--17018929217794__721e627d-13b4-43ca-8835-a18a8410d791-item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "custom_icon": "shopify://shop_images/icon-stock-guaranteed.png",
+            "icon_width": 64,
+            "mobile_icon_width": 64,
+            "title": "<strong>Stock Guaranteed</strong>",
+            "content": "<p>Always Stocked with Our Bestsellers for Your Business.</p>"
+          }
+        },
+        "template--17018929217794__721e627d-13b4-43ca-8835-a18a8410d791-item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "custom_icon": "shopify://shop_images/icon-dedicated-start-to-finish-support.png",
+            "icon_width": 64,
+            "mobile_icon_width": 64,
+            "title": "<strong>Seamless Buying Experience</strong>",
+            "content": "<p>Dedicated Start-To-Finish Support.</p>"
+          }
+        },
+        "template--17018929217794__721e627d-13b4-43ca-8835-a18a8410d791-item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-shield",
+            "custom_icon": "shopify://shop_images/icon-minimal-import-duties.png",
+            "icon_width": 64,
+            "mobile_icon_width": 64,
+            "title": "<strong>Minimal Import Duties</strong>",
+            "content": "<p>Shop Smart: Minimize Import Duties, Maximize Savings.</p>"
+          }
+        },
+        "bc0aa197-048d-41bc-8de9-a3d633816961": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-award-gift",
+            "custom_icon": "shopify://shop_images/icon-fast-shipping_b1dde7eb-59c1-48ed-b390-b05b8531932f.png",
+            "icon_width": 64,
+            "mobile_icon_width": 64,
+            "title": "<strong>Fast Shipping</strong>",
+            "content": "<p>3-day Free Shipping within US.</p>"
+          }
+        },
+        "7d6e398c-2f2d-42b9-afd9-7b0e67888a8b": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-award-gift",
+            "custom_icon": "shopify://shop_images/icon-a-grade-material.png",
+            "icon_width": 64,
+            "mobile_icon_width": 64,
+            "title": "<strong>A-Grade Material</strong>",
+            "content": "<p>Unmatched Quality, Timeless Beauty.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--17018929217794__721e627d-13b4-43ca-8835-a18a8410d791-item-1",
+        "template--17018929217794__721e627d-13b4-43ca-8835-a18a8410d791-item-2",
+        "template--17018929217794__721e627d-13b4-43ca-8835-a18a8410d791-item-3",
+        "bc0aa197-048d-41bc-8de9-a3d633816961",
+        "7d6e398c-2f2d-42b9-afd9-7b0e67888a8b"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "stack_on_mobile": true,
+        "icon_color": "",
+        "text_color": "",
+        "text_alignment": "center"
+      }
+    },
+    "d81189e4-f959-49ea-8108-e0f49b4fdd42": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "template--17018929217794__d81189e4-f959-49ea-8108-e0f49b4fdd42-heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Join our Trade Program today",
+            "heading_tag": "h3"
+          }
+        },
+        "44609349-69d8-428d-9c38-89bbcc2f8bd4": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "REGISTER NOW",
+            "class": "",
+            "id": "",
+            "url": "https://www.rowabi.com/pages/trade-program-register",
+            "background": "#fcf9f5",
+            "text_color": "#705840"
+          }
+        }
+      },
+      "block_order": [
+        "template--17018929217794__d81189e4-f959-49ea-8108-e0f49b4fdd42-heading-1",
+        "44609349-69d8-428d-9c38-89bbcc2f8bd4"
+      ],
+      "settings": {
+        "image_size": "auto",
+        "image": "shopify://shop_images/call-to-action-banner.jpg",
+        "allow_transparent_header": false,
+        "reveal_on_scroll": true,
+        "remove_vertical_spacing": true,
+        "content_width": "md",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#fcf9f5",
+        "overlay_color": "#000000",
+        "overlay_opacity": 40
+      }
+    },
+    "c851d760-f384-40ab-8531-e3d5ad15ec38": {
+      "type": "rich-text",
+      "blocks": {
+        "30e542de-905e-4c88-9296-ef8a99a1d3f6": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>YOUR BENEFIT</strong>",
+            "heading_tag": "h1",
+            "h1_tag": false
+          }
+        }
+      },
+      "block_order": [
+        "30e542de-905e-4c88-9296-ef8a99a1d3f6"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "background": ""
+      }
+    },
+    "e400a539-dcf1-4af6-a836-5f8ca38727dd": {
+      "type": "text-with-icons",
+      "blocks": {
+        "edea7a8b-01e3-44d6-b4a7-30c85f30b9a6": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "custom_icon": "shopify://shop_images/icon-no-middle-man.png",
+            "icon_width": 64,
+            "mobile_icon_width": 64,
+            "title": "<strong>No Middle Man</strong>",
+            "content": "<p>Enjoy top-quality products at the best prices with our vetted suppliers.</p>"
+          }
+        },
+        "eaa01048-9cf8-4a3b-8c59-9e45720baaf7": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "custom_icon": "shopify://shop_images/icon-early-access.png",
+            "icon_width": 64,
+            "mobile_icon_width": 64,
+            "title": "<strong>Early Access</strong>",
+            "content": "<p>You will get access to our latest collections before anyone else.</p>"
+          }
+        },
+        "2776a9e6-d799-4e2e-ab2c-0f1a655f9a80": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-shield",
+            "custom_icon": "shopify://shop_images/icon-tax-exempt-check-out.png",
+            "icon_width": 64,
+            "mobile_icon_width": 64,
+            "title": "<strong>Tax Exempt CheckOut</strong>",
+            "content": "<p>Automatically applied to all qualifying orders at checkout.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "edea7a8b-01e3-44d6-b4a7-30c85f30b9a6",
+        "eaa01048-9cf8-4a3b-8c59-9e45720baaf7",
+        "2776a9e6-d799-4e2e-ab2c-0f1a655f9a80"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "stack_on_mobile": true,
+        "icon_color": "",
+        "text_color": "",
+        "text_alignment": "center"
+      }
+    },
+    "e2462c35-209d-42e5-a916-554ac5d4aafc": {
+      "type": "multi-column",
+      "blocks": {
+        "template--17001912369410__e2462c35-209d-42e5-a916-554ac5d4aafc-image_with_text-1": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/our-mission-luxurry-elgance.png",
+            "title": "<strong>Luxury Elgance</strong>",
+            "heading_tag": "h3",
+            "content": "<h5>Exclusive designs for upscale residences.</h5>",
+            "link_url": "",
+            "blank": false,
+            "link_text": ""
+          }
+        },
+        "template--17001912369410__e2462c35-209d-42e5-a916-554ac5d4aafc-image_with_text-2": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/our-mission-away-from-mass-produced.png",
+            "title": "<strong>Away From Mass-Produced</strong>",
+            "heading_tag": "h3",
+            "content": "<h5>Reviving the charm of rattan lights with a touch of exclusivity.</h5>",
+            "link_url": "",
+            "blank": false,
+            "link_text": ""
+          }
+        },
+        "template--17001912369410__e2462c35-209d-42e5-a916-554ac5d4aafc-image_with_text-3": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/our-mission-reliable-us-supplier.png",
+            "title": "<strong>Reliable US Support</strong>",
+            "heading_tag": "h3",
+            "content": "<h5>Swift and seamless solutions to pressing demands and trends.</h5>",
+            "link_url": "",
+            "blank": false,
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17001912369410__e2462c35-209d-42e5-a916-554ac5d4aafc-image_with_text-1",
+        "template--17001912369410__e2462c35-209d-42e5-a916-554ac5d4aafc-image_with_text-2",
+        "template--17001912369410__e2462c35-209d-42e5-a916-554ac5d4aafc-image_with_text-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "separate_section_with_border": true,
+        "columns_per_row": 3,
+        "stack_on_mobile": true,
+        "overlap_image": false,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "md",
+        "subheading": "",
+        "title": "<strong>OUR MISSION</strong>",
+        "content": "",
+        "column_width_tablet": 38,
+        "column_width_mobile": 53,
+        "spacing_desktop": 56,
+        "spacing_mobile": 36
+      }
+    },
+    "cb66fa90-4bf4-49b9-920c-477b6ecf7e30": {
+      "type": "rich-text",
+      "blocks": {
+        "c49b92b7-fa42-4583-ad11-35f28d16f66d": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Rowabi: Embrace business opportunities with low risk and timely support</strong>",
+            "heading_tag": "h3",
+            "h1_tag": false
+          }
+        },
+        "5740fb2d-82e0-43d7-8cab-2cf0e1bc275a": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "register now",
+            "url": "#Registration-Form",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "c49b92b7-fa42-4583-ad11-35f28d16f66d",
+        "5740fb2d-82e0-43d7-8cab-2cf0e1bc275a"
+      ],
+      "disabled": true,
+      "settings": {
+        "separate_section_with_border": true,
+        "content_width": "lg",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "background": "#fcf9f5"
+      }
+    },
+    "1f7b33b6-f1d0-4f59-a918-8c0411875704": {
+      "type": "rich-text",
+      "blocks": {
+        "04614026-865a-4b9e-8da9-d1f47761f08a": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>BUSINESS OPPORTUNITIES - EXCLUSIVE OFFER</strong>",
+            "heading_tag": "h2",
+            "h1_tag": false
+          }
+        }
+      },
+      "block_order": [
+        "04614026-865a-4b9e-8da9-d1f47761f08a"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "content_width": "md",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "f43ed175-3a8f-45e1-8bff-9f81847f09b3": {
+      "type": "timeline",
+      "blocks": {
+        "3c53a895-caae-4be9-bab5-deb62a52589c": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/trade-program-restaurant-mobile-banner.jpg",
+            "mobile_image": "shopify://shop_images/trade-program-business-owners-mobile-banner.jpg",
+            "label": "Trade Program",
+            "subheading": "EXCLUSIVE OFFER",
+            "title": "Trade Program",
+            "content": "<ul><li><h6><strong>Who:</strong> Business Owners & Interior Designers.</h6></li><li><h6><strong>What:</strong> Take advantage of our Tiered Discount System to save big on your business needs.</h6></li><li><h6><strong>How:</strong> Register and hear back from us in <strong>24h.</strong></h6></li><li><h6><strong>No Minimum order required.</strong></h6></li></ul>",
+            "link_text": "Register now",
+            "link_url": "#Registration-Form",
+            "link_style": "solid",
+            "mobile_text_color": "#ffffff"
+          }
+        },
+        "template--17001912369410__f43ed175-3a8f-45e1-8bff-9f81847f09b3-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/online-furniture-websites.jpg",
+            "mobile_image": "shopify://shop_images/online-furniture-websites-mobile-banner.jpg",
+            "label": "Consignment Program",
+            "subheading": "EXCLUSIVE OFFER",
+            "title": "Consignment Program",
+            "content": "<ul><li><h6><strong>Who:</strong> Online Furniture Websites / Influencers</h6></li><li><h6><strong>What:</strong> <strong>Turn Every Day into a Payday.</strong></h6></li><li><h6><strong>How:</strong> Display our products on your website. Every time someone links from your site to <strong>Rowabi.com</strong> and buy an item, you’ll get<strong> </strong>commission. We do the work for you! We will process the order and ship it.</h6></li></ul>",
+            "link_text": "Register now",
+            "link_url": "#Registration-Form",
+            "link_style": "solid",
+            "mobile_text_color": "#ffffff"
+          }
+        },
+        "template--17001912369410__f43ed175-3a8f-45e1-8bff-9f81847f09b3-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/furniture-store.jpg",
+            "mobile_image": "shopify://shop_images/furniture-store-mobile-banner.jpg",
+            "label": "Partner Program",
+            "subheading": "EXCLUSIVE OFFER",
+            "title": "Partner Program",
+            "content": "<ul><li><h6><strong>Who:</strong> Brick-and-mortar retailers want to broaden the products offering.</h6></li><li><h6><strong>What:</strong> Complimentary in-store samples, exclusive partner discounts and access to marketing and advertising resources.</h6></li><li><h6><strong>How:</strong> Register and hear back from us in <strong>24h.</strong></h6></li><li><h6><strong>No minimum order required.</strong></h6></li></ul>",
+            "link_text": "Register now",
+            "link_url": "#Registration-Form",
+            "link_style": "solid",
+            "mobile_text_color": "#ffffff"
+          }
+        },
+        "template--17001912369410__f43ed175-3a8f-45e1-8bff-9f81847f09b3-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/white-label.jpg",
+            "mobile_image": "shopify://shop_images/white-label-mobile-banner.jpg",
+            "label": "White Label",
+            "subheading": "EXCLUSIVE OFFER",
+            "title": "White Label",
+            "content": "<ul><li><h6><strong>Who:</strong> Retailers who need help with ready-to-market products that you can rebrand and sell as your own.</h6></li><li><h6><strong>What: </strong>This program focuses on quick market entry, reduced risk, and enhancing brand credibility.</h6></li><li><h6><strong>How:</strong> Register and hear back from us in <strong>24h.</strong></h6></li><li><h6><strong>No minimum order required.</strong></h6></li></ul>",
+            "link_text": "Register now",
+            "link_url": "#Registration-Form",
+            "link_style": "solid",
+            "mobile_text_color": "#ffffff"
+          }
+        },
+        "4a01b335-6f7f-4942-b31c-49977c0c1129": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/wholesale-program.jpg",
+            "mobile_image": "shopify://shop_images/wholesale-program-mobile-banner.jpg",
+            "label": "Wholesale Program",
+            "subheading": "EXCLUSIVE OFFER",
+            "title": "Wholesale Program",
+            "content": "<ul><li><h6><strong>Who: </strong>Furniture distributors, dealers, and retailers looking for bulk purchases at substantial discounts.</h6></li><li><h6><strong>What: </strong>Buy more to save more.</h6></li><li><h6><strong>How:</strong> Register and hear back from us in <strong>24h.</strong></h6></li><li><h6><strong>Minimum order qty:</strong> 30 Pieces (Negotiation Possible).</h6></li></ul>",
+            "link_text": "Register now",
+            "link_url": "#Registration-Form",
+            "link_style": "solid",
+            "mobile_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "3c53a895-caae-4be9-bab5-deb62a52589c",
+        "template--17001912369410__f43ed175-3a8f-45e1-8bff-9f81847f09b3-item-1",
+        "template--17001912369410__f43ed175-3a8f-45e1-8bff-9f81847f09b3-item-2",
+        "template--17001912369410__f43ed175-3a8f-45e1-8bff-9f81847f09b3-item-3",
+        "4a01b335-6f7f-4942-b31c-49977c0c1129"
+      ],
+      "settings": {
+        "separate_section_with_border": false
+      }
+    },
+    "2af4c3dd-5d5f-4c01-8f3c-48b9a1b8c325": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "a6dba9f0-674c-4f90-b454-65a702494cf1": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Rowabi: Delight your customers and indulge in exclusive savings</strong>",
+            "heading_tag": "h3"
+          }
+        },
+        "4b28a21c-c64b-41c7-bcfb-207d9e1fb605": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "TRADE PROGRAM REGISTER",
+            "class": "tradeprogramregister",
+            "id": "tradeprogramregister",
+            "url": "https://www.rowabi.com/pages/trade-program-register",
+            "background": "#fcf9f5",
+            "text_color": "#705840"
+          }
+        }
+      },
+      "block_order": [
+        "a6dba9f0-674c-4f90-b454-65a702494cf1",
+        "4b28a21c-c64b-41c7-bcfb-207d9e1fb605"
+      ],
+      "settings": {
+        "image_size": "auto",
+        "image": "shopify://shop_images/call-to-action-banner.jpg",
+        "allow_transparent_header": false,
+        "reveal_on_scroll": true,
+        "remove_vertical_spacing": true,
+        "content_width": "md",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#fcf9f5",
+        "overlay_color": "#000000",
+        "overlay_opacity": 40
+      }
+    },
+    "fb6ddeac-241e-438f-93ed-823c939515bd": {
+      "type": "multi-column",
+      "blocks": {
+        "aa2731da-e112-4e96-a148-505468736728": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/fox-news-rowabi-introduces-sustainable-business-programs-in-the-us-rattan-lighting-market1.png",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "https://www.myhighplains.com/business/press-releases/ein-presswire/672533495/rowabi-introduces-sustainable-business-programs-in-the-us-rattan-lighting-market",
+            "blank": true,
+            "link_text": ""
+          }
+        },
+        "573272da-3c9a-4c14-8c94-481814804414": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/ap-news-rowabi-introduces-sustainable-business-programs-in-the-us-rattan-lighting-market.png",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "https://apnews.com/press-release/ein-presswire-newsmatics/financial-markets-4d13067d85692be2fe9438c2135592dd",
+            "blank": true,
+            "link_text": ""
+          }
+        },
+        "6afcef4d-aba3-4343-9449-b3aa60dcc8be": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/your-basin-news-rowabi-introduces-sustainable-business-programs-in-the-us-rattan-lighting-market.png",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "https://www.yourbasin.com/business/press-releases/ein-presswire/672533495/rowabi-introduces-sustainable-business-programs-in-the-us-rattan-lighting-market/",
+            "blank": true,
+            "link_text": ""
+          }
+        },
+        "b2c36eb3-52ae-4a9b-b5e1-f9ec269399f3": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/ktsm-rowabi-introduces-sustainable-business-programs-in-the-us-rattan-lighting-market.png",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "https://www.ktsm.com/business/press-releases/ein-presswire/672533495/rowabi-introduces-sustainable-business-programs-in-the-us-rattan-lighting-market/",
+            "blank": true,
+            "link_text": ""
+          }
+        },
+        "a005ed9f-372b-4a03-893f-b29b7ca39a8b": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/us-national-times-rowabi-introduces-sustainable-business-programs-in-the-us-rattan-lighting-market.png",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "https://www.usnationaltimes.com/article/672533495-rowabi-introduces-sustainable-business-programs-in-the-us-rattan-lighting-market",
+            "blank": true,
+            "link_text": ""
+          }
+        },
+        "64cba748-295f-4a5e-8b25-cb8ca174dff3": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/media-world-news-rowabi-introduces-sustainable-business-programs-in-the-us-rattan-lighting-market.png",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "https://www.mediaworldtoday.com/article/672533495-rowabi-introduces-sustainable-business-programs-in-the-us-rattan-lighting-market",
+            "blank": true,
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "aa2731da-e112-4e96-a148-505468736728",
+        "573272da-3c9a-4c14-8c94-481814804414",
+        "6afcef4d-aba3-4343-9449-b3aa60dcc8be",
+        "b2c36eb3-52ae-4a9b-b5e1-f9ec269399f3",
+        "a005ed9f-372b-4a03-893f-b29b7ca39a8b",
+        "64cba748-295f-4a5e-8b25-cb8ca174dff3"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "columns_per_row": 6,
+        "stack_on_mobile": false,
+        "overlap_image": true,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "xs",
+        "subheading": "",
+        "title": "<strong>NEWS & MEDIA</strong>",
+        "content": "",
+        "column_width_tablet": 38,
+        "column_width_mobile": 53,
+        "spacing_desktop": 56,
+        "spacing_mobile": 36
+      }
+    },
+    "11b77381-6902-429e-b5c1-162150fbe352": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17001912369410__11b77381-6902-429e-b5c1-162150fbe352-heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Customer Reviews: Hear It Directly from Them</strong>",
+            "heading_tag": "h2",
+            "h1_tag": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17001912369410__11b77381-6902-429e-b5c1-162150fbe352-heading-1"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "content_width": "lg",
+        "text_position": "center",
+        "remove_vertical_spacing": true,
+        "background": ""
+      }
+    },
+    "15136e82-c393-4d12-b14a-1bc0374b3edf": {
+      "type": "testimonials",
+      "blocks": {
+        "template--17001912369410__15136e82-c393-4d12-b14a-1bc0374b3edf-testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<h5><em>\"Love the texture and how it transforms the look of our space .\"</em></h5>",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100,
+            "author": ""
+          }
+        },
+        "template--17001912369410__15136e82-c393-4d12-b14a-1bc0374b3edf-testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<h5><em>\"This pendant from Rowabi was a no brainer. I think it's my favorite.\"</em></h5>",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100,
+            "author": ""
+          }
+        },
+        "template--17001912369410__15136e82-c393-4d12-b14a-1bc0374b3edf-testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<h5><em>\"I am obsessed with this piece! First the quality is amazing, the style is top notch and it’s massive size makes it a statement piece in this room!\"</em></h5>",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100,
+            "author": ""
+          }
+        },
+        "4031e8f9-39b9-4d0b-951d-ddc816b3965e": {
+          "type": "testimonial",
+          "settings": {
+            "content": "<h5><em>\"Obsessed with the Barbra pendant from Rowabi - Add so much texture and personality to our space.\"</em></h5>",
+            "logo_max_width": 140,
+            "logo_mobile_max_width": 100,
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17001912369410__15136e82-c393-4d12-b14a-1bc0374b3edf-testimonial-1",
+        "template--17001912369410__15136e82-c393-4d12-b14a-1bc0374b3edf-testimonial-2",
+        "template--17001912369410__15136e82-c393-4d12-b14a-1bc0374b3edf-testimonial-3",
+        "4031e8f9-39b9-4d0b-951d-ddc816b3965e"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "auto_rotate_between_testimonials": true,
+        "cycle_speed": 3,
+        "font_size_factor": 1.1,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "background": "#fcf9f5",
+        "text_color": ""
+      }
+    },
+    "64197418-9532-4a36-a850-381b8e8465fc": {
+      "type": "multi-column",
+      "blocks": {
+        "template--17001912369410__64197418-9532-4a36-a850-381b8e8465fc-image_with_text-1": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/etsy-reviews.png",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "",
+            "blank": true,
+            "link_text": ""
+          }
+        },
+        "template--17001912369410__64197418-9532-4a36-a850-381b8e8465fc-image_with_text-2": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/amazon-reviews.png",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "https://www.amazon.com/Rowabi-Rattan-Pendant-Light-Furniture/dp/B0C15KDKWQ/ref=cm_cr_arp_d_pl_foot_top?ie=UTF8&th=1",
+            "blank": true,
+            "link_text": ""
+          }
+        },
+        "template--17001912369410__64197418-9532-4a36-a850-381b8e8465fc-image_with_text-3": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/wayfair-reviews.png",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "",
+            "blank": true,
+            "link_text": ""
+          }
+        },
+        "29047d75-a6b9-496b-a689-547d5329237b": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/google-reviews.png",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "https://www.google.com/maps/place/Rowabi/@29.8017471,-95.5607038,17z/data=!4m8!3m7!1s0x8640c58904e97afb:0x3a5850e5cd71f7b8!8m2!3d29.8017471!4d-95.5607038!9m1!1b1!16s%2Fg%2F11krzv13sz?entry=ttu",
+            "blank": true,
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17001912369410__64197418-9532-4a36-a850-381b8e8465fc-image_with_text-1",
+        "template--17001912369410__64197418-9532-4a36-a850-381b8e8465fc-image_with_text-2",
+        "template--17001912369410__64197418-9532-4a36-a850-381b8e8465fc-image_with_text-3",
+        "29047d75-a6b9-496b-a689-547d5329237b"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "columns_per_row": 4,
+        "stack_on_mobile": true,
+        "overlap_image": true,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "xs",
+        "subheading": "",
+        "title": "<strong>OVER 1800 REVIEWS</strong>",
+        "content": "",
+        "column_width_tablet": 38,
+        "column_width_mobile": 53,
+        "spacing_desktop": 56,
+        "spacing_mobile": 36
+      }
+    },
+    "rich_text_HGkAaL": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_MDrpkC": {
+          "type": "subheading",
+          "settings": {
+            "text": "<strong>Contact for support:</strong>"
+          }
+        },
+        "heading_xdGiqV": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Tony Nguyen</strong>",
+            "heading_tag": "h3",
+            "h1_tag": false
+          }
+        },
+        "richtext_q9PPFe": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Business Representative<br/>Phone No. <a href=\"tel:+12814102981\" target=\"_blank\">+1 281 410 2981</a><br/>Email: <a href=\"mailto:tonynguyen@rowabi.com\">tonynguyen@rowabi.com</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_MDrpkC",
+        "heading_xdGiqV",
+        "richtext_q9PPFe"
+      ],
+      "disabled": true,
+      "settings": {
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "background": "#fcf9f5"
+      }
+    },
+    "718adea9-33db-4e6d-be42-7c8836260121": {
+      "type": "multi-column",
+      "blocks": {
+        "template--17001912369410__718adea9-33db-4e6d-be42-7c8836260121-image_with_text-1": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/residential.jpg",
+            "title": "RESIDENTIAL",
+            "heading_tag": "h3",
+            "content": "<p>We’re here to support your creative vision no matter the scope of the project, from single rooms to total home renovations.</p>",
+            "link_url": "",
+            "blank": false,
+            "link_text": ""
+          }
+        },
+        "template--17001912369410__718adea9-33db-4e6d-be42-7c8836260121-image_with_text-2": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/commercial-restaurant-sepherina-pendant-light.jpg",
+            "title": "COMMERCIAL",
+            "heading_tag": "h3",
+            "content": "<p>Select pieces in our pendant light collections meet requirements for safety and long-lasting durability. Good news for hospitality projects, corporate offices, event spaces, and more!</p>",
+            "link_url": "",
+            "blank": false,
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17001912369410__718adea9-33db-4e6d-be42-7c8836260121-image_with_text-1",
+        "template--17001912369410__718adea9-33db-4e6d-be42-7c8836260121-image_with_text-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "separate_section_with_border": false,
+        "columns_per_row": 2,
+        "stack_on_mobile": true,
+        "overlap_image": false,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "md",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_width_tablet": 38,
+        "column_width_mobile": 53,
+        "spacing_desktop": 56,
+        "spacing_mobile": 36
+      }
+    },
+    "image_with_text_ngKPKG": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_P3pWQt": {
+          "type": "subheading",
+          "settings": {
+            "text": "<strong>Contact for support:</strong>"
+          }
+        },
+        "heading_LCT4bt": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Tony Nguyen</strong>",
+            "heading_tag": "h3"
+          }
+        },
+        "richtext_zYE4cp": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Business Representative<br/>Phone No. <a href=\"tel:+12814102981\" target=\"_blank\">+1 281 410 2981</a><br/>Email: <a href=\"mailto:tonynguyen@rowabi.com\">tonynguyen@rowabi.com</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_P3pWQt",
+        "heading_LCT4bt",
+        "richtext_zYE4cp"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "image": "shopify://shop_images/customer-support-icon.jpg",
+        "mobile_image": "shopify://shop_images/customer-support-icon-mobile.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
+    "3b68ef01-be86-4342-894b-2944a4cc50e9": {
+      "type": "multi-column",
+      "blocks": {
+        "template--17001912369410__3b68ef01-be86-4342-894b-2944a4cc50e9-image_with_text-1": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/customer-projects-restaurant-sepherina-rattan-pendant-light.jpg",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "https://www.instagram.com/p/CxyWPMVMK76/",
+            "blank": true,
+            "link_text": ""
+          }
+        },
+        "template--17001912369410__3b68ef01-be86-4342-894b-2944a4cc50e9-image_with_text-2": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/customer-feedback-aurelia-rattan-pendant-light.jpg",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "https://www.instagram.com/p/CxoC3zOuUm-/?igshid=ODhhZWM5NmIwOQ%3D%3D",
+            "blank": true,
+            "link_text": ""
+          }
+        },
+        "template--17001912369410__3b68ef01-be86-4342-894b-2944a4cc50e9-image_with_text-3": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/customer-feedback-santa-barbara-pendant-light.jpg",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "https://www.instagram.com/reel/CtjSxQnsQWH/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA%3D%3D",
+            "blank": true,
+            "link_text": ""
+          }
+        },
+        "01d65bbb-c8e5-4e4e-ad14-a9ca6e00bd69": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/customer-feedback-luminous-pendant-light.jpg",
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "https://www.instagram.com/reel/Cy4SSPyM6pw/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA%3D%3D",
+            "blank": true,
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17001912369410__3b68ef01-be86-4342-894b-2944a4cc50e9-image_with_text-1",
+        "template--17001912369410__3b68ef01-be86-4342-894b-2944a4cc50e9-image_with_text-2",
+        "template--17001912369410__3b68ef01-be86-4342-894b-2944a4cc50e9-image_with_text-3",
+        "01d65bbb-c8e5-4e4e-ad14-a9ca6e00bd69"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "columns_per_row": 4,
+        "stack_on_mobile": true,
+        "overlap_image": false,
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing": "xs",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_width_tablet": 38,
+        "column_width_mobile": 53,
+        "spacing_desktop": 56,
+        "spacing_mobile": 36
+      }
+    },
+    "0bbca108-14bd-435d-acac-2fa43bd031a4": {
+      "type": "article-contact",
+      "blocks": {
+        "3f27f7f6-faf6-4706-9aa5-8e62418896c6": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Business Focus *",
+            "values": "Restaurants/ Cafes/ Tea Houses;Hotels/ Resorts/ Airbnb;Spa & Health Retreats; Event/ Wedding Planning; Interior Designers/ Architects;Furniture Dealer/ Online Retailer;Builders/ Real Estate Construction/ Brokers;Others",
+            "required": true
+          }
+        },
+        "b4ddc0bd-1266-45c3-bf49-97daa208061e": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Type of collab *",
+            "values": "Trade Program;Consignment Program;Partnership;Franchise/ Agency;White Label;Wholesale; Others",
+            "required": true
+          }
+        },
+        "aa269531-94b4-4113-8802-442ceb51ea70": {
+          "type": "dropdown",
+          "settings": {
+            "title": "How did you hear about us? *",
+            "values": "Social Media;Search Engine;Friend/ Family recommendation;Other",
+            "required": true
+          }
+        },
+        "dropdown_6LeXDJ": {
+          "type": "dropdown",
+          "settings": {
+            "title": "I would like to receive catalog *",
+            "values": "Physical Catalog; Digital Catalog; I Don't Need It",
+            "required": true
+          }
+        }
+      },
+      "block_order": [
+        "3f27f7f6-faf6-4706-9aa5-8e62418896c6",
+        "b4ddc0bd-1266-45c3-bf49-97daa208061e",
+        "aa269531-94b4-4113-8802-442ceb51ea70",
+        "dropdown_6LeXDJ"
+      ],
+      "settings": {
+        "id_section": "Registration-Form",
+        "separate_section_with_border": true,
+        "subheading": "",
+        "title": "REGISTRATION FORM",
+        "content": ""
+      }
+    },
+    "b200d3bc-aaa8-472d-bbb9-53623f322779": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17001912369410__b200d3bc-aaa8-472d-bbb9-53623f322779-heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Frequenly Asked Questions",
+            "heading_tag": "h1",
+            "h1_tag": false
+          }
+        },
+        "742eac85-76f6-4a59-b292-353807c32838": {
+          "type": "heading",
+          "settings": {
+            "text": "Trade Program",
+            "heading_tag": "h3",
+            "h1_tag": false
+          }
+        },
+        "template--17001912369410__b200d3bc-aaa8-472d-bbb9-53623f322779-richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p></p><p><strong>HOW TO APPLY FOR ROWABI'S TRADE PROGRAM?</strong></p><ul><li>Fill in our registration form</li><li>We will contact you through email within 2-3 business days</li></ul><p></p><p><strong>HOW TO UTILIZE YOUR ROWABI TRADE PROGRAM DISCOUNT?</strong></p><p>Once you are approved and become a trade member, you will receive a unique member number. This number should be linked to your Rowabi account to activate your trade program discount. You can apply your membership number to an existing Rowabi account or create a new one if you don't already have an account. Please note that you will receive one membership number, but you must create separate accounts for each Rowabi brand.</p><p></p><p><strong>Do I need to be an interior designer to apply for Rowabi's Trade Program?</strong></p><p>No, we welcome all business owners to apply to our trade program.</p><p></p><p><strong>What is the discount for Trading Program?</strong></p><p>The discount will start from <strong>20% off on all full-price items</strong> from our brands, including Rowabi, with <strong>no minimum purchase required</strong>.</p><p></p><p><strong>Are fabric and material samples available?</strong></p><p>Currently, we offer fabric swatch samples only. To request free fabric samples, please contact the Rowabi trade program concierge at <a href=\"mailto:trade.concierge@rowabi.com\" target=\"_blank\">trade@rowabi.com</a> or call 346-247-0171.</p><p></p><p><strong>How can I get in touch with trade program questions?</strong></p><p>For any trade program-related inquiries, please reach out to <a href=\"mailto:trade.concierge@rowabi.com\" target=\"_blank\">trade@rowabi.com</a></p><p></p><p><strong>Are Rowabi trade member purchases eligible for tax exemption?</strong></p><p>Yes, trade members who have signed up for tax exemption can place tax-exempt orders without having to contact our Customer Care team for tax reimbursement after making a purchase.</p><p></p><p><strong>How do I sign up for tax-exempt purchases?</strong></p><p>New trade members applying for tax-exemption status will automatically be enrolled in tax-exempt purchases when they create their online account. Existing trade members should contact <a href=\"mailto:trade.concierge@rowabi.com\" target=\"_blank\">trade@rowabi.com</a> to receive the necessary paperwork for enrollment. Tax-exempt purchases can be made once you sign into your trade account, and taxes will be removed at checkout when the option is selected.</p><p></p><p><strong>Wholesale</strong></p><p></p><p><strong>Do you ship overseas?</strong></p><p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals</p><p></p><p><strong>How long will it take to get my orders?</strong></p><p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p><p></p><p><strong>Any question?</strong></p><p>You can contact us through our contact page! We will be happy to assist you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--17001912369410__b200d3bc-aaa8-472d-bbb9-53623f322779-heading-1",
+        "742eac85-76f6-4a59-b292-353807c32838",
+        "template--17001912369410__b200d3bc-aaa8-472d-bbb9-53623f322779-richtext-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "separate_section_with_border": true,
+        "content_width": "md",
+        "text_position": "start",
+        "remove_vertical_spacing": false,
+        "background": ""
+      }
+    },
+    "42fc6adb-79d0-48bb-9f57-2286a4f20e65": {
+      "type": "faq",
+      "blocks": {
+        "template--17001912369410__42fc6adb-79d0-48bb-9f57-2286a4f20e65-category-1": {
+          "type": "category",
+          "settings": {
+            "title": "<strong>Trade Program</strong>",
+            "icon": "picto-chat",
+            "icon_width": 16
+          }
+        },
+        "template--17001912369410__42fc6adb-79d0-48bb-9f57-2286a4f20e65-question-1": {
+          "type": "question",
+          "settings": {
+            "question": "<strong>How to apply for Rowabi's Trade Program?</strong>",
+            "answer": "<ul><li>Fill in our registration form.</li><li>We will contact you through email within 24h.</li></ul>"
+          }
+        },
+        "template--17001912369410__42fc6adb-79d0-48bb-9f57-2286a4f20e65-question-2": {
+          "type": "question",
+          "settings": {
+            "question": "<strong>How to utilize you Rowabi Trade Program Discount?</strong>",
+            "answer": "<p>Once you are approved and become a trade member, you will receive a unique member number. This number should be linked to your Rowabi account to activate your trade program discount. You can apply your membership number to an existing Rowabi account or create a new one if you don't already have an account. Please note that you will receive one membership number, but you must create separate accounts for each Rowabi brand.</p>"
+          }
+        },
+        "template--17001912369410__42fc6adb-79d0-48bb-9f57-2286a4f20e65-question-3": {
+          "type": "question",
+          "settings": {
+            "question": "<strong>Do I need to be an interior designer to apply for Rowabi's Trade Program?</strong>",
+            "answer": "<p>No, we welcome all business owners to apply to our trade program.</p>"
+          }
+        },
+        "b06a8f19-9e6c-4a78-a6c8-425ead87bbfb": {
+          "type": "question",
+          "settings": {
+            "question": "<strong>Are fabric and material samples available?</strong>",
+            "answer": "<p>Currently, we offer fabric swatch samples only. To request free fabric samples, please contact the Rowabi trade program concierge at hello@rowabi.com or call 346-247-0171.</p>"
+          }
+        },
+        "9230f279-41e9-4376-ba71-dd3395ecf5fe": {
+          "type": "question",
+          "settings": {
+            "question": "<strong>How can I get in touch with trade program questions?</strong>",
+            "answer": "<p>For any trade program-related inquiries, please reach out to hello@rowabi.com.</p>"
+          }
+        },
+        "2aa3c693-87d6-4e24-9a26-1151bfbbd3fa": {
+          "type": "question",
+          "settings": {
+            "question": "<strong>Are Rowabi trade member purchases eligible for tax exemption?</strong>",
+            "answer": "<p>Yes, trade members who have signed up for tax exemption can place tax-exempt orders without having to contact our Customer Care team for tax reimbursement after making a purchase.</p>"
+          }
+        },
+        "912157f5-360b-4414-bcf0-20959bce52ed": {
+          "type": "question",
+          "settings": {
+            "question": "<strong>How do I sign up for tax-exempt purchases?</strong>",
+            "answer": "<p>New trade members applying for tax-exemption status will automatically be enrolled in tax-exempt purchases when they create their online account. Existing trade members should contact hello@rowabi.com to receive the necessary paperwork for enrollment. Tax-exempt purchases can be made once you sign into your trade account, and taxes will be removed at checkout when the option is selected.</p>"
+          }
+        },
+        "2746fb77-841d-4ecc-a6ef-21cf23dbffd9": {
+          "type": "category",
+          "settings": {
+            "title": "<strong>Wholesale</strong>",
+            "icon": "picto-chat",
+            "icon_width": 16
+          }
+        },
+        "1653ac89-0b8c-4f7d-8eca-6b26023d5226": {
+          "type": "question",
+          "settings": {
+            "question": "<strong>Do you ship overseas?</strong>",
+            "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+          }
+        },
+        "8b87cd71-5fdd-4ee7-a4b0-0cc83fd5c73d": {
+          "type": "question",
+          "settings": {
+            "question": "<strong>How long will it take to get my orders?</strong>",
+            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+          }
+        },
+        "b8585412-b732-4fe2-9801-7b5881b72f6c": {
+          "type": "question",
+          "settings": {
+            "question": "<strong>Any question?</strong>",
+            "answer": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--17001912369410__42fc6adb-79d0-48bb-9f57-2286a4f20e65-category-1",
+        "template--17001912369410__42fc6adb-79d0-48bb-9f57-2286a4f20e65-question-1",
+        "template--17001912369410__42fc6adb-79d0-48bb-9f57-2286a4f20e65-question-2",
+        "template--17001912369410__42fc6adb-79d0-48bb-9f57-2286a4f20e65-question-3",
+        "b06a8f19-9e6c-4a78-a6c8-425ead87bbfb",
+        "9230f279-41e9-4376-ba71-dd3395ecf5fe",
+        "2aa3c693-87d6-4e24-9a26-1151bfbbd3fa",
+        "912157f5-360b-4414-bcf0-20959bce52ed",
+        "2746fb77-841d-4ecc-a6ef-21cf23dbffd9",
+        "1653ac89-0b8c-4f7d-8eca-6b26023d5226",
+        "8b87cd71-5fdd-4ee7-a4b0-0cc83fd5c73d",
+        "b8585412-b732-4fe2-9801-7b5881b72f6c"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "show_categories": false,
+        "subheading": "",
+        "title": "<strong>Frequently Asked Questions</strong>",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "3fff800e-1c20-42b8-91d5-97f06940c1df",
+    "3fff800e-1c20-42b8-91d5-97f06940c1de",
+    "f43911df-2a11-47bb-82e0-011781235c47",
+    "0a0ceab2-ad5c-4f1c-ae4a-a0a55ba520e2",
+    "721e627d-13b4-43ca-8835-a18a8410d791",
+    "d81189e4-f959-49ea-8108-e0f49b4fdd42",
+    "c851d760-f384-40ab-8531-e3d5ad15ec38",
+    "e400a539-dcf1-4af6-a836-5f8ca38727dd",
+    "e2462c35-209d-42e5-a916-554ac5d4aafc",
+    "cb66fa90-4bf4-49b9-920c-477b6ecf7e30",
+    "1f7b33b6-f1d0-4f59-a918-8c0411875704",
+    "f43ed175-3a8f-45e1-8bff-9f81847f09b3",
+    "2af4c3dd-5d5f-4c01-8f3c-48b9a1b8c325",
+    "fb6ddeac-241e-438f-93ed-823c939515bd",
+    "11b77381-6902-429e-b5c1-162150fbe352",
+    "15136e82-c393-4d12-b14a-1bc0374b3edf",
+    "64197418-9532-4a36-a850-381b8e8465fc",
+    "rich_text_HGkAaL",
+    "718adea9-33db-4e6d-be42-7c8836260121",
+    "image_with_text_ngKPKG",
+    "3b68ef01-be86-4342-894b-2944a4cc50e9",
+    "0bbca108-14bd-435d-acac-2fa43bd031a4",
+    "b200d3bc-aaa8-472d-bbb9-53623f322779",
+    "42fc6adb-79d0-48bb-9f57-2286a4f20e65"
+  ]
+}

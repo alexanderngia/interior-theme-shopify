@@ -1,0 +1,105 @@
+<div class="rowabi-grid rowabi-grid-cols-1 md:rowabi-grid-cols-2 rowabi-mt-[32px] md:rowabi-mt-[60px]">
+  <div class="rowabi-py-[32px] md:rowabi-h-[420px] rowabi-flex rowabi-flex-col rowabi-items-center rowabi-justify-center rowabi-bg-[#F9F9F9] ">
+    <div class="rowabi-max-w-max rowabi-flex rowabi-flex-col rowabi-items-center rowabi-justify-center md:rowabi-my-[120px]">
+      <{{ section.settings.heading_tag }} style='font-family: "Sainte Colombe", serif;' class="rowabi-text-lg md:rowabi-text-3xl rowabi-text-center rowabi-text-[#444139] rowabi-uppercase">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
+      <div class="rowabi-container rowabi-text-[13px] rowabi-font-[400] rowabi-leading-[19px] md:rowabi-text-base rowabi-text-center rowabi-text-[#8C6F51] roawbi-mt-1 md:rowabi-mt-4 ">{{ section.settings.subheading }}</div>
+      <a href="{{ section.settings.button_link }}" class="rowabi-font-bold rowabi-text-center rowabi-text-white rowabi-text-xs md:rowabi-text-base rowabi-bg-[#444139] rowabi-px-[12px] rowabi-py-[10px] md:rowabi-px-[30px] rowabi-mt-5 md:rowabi-mt-8">
+        {{ section.settings.button_content }}
+      </a>
+    </div>
+  </div>
+  <img
+    class="rowabi-hidden md:rowabi-block rowabi-h-[420px]"
+    width="100%"
+    height="auto"
+    src="{{ section.settings.image_pc | img_url: 'master' }}" />
+  <img
+    class="md:rowabi-hidden rowabi-h-[417px]"
+    width="100%"
+    height="auto"
+    src="{{ section.settings.image_mb | img_url: 'master' }}" />
+
+</div>
+
+
+{% schema %}
+  {
+    "name": "Rowabi Image With Text",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "select",
+        "id": "heading_tag",
+        "label": "Heading tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "H1"
+          },
+          {
+            "value": "h2",
+            "label": "H2"
+          },
+          {
+            "value": "h3",
+            "label": "H3"
+          },
+          {
+            "value": "h4",
+            "label": "H4"
+          },
+          {
+            "value": "h5",
+            "label": "H5"
+          },
+          {
+            "value": "h6",
+            "label": "H6"
+          },
+          {
+            "value": "p",
+            "label": "P"
+          }
+        ],
+        "default": "h1"
+      },
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "heading",
+        "default": "<h1>The Art of Rowabi</h1>"
+      },
+      {
+        "type": "richtext",
+        "id": "subheading",
+        "label": "subheading",
+        "default": "<p>Yorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Sed do eiusmod tempor incididunt</p>"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button url"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "button_content",
+        "label": "Button Content",
+        "default": "DISCORVER THE ART"
+      }, {
+        "type": "image_picker",
+        "id": "image_pc",
+        "label": "Image Desktop"
+      }, {
+        "type": "image_picker",
+        "id": "image_mb",
+        "label": "Image Mobile"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Rowabi Image With Text"
+      }
+    ]
+  }
+{% endschema %}

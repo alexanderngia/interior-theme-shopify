@@ -1,0 +1,192 @@
+<style>
+  .shopify-shop-pendant .swiper-mb {
+      width: 100%;
+      height: 363px;
+    }
+
+   
+    .shopify-shop-pendant .swiper-slide {
+      width: 300px;
+      height: 300px;
+    }
+
+    .shopify-shop-pendant .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+    @media only screen and (max-width: 768px) {
+      .shopify-shop-pendant .swiper-mb {
+      width: 100%;
+      height: auto;
+    }
+      .shopify-shop-pendant .swiper-wrapper {
+      column-gap: 16px;
+    }
+    .shopify-shop-pendant .swiper-slide {
+     margin-right: 0 !important;
+     height: 345px;
+      width: 272px;
+    }
+    
+    .shopify-shop-pendant .swiper-slide img {
+      width: 270px;
+      height: 300px;
+    }
+    }    
+</style>
+
+<div class="rowabi-mt-[32px] md:rowabi-mt-[60px]">
+  <{{ section.settings.heading_tag }} style='font-family: "Sainte Colombe", serif;' class="rowabi-text-lg md:rowabi-text-3xl rowabi-text-center rowabi-text-[#444139]">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
+  <p class="rowabi-text-[13px] rowabi-leading-[21px] rowabi-font-[400] md:rowabi-text-base rowabi-text-center rowabi-text-[#8C6F51] rowabi-mt-1 md:rowabi-mt-4">{{ section.settings.subheading }}</p>
+  <div class="rowabi-hidden md:rowabi-grid rowabi-grid-cols-2 rowabi-mt-9">
+    {% for block in section.blocks %}
+    {% assign border = "" %}
+    
+    {% if forloop.index == 2 %}
+      {% assign border = "rowabi-border-l-0" %}
+    {% elsif forloop.index == 3 %}
+      {% assign border = "rowabi-border-t-0" %}
+    {% elsif forloop.index == 4 %}
+      {% assign border = "rowabi-border-t-0 rowabi-border-l-0" %}
+    {% endif %}
+      <div class="rowabi-flex rowabi-flex-col rowabi-border rowabi-border-[#595343] {{ border }}">
+        <div width="100%" height="auto" class="rowabi-h-[300px] md:rowabi-h-[420px] rowabit-w-full" style="
+          background:url(https:{{ block.settings.image | img_url: 'master'}});
+          background-repeat:no-repeat;
+          background-position:top;
+          background-size:cover">
+        </div>
+        
+        <a href="{{ block.settings.link }}" class="rowabi-flex rowabi-justify-between rowabi-items-center rowabi-border-t rowabi-border-[#595343] rowabi-pl-[95px] rowabi-pr-[36px] rowabi-py-[30px]">
+          <p class="rowabi-font-bold rowabi-text-center rowabi-text-[#444139] rowabi-text-sm md:rowabi-text-base rowabi-py-3">{{ block.settings.label }}</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><g clip-path="url(#clip0_815_2432)"><path d="M14.7228 3.27631L3.27539 14.7237" stroke="#444139" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.4209 3.27631H14.7235V13.5789" stroke="#444139" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_815_2432"><rect width="18" height="18" fill="white"/></clipPath></defs>
+          </svg>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- mobile version -->
+  <div class="md:rowabi-hidden rowabi-mt-[21px]">
+    <div class="swiper-mb myShopPendantMobile rowabi-px-4">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="rowabi-flex rowabi-flex-col rowabi-border rowabi-border-[#595343]">
+              <img width="100%" height="300" class="" src="{{ block.settings.image-mb | img_url: 'master'}}" />
+              
+              <a href="{{ block.settings.link }}" class="rowabi-flex rowabi-justify-between rowabi-items-center rowabi-border-t rowabi-border-[#595343] rowabi-px-[16px] rowabi-py-3">
+                <h3 class="rowabi-text-[13px] rowabi-leading-[20px] rowabi-font-[700] rowabi-text-center rowabi-text-[#444139] md:rowabi-text-base">{{ block.settings.label }}</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><g clip-path="url(#clip0_815_2432)"><path d="M14.7228 3.27631L3.27539 14.7237" stroke="#444139" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.4209 3.27631H14.7235V13.5789" stroke="#444139" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_815_2432"><rect width="18" height="18" fill="white"/></clipPath></defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+       </div>
+    </div>
+  </div>
+
+  <div class="rowabi-mt-[46px] rowabi-h-[1px] rowabi-bg-[#4441394D] rowabi-w-full md:rowabi-hidden"> </div>
+</div>
+
+<script>
+  var swiper = new Swiper(".myShopPendantMobile", {
+    grabCursor: true,
+    slidesPerView: "auto",
+    spaceBetween: 10,
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Rowabi shop pendant",
+  "class": "shopify-shop-pendant rowabi-overflow-hidden",
+  "tag": "section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "P"
+        }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "t:global.text.subheading",
+      "default": "These pieces add instant character to any space"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:global.text.heading",
+      "default": "SHOP PENDANT LIGHT BY ROOM"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "t:sections.timeline.blocks.item.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:global.image.image",
+        },
+        {
+          "type": "image_picker",
+          "id": "image-mb",
+          "label": "Image mobile",
+        },
+        {
+          "type": "inline_richtext",
+          "id": "label",
+          "label": "t:sections.timeline.blocks.item.label",
+          "default": "LIGHTS FOR LIVING ROOM"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Category url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rowabi shop pendant",
+    }
+  ]
+}
+{% endschema %}

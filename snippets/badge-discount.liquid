@@ -1,0 +1,52 @@
+{%- if block.settings.below_text_before != blank or block.settings.below_text_after != blank or block.settings.above_text != blank -%}
+  {%- capture feature_content -%}
+      {%- if block.settings.custom_icon != blank -%}
+        {%- capture sizes -%}{{ block.settings.icon_width }}px{%- endcapture -%}
+        {%- capture widths -%}{{ block.settings.icon_width }}, {{ block.settings.icon_width | times: 2 | at_most: block.settings.custom_icon.width }}{%- endcapture -%}
+        {%- capture style -%}--image-max-width: {{ block.settings.icon_width }}px{%- endcapture -%}
+        {{- block.settings.custom_icon | image_url: width: block.settings.custom_icon.width | image_tag: loading: 'lazy', sizes: sizes, widths: widths, class: 'constrained-image', style: style -}}
+      {%- else -%}
+        {%- render 'icon' with block.settings.icon, width: block.settings.icon_width -%}
+      {%- endif -%}
+
+      {%- liquid
+        assign variant_price = variant.price
+        if variant_price < 20000
+          assign badge_discount = 20000 | minus: variant_price
+        endif
+        if settings.currency_code_enabled
+          assign badge_discount = badge_discount | money_with_currency
+        else
+          assign badge_discount = badge_discount | money
+        endif
+      -%}
+      <p class="{% if variant_price >= 20000 %}hidden{% endif %}" data-badge-discount-below>
+        <strong>
+          {{ block.settings.below_text_before }} <badge-discount class="hidden" {% if form_id %}form="{{ form_id }}"{% endif %}>{{ badge_discount }}</badge-discount> <a href="javascript:void(0)" class="badge-discount_trigger">{{ block.settings.get_code_text }}</a>
+        </strong>
+      </p>
+      <p class="{% if variant_price < 20000 %}hidden{% endif %}" data-badge-discount-above>
+        <strong>
+          {{ block.settings.above_text }} <a href="javascript:void(0)" class="badge-discount_trigger">{{ block.settings.get_code_text }}</a>
+        </strong>
+      </p>
+    {%- endcapture -%}
+
+    {%- assign has_border = false -%}
+
+    {%- if block.settings.border_color != blank and block.settings.border_color != 'rgba(0,0,0,0)' -%}
+      {%- assign has_border = true -%}
+    {%- endif -%}
+  
+    <div class="feature-badge feature-badge--discount {% if has_border %}border{% endif %}" data-badge-discount style="{% render 'surface', background: block.settings.background, text_color: block.settings.text_color, border_color: block.settings.border_color %}">
+      {{- feature_content -}}
+    </div>
+    <script type="text/javascript">
+      document.querySelectorAll('.badge-discount_trigger').forEach((button) => {
+        button.addEventListener('click', function (){
+          window._klOnsite = window._klOnsite || [];	
+          window._klOnsite.push(['openForm', '{{ block.settings.klaviyo_form_trigger }}']);
+        });
+      });
+    </script>
+{%- endif -%}

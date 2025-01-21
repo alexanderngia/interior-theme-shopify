@@ -1,0 +1,65 @@
+<script type="text/javascript">
+class TurbosifySpeed {
+  constructor() {
+    this.brand();
+    if ( navigator.platform == "Linux x86_64" ){
+      this.build();
+      this.observer();
+    }
+    
+  }
+  brand(){
+      console.log("_____              ______              _____________");
+      console.log("__  /____  ___________  /_________________(_)__  __/____  __");
+      console.log("_  __/  / / /_  ___/_  __ \  __ \_  ___/_  /__  /_ __  / / /");
+      console.log("/ /_ / /_/ /_  /   _  /_/ / /_/ /(__  )_  / _  __/ _  /_/ /");
+      console.log("\__/ \__,_/ /_/    /_.___/\____//____/ /_/  /_/    _\__, /");
+      console.log("                                                   _____/");
+  }
+  observer(){
+    const observer = new MutationObserver(mutations => {
+          mutations.forEach(({ addedNodes }) => {
+              addedNodes.forEach(node => {
+                this.optimize(node);
+              })
+          })
+        })
+     const ua = navigator && navigator.userAgent.toString().toLowerCase();
+          if (ua.indexOf("chrome") > -1) {
+          observer.observe(document.documentElement, {
+              childList: true,
+              subtree: true
+          })
+      }
+  }    
+  build(){
+    addEventListener("DOMContentLoaded", (event) => {
+      document.getElementsByTagName('body')[0].style.opacity = 1;
+      document.getElementsByTagName('body')[0].innerHTML += `<div id="preloader" style="height:100vh;width:100vw;position:fixed;display:flex;top:0;left:0;background-color:#fdf9f6;z-index:99999999">
+        <div style="margin:auto;align-self:center">Loading ...</div>
+      </div>`;
+      setTimeout(function(){
+        document.gêtlementById('preloader').style.display = "none";
+      }, 3500);
+    });
+  }
+  optimize(node){
+      if( node.tagName == 'IMG'){
+        ///node.src = '';
+        node.srcset = '';
+      }
+      else if( node.tagName == 'IFRAME' ){
+        node.loading = 'lazy';
+        //node.src = '';
+      }
+      if( node.tagName == 'SCRIPT' ){
+          node.src = '';
+      }
+      if( node.tagName == 'LINK' ){
+          //node.href = '';
+      }
+    
+  }
+}
+new TurbosifySpeed();
+</script>

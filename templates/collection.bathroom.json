@@ -1,0 +1,180 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_popup_xU9tq4": {
+      "type": "slideshow-popup",
+      "blocks": {
+        "image_gWM3CW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sepherina-semi-pendant-holiday-lighting.jpg",
+            "mobile_image": "shopify://shop_images/sepherina-semi-rattan-holiday-lighting.jpg",
+            "subheading": "",
+            "subheading_below": false,
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_popup": false,
+            "button_1_link": "https://www.rowabi.com/collections/pendant-lighting?utm_source=website&utm_medium=banner-bathroom&utm_campaign=holiday-lighting",
+            "klaviyo_form_trigger": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_popup": false,
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "image_gWM3CW"
+      ],
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "form_show": false,
+        "form_delay": 3,
+        "form_heading": "REGISTRATION FORM",
+        "field_title_1": "Custom field",
+        "field_values_1": "value 1; value 2; value 3",
+        "field_required_1": false,
+        "field_title_2": "Custom field",
+        "field_values_2": "value 1; value 2; value 3",
+        "field_required_2": false,
+        "field_title_3": "Custom field",
+        "field_values_3": "value 1; value 2; value 3",
+        "field_required_3": false,
+        "field_title_4": "Custom field",
+        "field_values_4": "value 1; value 2; value 3",
+        "field_required_4": false
+      }
+    },
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/banner-collection-black-friday-pc.jpg",
+        "mobile_image": "shopify://shop_images/banner-collection-black-friday-mobile.jpg",
+        "image_size": "auto",
+        "allow_transparent_header": false,
+        "reveal": true,
+        "enable_parallax": false,
+        "show_collection_title": false,
+        "show_collection_description": false,
+        "content_width": "xs",
+        "background": "#000000",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "fafc8a2e-74c9-44e8-b202-6a25c6203a3b": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 15,
+        "padding_bottom": 15
+      }
+    },
+    "46a6d0b9-8e9a-478c-8707-bfcf4d8f3831": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Pendant Lights for Bathroom</strong>",
+            "heading_tag": "h1",
+            "h1_tag": true
+          }
+        },
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-2": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><em><strong>Pendant lights for bathroom</strong></em><em> are becoming more and more important. They can add depth and detail to the overall look of the space, making the bathroom perfect. There are a variety of traditional and modern bathroom lights to suit any style or budget, including wall lights, spotlights, and more. </em><a href=\"https://www.rowabi.com/\" target=\"_blank\"><em><strong>Rowabi interiors</strong></em></a><em> will help you discover the modern bathroom pendant light in this article.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-1",
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-2"
+      ],
+      "custom_css": [
+        ".h1 {font-size: 30px;}"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": true,
+        "background": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "load_more": true,
+        "hide_product_information": false,
+        "products_per_page": 48,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": true,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "filter_layout": "sidebar",
+        "quick_links_menu": "",
+        "show_sort_by": false,
+        "show_filters": true,
+        "show_results_count": true,
+        "show_filter_group_name": false,
+        "show_empty_filter_values": false,
+        "show_filter_values_count": true,
+        "show_color_swatch": false,
+        "open_filters_by_default": false
+      }
+    },
+    "96b9ab16-6dea-42c3-9ac3-1c73903665ca": {
+      "type": "read-more",
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<h2><strong>Why should you install pendant lights in the bathroom?</strong></h2>\n\n    <p><a href=\"https://www.rowabi.com/collections/pendant-lighting\" target=\"_blank\"><strong>Pendant lights</strong></a> can be a great option in any bathroom. They not only provide the necessary task lighting but also add a touch of style to your space. Here are some reasons explaining why you should choose pendant lights for your bathroom.</p>\n\n\n    <h3><strong>Excellent illumination for tasks</strong></h3>\n\n    <p>Pendant lights are known for their ability to provide focused and direct light, making them ideal for task lighting in your bathroom. They are guaranteed to provide perfectly focused light for areas where you need more light, such as above the sink or vanity.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/pendant-lights-for-bathroom.jpg?v=1692163775\" alt=\"pendant lights for bathroom\"><br /><em>Pendant lights are known for task lighting and excellent illumination</em></p>\n\n    <h3><strong>Personalized designs</strong></h3>\n\n    <p>Pendant lights for bathroom come in a variety of styles, sizes, and patterns, allowing you to choose the best model that enhances the overall aesthetic of your bathroom. Whether you're looking for minimalism or modernity, pendant lights offer a wide range of options to adapt your style. You can also customize the pendant light according to your bathroom.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-can-choose-personalized-designs-that-are-suitable-for-your-bathroom.jpg?v=1692163775\" alt=\"can choose personalized designs that are suitable\"><br /><em>You can choose personalized designs that are suitable for your bathroom</em></p>\n\n    <h3><strong>Versatile and functional devices</strong></h3>\n\n    <p>Besides lighting, bathroom pendant light fixtures play an important role in creating a functional and aesthetic space. LED lights for the bathroom can be placed in any space such as hanging pendant lights over the bathroom vanity or the ceiling. However, you will make sure that it is mounted at the right height and practical for your space.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/bathroom-pendant-light-fixtures-play-an-essential-role-in-creating-a-functional-and-aesthetic-space.jpg?v=1692163774\" alt=\"play an essential role in creating a functional and aesthetic space\"><br /><em>Bathroom pendant light fixtures play an essential role in creating a functional and aesthetic space.</em></p>\n\n    <h3><strong>Space-saving appliances</strong></h3>\n\n    <p>Pendant lights for bathroom take up very little space and simplify surfaces, making them suitable for some small spaces. If you are considering space, a bathroom pendant light will be a perfect choice. Moreover, you can also try to place a large and bold single pendant light in the center of the ceiling which will act as ambient light.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/pendant-lights-are-considered-space-saving-appliances.jpg?v=1692163774\" alt=\"considered space-saving appliances\"><br /><em>Pendant lights are considered space-saving appliances</em></p>\n\n    <h3><strong>Easy to install and use</strong></h3>\n\n    <p>Pendant lights for bathroom are a popular choice due to their versatility, style, and ease of installation and use. If you want to replace or remove pendant lights, it is a simple job and does not require any professional experience.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-pendant-lights-for-the-bathroom-are-easy-to-be-installed.jpg?v=1692163774\" alt=\"easy to be installed\"><br /><em>The pendant lights for the bathroom are easy to be installed</em></p>\n\n    <h3><strong>Enhance the bathroom's overall aesthetic</strong></h3>\n\n    <p>Bathroom lighting fixtures come in a variety of styles, from traditional to modern. In particular, with their great design, they will enhance the overall aesthetic and provide the perfect illumination, which can help brighten up your bathroom.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/there-is-a-variety-of-styles-of-pendant-lights-that-enhance-a-bathrooms-overall-aesthetic.jpg?v=1692163775\" alt=\"enhance a bathroom's overall aesthetic\"><br /><em>There is a variety of styles of pendant lights that Enhance a bathroom's overall aesthetic</em></p>\n\n    <h2><strong>5 Tips to choose the most suitable pendant light</strong></h2>\n\n    <p>Choosing the right bathroom pendant light is crucial in creating a relaxing and wonderful space. Here are some tips to help you find the best pendant lights for the bathroom.</p>\n\n    <h3><strong>About the style of pendant lights</strong></h3>\n\n    <p>Nowadays, there are more and more concept designs for pendant lights. Hence, you can also choose one that is suitable for your own house. They come in a variety of styles, from traditional, modern, or rustic.</p>\n\n    <p>If you have a modern home, you can choose pendant lights with clean lines and minimal patterns. On the other hand, if you have a modern home, you can choose pendant lights with clean lines and minimal patterns, as well as a style that harmonizes with your overall decor.</p>\n\n    <p>For example, with the vintage bathroom, you can choose pendant lights with intricate or ornate details, such as carved patterns or engraved glass shades to enhance the bathroom's classic aesthetic. Furthermore, you have to make sure that they are balanced and not overwhelming or overwhelming for the room.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-can-select-styles-and-designs-that-satisfy-your-needs.jpg?v=1692163774\" alt=\"can select styles and designs that satisfy your needs\"><br /><em>You can select styles and designs that satisfy your needs.</em></p>\n\n    <h3><strong>About the corresponding size</strong></h3>\n\n    <p>You also have to think about the size of Pendant lights for bathroom. If your bathroom is large, a large fixture may be suitable. If the pendant light is too small, it may not provide enough light and may appear disproportionate in the space. Conversely, if it's too big, it can overwhelm the room and create a sense of disproportion.</p>\n\n    <p>To decide on the right size, you can consider the height and size of the room where the lights are installed. Typically, lights should be at least 75% of the vanity's width or wider to ensure adequate lighting.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-size-of-the-pendant-light-is-really-important.jpg?v=1692163775\" alt=\"size really important\"><br /><em>The size of the pendant light is really important</em></p>\n\n    <h3><strong>The function of bathroom pendant</strong></h3>\n\n    <p>Pendant lights for bathrooms can provide both functional and aesthetic purposes. When choosing this, it is important to consider the specific functions that the light will provide.</p>\n\n    <p>If you choose the lamp mainly for decoration, hanging bathroom light fixtures made from natural materials such as coconut leaves, bamboo, humus, hemp, and wood... creating natural beauty will be the perfect choice. If you want a relaxing bathroom space that pleases the eyes and the mind, do not hesitate to choose lamps equipped with LED technology.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-can-consider-the-specific-functions-that-the-light-will-provide-to-decide-which-mode-is-more-suitable.jpg?v=1692163774\" alt=\"you can consider the specific functions that the light will provide to decide\"><br /><em>You can consider the specific functions that the light will provide to decide which mode is more suitable</em></p>\n\n    <h3><strong>About suitability for wet conditions</strong></h3>\n\n    <p>Bathrooms are a place of moisture and humidity, so it's important to choose pendant lights for bathrooms that can withstand these conditions. For wet conditions, you should consider the pendant light's IP rating. The IP65 pendant bathroom lights are ideal models you shouldn’t ignore. This will help the lights be carefully protected, durability and longevity.</p>\n\n    <p>In addition, you should also consider choosing pendant lights made from stainless steel or marine aluminum. These materials are capable of withstanding wet conditions without degrading or affecting the performance of the luminaire.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-should-consider-the-pendant-lights-ip-rating-for-the-light-can-withstand-humidity.jpg?v=1692163775\" alt=\"consider the pendant light's IP rating for the light can withstand humidity\"><br /><em>You should consider the pendant light's IP rating for the light can withstand humidity</em></p>\n\n    <h3><strong>About reasonable gadget</strong></h3>\n\n    <p>Pendant lights with reasonable utility allow greater control of light intensity and direction, which can enhance the atmosphere and visual appeal of a space. You can choose pendant lights with sensible add-ons such as energy-efficient LED technology to reduce your electricity bill and reduce your environmental impact.</p>\n\n    <p>It is essential to closely consider your budget with the value that pendant lights provide. First, you must determine the maximum amount you are willing to spend on bathroom pendant lights, which will help you gather some affordable lamps.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-can-choose-bathroom-lights-with-sensible-add-ons-such-as-energy-efficient-led-technology.jpg?v=1692163774\" alt=\"can choose sensible add-ons such as energy-efficient LED technology\"><br /><em>You can choose bathroom lights with sensible add-ons such as energy-efficient LED technology</em></p>\n\n    <h2><strong>How to clean bathroom pendant lighting</strong></h2>\n\n    <p>Cleaning your bathroom pendant light not only ensures that it provides optimal lighting but also helps maintain its appearance. Therefore, it is essential to keep it clean regularly. There are some ways that you can refer to clean modern bathroom pendant lighting:</p>\n\n    <ul>\n        <li>Take off the shade and wash it with soap.</li>\n        <li>Use a soft, damp cloth to clean the metal parts of the lamp.</li>\n        <li>You can also use dish soap and water or make a paste out of baking soda and vinegar.</li>\n    </ul>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-should-take-off-the-shade-and-wash-it-in-soap-carefully.jpg?v=1692163774\" alt=\"should take off the shade and wash it in soap carefully\"><br /><em>You should take off the shade and wash it in soap carefully</em></p>\n\n    <h2><strong>TOP 10 modern bathroom pendant lighting devices</strong></h2>\n\n    If you are looking for pendant lights for bathrooms, we have a variety of designs that you can consider for your bathroom.\n\n    <h3><strong>Model 1: Cube pendant and round bathroom mirror</strong></h3>\n\n    The golden cube hanging pendant lights over the bathroom vanity will provide light for the vanity with the black stool. The white cabinets with gold knobs will provide extra storage space. The most prominent in this design is the round mirror attached to the wall above the golden faucet.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-cube-pendant-and-round-bathroom-mirror-will-bring-elegant-and-slightly-bathroom.jpg?v=1692163774\" alt=\"the cube pendant and round bathroom mirror will bring elegant and slightly\"><br /><em>The cube pendant and round bathroom mirror will bring elegant and slightly bathroom</em></p>\n\n    <h3><strong>Model 2: Black bathroom pendant light on Vanity</strong></h3>\n\n    <p>The pendant will be a great addition to your bathroom. You can place them over the sink, over the tub, or place a trio of them along the vanity. The most attractive feature of this lamp is the glass spheres surrounding the bulb, making your bathroom more luxurious and beautiful.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/this-model-can-bring-luxurious-and-beautiful-beauty-to-your-bathroom.jpg?v=1692163774\" alt=\"model can bring luxurious and beautiful beauty\"><br /><em>This model can bring luxurious and beautiful beauty to your bathroom</em></p>\n\n    <h3><strong>Model 3: Bathroom pendant lights with Shiplap</strong></h3>\n\n    <p>Some recent home design trends have caught everyone's attention with unique shiplap walls and industrial pendant lights. A bronze frame mirror mounted above the dressing table will make the space more luxurious. White vertical shiplap is combined with dark green paint to cover the walls of this space.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/shiplap-walls-and-industrial-pendant-lights-make-an-attentive-look-for-the-bathroom.jpg?v=1692163775\" alt=\"make an attentive look for the bathroom\"><br /><em>Shiplap walls and industrial pendant lights make an attentive look for the bathroom</em></p>\n\n    <h3><strong>Model 4: Use bathroom pendants for a new accent</strong></h3>\n\n    <p>If you create something striking for your bathroom, don't hesitate to make your bathroom stand out with stained glass pendant lights. It's an easy change with bright neon scarves that add to the bright fun.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-also-make-something-striking-for-your-bathroom-with-this-model.jpg?v=1692163775\" alt=\"make something striking with this model\"><br /><em>You also make something striking for your bathroom with this model</em></p>\n\n    <h3><strong>Model 5: Reflect for more interest</strong></h3>\n\n    <p>With this model, you can easily create a lot of light in your bathroom, doubling the impact by placing it in front of a mirror. These models also add visual interest to the bathroom plan.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-can-easily-create-a-lot-of-light-in-your-bathroom-with-this-model.jpg?v=1692163775\" alt=\"easily create a lot of light in your bathroom\"><br /><em>You can easily create a lot of light in your bathroom with this model</em></p>\n\n    <h3><strong>Model 6: Work an industrial look</strong></h3>\n\n    <p>The black cage pendant looks more striking on the darker wall, creating an industrial feel. In addition, it coordinates with brass and small details, making the space more modern and unique.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-black-cage-pendant-will-create-an-industrial-feel-for-your-bathroom.jpg?v=1692163774\" alt=\"the black cage pendant will create an industrial feel\"><br /><em>The black cage pendant will create an industrial feel for your bathroom</em></p>\n\n    <h3><strong>Model 7: A luxurious and elegant design</strong></h3>\n\n    <p>Another pendant light for the bathroom is a lamp with a color palette that exudes luxury. You can favor neutral tones, such as creamy white, soft gray, and light beige, which are often used as the background for this design style.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/this-model-is-simple-but-modern.jpg?v=1692163774\" alt=\"simple but modern\"><br /><em>This model is simple but modern</em></p>\n\n    <h3><strong>Model 8: Turn on the glitz</strong></h3>\n\n    <p>If you are looking for vintage bathroom pendant lighting, this model is the ideal choice that you should not miss. You can place a high-hanging chandelier above the bathtub. However, if low ceilings are an issue, you can also look for a suitable design instead.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/turn-on-the-glitz-stands-for-vintage-bathroom-pendant-lighting.jpg?v=1692163775\" alt=\"turn on the glitz stands for vintage\"><br /><em>Turn on the glitz stands for vintage bathroom pendant lighting</em></p>\n\n    <h3><strong>Model 9: Find period styles with all the right ratings</strong></h3>\n\n    <p>Why don't you decorate your bathroom in art deco style with this model? In style, it matches the wall lights brilliantly and to match the sound, you can pair a central bathroom pendant with a pair of wall lights on either side of your sink.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/this-unique-mode-brings-an-art-deco-style-to-the-bathroom.jpg?v=1692163774\" alt=\"unique mode brings an art deco style\"><br /><em>This unique mode brings an Art Deco style to the bathroom</em></p>\n\n    <h3><strong>Model 10: Bathroom pendant light ideas with black wall sconce</strong></h3>\n\n    <p>The bathroom sconce idea is represented in this space by a classic pendant between a black three-ball sconce. You can pair them with a white vanity, marble countertop, and stand-up sink underneath. In addition, blue and white mosaic tiles installed on the floor will be an ideal combination.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-black-and-white-mix-will-make-your-bathroom-more-luxurious.jpg?v=1692163774\" alt=\"black and white mix will make more luxurious\"><br /><em>The black and white mix will make your bathroom more luxurious</em></p>\n\n    <h2><strong>Rowabi - the reputable distributor of pendant lights for bathrooms</strong></h2>\n\n    <p>Rowabi is known as a flagship store with pendant lights for bathrooms. There are several reasons why you should choose Rowabi to make your bathroom even better.</p>\n\n    <h3><strong>Quality and diverse products</strong></h3>\n\n    <p>With experience in the bathroom pendant lights field, we are ready to offer a wide range of high-quality products that enhance the aesthetics and functionality of any bathroom space. Each product is manufactured with precision and attention to detail, ensuring durability and longevity.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/rowabi-is-ready-to-offer-a-variety-of-high-quality-products.jpg?v=1692163775\" alt=\"our offer a variety of high-quality products\"><br /><em>Rowabi is ready to offer a variety of high-quality products</em></p>\n\n    <h3><strong>Affordable prices with many promotions</strong></h3>\n\n    <p>Rowabi also offers affordable and competitive prices to our customers. Therefore, when buying pendant lights in our shop, you don’t need to worry about the high price. Moreover, Rowabi regularly offers discounts and promotions, making it more accessible to customers.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/we-also-offer-affordable-and-competitive-prices-that-are-suitable-for-every-customers-budget.jpg?v=1692163775\" alt=\"we offer affordable and competitive prices\"><br /><em>We also offer affordable and competitive prices that are suitable for every customer’s budget</em></p>\n\n    <h3><strong>Personalized and modern designs</strong></h3>\n\n    <p>All styles at Rowabi are guaranteed to keep up with the latest trends. Our pendant lights always have a modern design that can be seamlessly suitable for any bathroom theme, creating a cohesive and visually appealing space.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-can-choose-your-personalized-and-modern-designs.jpg?v=1692163774\" alt=\"can choose your Personalized and modern designs\"><br /><em>You can choose your Personalized and modern designs</em></p>\n\n    <h3><strong>Fast and safe shipping (three days only)</strong></h3>\n\n    <p>When it comes to shipping, Rowabi ensures that your bathroom pendant light is delivered quickly and safely. You can expect to receive your order in as little as 3 days. This will save you time and money.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/customers-will-not-have-to-wait-too-much-time-to-be-received-pendant-lights.jpg?v=1692163774\" alt=\"customer will not have to wait too much time to be received\"><br /><em>Customers will not have to wait too much time to be received pendant lights</em></p>\n\n    <h3><strong>Return policies and installation guidance</strong></h3>\n\n    <p>Furthermore, Rowabi offers flexible return policies. You can easily return or exchange the pendant light if the product has a problem or does not meet your needs. This will ensure complete satisfaction with their purchase. In addition, we also provide detailed instructions and tips to make the installation process hassle-free, helping you to install the device safely.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/rowabi-offers-flexible-return-policies-as-well-as-detailed-instructions.jpg?v=1692163774\" alt=\"we offers flexible return policies\"><br /><em>Rowabi offers flexible return policies. as well as detailed instructions</em></p>\n\n    <p>Rowabi has suggested to you the Top 10 modern pendant lights for bathroom. In general, choosing a bathroom pendant light with reasonable utilities will ensure a balance between functionality, aesthetics, safety, and durability. If you have any questions about bathroom pendant lights, don’t hesitate to contact us to be answered correctly and quickly.</p>",
+        "text_alignment": "start",
+        "height": 300,
+        "read_more": "Read more",
+        "read_less": "Read less"
+      }
+    }
+  },
+  "order": [
+    "slideshow_popup_xU9tq4",
+    "collection-banner",
+    "fafc8a2e-74c9-44e8-b202-6a25c6203a3b",
+    "46a6d0b9-8e9a-478c-8707-bfcf4d8f3831",
+    "main",
+    "96b9ab16-6dea-42c3-9ac3-1c73903665ca"
+  ]
+}

@@ -1,0 +1,45 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "80edd9b9-8a80-47fa-92fb-aa2609729a54": {
+      "type": "breadcrumbs",
+      "disabled": true,
+      "settings": {
+        "padding_top": 15,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page-author",
+      "settings": {
+        "avatar": "shopify://shop_images/henry-phan.jpg",
+        "name": "Henry Phan",
+        "instagram": "https://www.instagram.com/win.ph/",
+        "twitter": "#",
+        "subheading": "Henry Phan is the CEO of Rowabi.com",
+        "heading": "",
+        "text": "<p><strong>Henry Phan</strong> is the visionary founder and developer of <a href=\"https://www.rowabi.com/\" target=\"_blank\"><strong>Rowabi</strong></a>, a distinguished brand renowned for its exquisite <a href=\"https://www.rowabi.com/collections/rattan-pendant-lights\" target=\"_blank\"><strong>rattan pendant lights</strong></a> and eco-friendly home decor. With an extensive three-year background in interior design, Henry Phan has firmly established himself as a stalwart professional in this realm.</p>",
+        "image": "shopify://shop_images/liora-semi-annual-sale-blog-banner.jpg",
+        "image_link": "https://www.rowabi.com/collections/contemporary-pendant-lights?utm_source=website&utm_medium=author&utm_campaign=holiday-lighting",
+        "background_author": "#edf1f4",
+        "blog_heading": "Latest from Henry Phan",
+        "blog": "lab-of-wabi-sabi-blogs",
+        "posts_count": 15,
+        "show_excerpt": true,
+        "show_read_more": false
+      }
+    }
+  },
+  "order": [
+    "80edd9b9-8a80-47fa-92fb-aa2609729a54",
+    "main"
+  ]
+}

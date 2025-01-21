@@ -1,0 +1,293 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "f52337fa-0f08-4fe7-aa7a-773193b17c4f": {
+      "type": "slideshow-popup",
+      "blocks": {
+        "image_mtgr7P": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bedroom-web-banner.jpg",
+            "mobile_image": "shopify://shop_images/bedroom-mobile-banner.jpg",
+            "subheading": "",
+            "subheading_below": false,
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_popup": false,
+            "button_1_link": "https://www.rowabi.com/collections/pendant-lighting?utm_source=website&utm_medium=banner-bedroom&utm_campaign=holiday-lighting",
+            "klaviyo_form_trigger": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_popup": false,
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "image_mtgr7P"
+      ],
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "form_heading": "REGISTRATION FORM",
+        "field_title_1": "Custom field",
+        "field_values_1": "value 1; value 2; value 3",
+        "field_required_1": false,
+        "field_title_2": "Custom field",
+        "field_values_2": "value 1; value 2; value 3",
+        "field_required_2": false,
+        "field_title_3": "Custom field",
+        "field_values_3": "value 1; value 2; value 3",
+        "field_required_3": false,
+        "field_title_4": "Custom field",
+        "field_values_4": "value 1; value 2; value 3",
+        "field_required_4": false
+      }
+    },
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/banner-collection-black-friday-pc.jpg",
+        "mobile_image": "shopify://shop_images/banner-collection-black-friday-mobile.jpg",
+        "image_size": "auto",
+        "allow_transparent_header": false,
+        "reveal": true,
+        "enable_parallax": false,
+        "show_collection_title": false,
+        "show_collection_description": false,
+        "content_width": "xs",
+        "background": "#000000",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "fafc8a2e-74c9-44e8-b202-6a25c6203a3b": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 15,
+        "padding_bottom": 15
+      }
+    },
+    "46a6d0b9-8e9a-478c-8707-bfcf4d8f3831": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Pendant Lights Designed for Bedrooms</strong>",
+            "heading_tag": "h1",
+            "h1_tag": true
+          }
+        },
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-2": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><em>Discover serenity with Rowabi's exquisite </em><a href=\"https://www.rowabi.com/collections/pendant-lights-for-bedroom\" target=\"_blank\"><em><strong>pendant lights for bedroom</strong></em></a><em>. These handcrafted rattan masterpieces diffuse a soft, soothing glow through their intricate weave, creating an intimate atmosphere perfect for relaxation. The natural textures and organic forms bring a touch of tranquility to your personal sanctuary. Elevate your sleep space with </em><a href=\"https://www.rowabi.com/\" target=\"_blank\"><em><strong>Rowabi Interiors</strong></em></a><em> timeless, sustainably sourced lighting designs.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-1",
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-2"
+      ],
+      "custom_css": [
+        ".h1 {font-size: 30px;}"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": true,
+        "background": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "load_more": true,
+        "hide_product_information": false,
+        "products_per_page": 48,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": true,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "filter_layout": "sidebar",
+        "quick_links_menu": "",
+        "show_sort_by": false,
+        "show_filters": true,
+        "show_results_count": false,
+        "show_filter_group_name": false,
+        "show_empty_filter_values": false,
+        "show_filter_values_count": false,
+        "show_color_swatch": false,
+        "open_filters_by_default": false
+      }
+    },
+    "ece2564f-16a6-4397-a5d7-96b85bf40668": {
+      "type": "shop-the-look",
+      "blocks": {
+        "template--16752707436802__ece2564f-16a6-4397-a5d7-96b85bf40668-1684480856bab0750a-0": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1029-1032_3000x3000_0bad424b-4213-44c9-ae7a-83f3c8b69577.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "sepherina-rattan-pendant-light-1",
+            "product_1_horizontal_position": 40,
+            "product_1_vertical_position": 35,
+            "product_2": "serena-rattan-dome-light-1",
+            "product_2_horizontal_position": 22,
+            "product_2_vertical_position": 51,
+            "product_3": "",
+            "product_3_horizontal_position": 66,
+            "product_3_vertical_position": 42,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        },
+        "template--16752707436802__ece2564f-16a6-4397-a5d7-96b85bf40668-1684480856bab0750a-1": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1025-1029B_-_1200X1200_17b351f2-7986-4b5c-ae5a-7f4e0c66daf8.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "lucian-rattan-pendant-light-bundle",
+            "product_1_horizontal_position": 57,
+            "product_1_vertical_position": 30,
+            "product_2": "santana-rattan-pendant-light-bundle",
+            "product_2_horizontal_position": 21,
+            "product_2_vertical_position": 48,
+            "product_3": "",
+            "product_3_horizontal_position": 60,
+            "product_3_vertical_position": 65,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        },
+        "83d710b4-b33a-4fb5-ac0b-76108024d70c": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1031-1029_-_1200X1200_d913321a-1d6a-489a-b449-d0e29b39473f.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "sepherina-rattan-pendant-light-1",
+            "product_1_horizontal_position": 55,
+            "product_1_vertical_position": 30,
+            "product_2": "kloe-rattan-pendant-light-bundle",
+            "product_2_horizontal_position": 20,
+            "product_2_vertical_position": 53,
+            "product_3": "",
+            "product_3_horizontal_position": 65,
+            "product_3_vertical_position": 60,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        },
+        "2312716e-5a27-4e33-b443-f64b5712305b": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1031B-1029B_-_1200X1200_f7381075-c2f9-4508-b5d2-b95d981fc739.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "lucian-rattan-pendant-light-bundle",
+            "product_1_horizontal_position": 55,
+            "product_1_vertical_position": 30,
+            "product_2": "latigo-rattan-pendant-light",
+            "product_2_horizontal_position": 25,
+            "product_2_vertical_position": 40,
+            "product_3": "",
+            "product_3_horizontal_position": 65,
+            "product_3_vertical_position": 60,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        },
+        "7d9983a9-10bb-440e-aca5-55af558ea290": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1007-1037_3000x3000_44a1d5ae-1a3b-4a9f-b9c7-96543d22e787.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "belle-rattan-pendant-light-bundle",
+            "product_1_horizontal_position": 55,
+            "product_1_vertical_position": 30,
+            "product_2": "rowabi-dreamy-palm-fibers-pendant-light-bundle",
+            "product_2_horizontal_position": 25,
+            "product_2_vertical_position": 40,
+            "product_3": "",
+            "product_3_horizontal_position": 65,
+            "product_3_vertical_position": 60,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        }
+      },
+      "block_order": [
+        "template--16752707436802__ece2564f-16a6-4397-a5d7-96b85bf40668-1684480856bab0750a-0",
+        "template--16752707436802__ece2564f-16a6-4397-a5d7-96b85bf40668-1684480856bab0750a-1",
+        "83d710b4-b33a-4fb5-ac0b-76108024d70c",
+        "2312716e-5a27-4e33-b443-f64b5712305b",
+        "7d9983a9-10bb-440e-aca5-55af558ea290"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "subheading": "",
+        "title": "<strong>Serene Radiance Design Choices</strong>",
+        "content": "",
+        "popover_title": "Shop the look"
+      }
+    },
+    "eeb3c004-b6a5-4db6-94d0-9ab70b805470": {
+      "type": "read-more",
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<strong><em>Pendant lights for bedroom</em></strong><em> are becoming more and more popular decoration items. They bring a touch of warmth, elegance, and functionality to any style. Furthermore, there is a wide range of materials, styles, and sizes for everyone to find the perfect fit for their specific needs. In this article, <strong>Rowabi </strong>will help you choose the best model.</em>\n    <h2><strong>The advantages of pendant lights for bedroom</strong></h2>\n    The pendant can be used in many ways to enhance the bedroom hierarchy. It can also be used to provide light for reading or dressing tasks. Here are some advantages of bedroom pendants you can refer to.\n    <h3><strong>Standout interior designs</strong></h3>\n    <a href=\"https://www.rowabi.com/collections/pendant-lighting\" target=\"_blannk\">Pendant lights</a> are considered to be the defining feature of any bedroom. With a variety of designs and materials, they will enhance the overall aesthetic of the space. In addition, the <em>best bedroom pendant lights</em> offer a multitude of options to match interior design themes ranging from sleek to modern. The right lighting can make a significant standout interior design of your bedroom\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/pendant-lights-for-bedroom.jpg\" alt=\"pendant lights for bedroom\"><br/><em>Pendant lights are considered to stand out in interior designs </em></p>\n    <h3><strong>Take up less space in the house</strong></h3>\n    Compared to traditional table or floor lamps, <strong>Pendant lights for bedrooms</strong> are a great space-saving option. In particular, <em>hanging lights on the bedroom</em> ceiling helps to make the space more spacious and uncluttered. This is especially beneficial for smaller bedrooms where every inch of space matters. If your home has limited floor space, you don't need to worry that they will take up a large space.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/bedroom-pendant-lights-are-a-great-space-saving-option.jpg?v=1691676613\" alt=\"bedroom pendant lights are a great space-saving option\"><br/><em>Bedroom pendant lights are a great space-saving option</em></p>\n    <h3><strong>Affordable budget</strong></h3>\n    Many people think pendant lights look elegant, hence they seem expensive. But the fact is that the price is very affordable, suitable for everyone's pocket. As a result, any homeowner can enhance their bedroom space without breaking the bank.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-price-of-pendant-lights-for-bedrooms-is-very-affordable-and-suitable-for-every-customer.jpg\" alt=\"the price affordable and suitable for every customer\"><br/><em>The price of pendant lights for bedrooms is very affordable and suitable for every customer</em></p>\n\n    <h3><strong>Soft and comfortable light</strong></h3>\n    The placement of bedroom pendant lights may improve the natural light in the room, resulting in a warm and pleasant ambiance. Additionally, these can be utilized to moderate weather extremes, particularly in the summer. You may balance out the natural light in your bedroom with soft, pleasant light produced by hanging lights.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/bedroom-pendant-lights-will-create-soft-and-comfortable-light-for-your-room.jpg\" alt=\"will create Soft and comfortable light for your room\"><br/><em>Bedroom pendant lights will create Soft and comfortable light for your room</em></p>\n\n    <h3><strong>No damage to wall and ceiling</strong></h3>\n    It's common for people to worry that bedroom pendant lights will damage the ceiling and walls. However, pendant lights will surely be installed safely using the most recent techniques and equipment. When you decide to move, they are simple to pull down and leave no marks on the walls or ceiling.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/with-the-latest-techniques-pendant-lights-for-bedrooms-surely-be-installed-without-any-harm.jpg\" alt=\"with the latest techniques, surely be installed without any harm\"><br/><em>With the latest techniques, pendant lights for bedrooms surely be installed without any harm</em></p>\n    <h3><strong>Customized pendant lights</strong></h3>\n    One of the most important advantages of bedrooms with pendant lights is their adaptability. There are many types of pendant lights to suit every style. Therefore, you can freely choose the material, color, and design that you like. This customization ensures that the pendant lights perfectly complement the bedroom decor and reflect the individual's unique style.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-can-freely-choose-the-customized-pendant-light-design-that-you-like.jpg\" alt=\"freely choose to customize the pendant light off design you like\"><br/><em>You can freely choose the customized pendant light design that you like.</em></p>\n    <h2><strong>Tips for selecting the perfect pendant lights </strong></h2>\n    Choosing the perfect pendant light or room pendant light sounds easy, but it requires some careful elements of both the space and how the pendant lights work together. Here are some tips that will ensure you choose the right <strong>Pendant lights for bedrooms</strong>.\n    <ul>\n        <li><strong>Think about the size of your space: </strong>If your bedroom is small, you should select a more delicate pendant so as not to overpower it. On the other hand, if your bedroom is bigger, you could want to think about statement-making pendants.</li>\n        <li><strong>Consider your décor carefully. </strong>You might select pendants that are simple and elegant for a modern bedroom. On the other hand, if your bedroom is decorated classically, you can pick a necklace with a more elaborate pattern.</li>\n        <li><strong>Choose the right type of pendant lights:</strong> Do you want a brighter light to help you see better or a warm and cozy light that will create a relaxing atmosphere? Considering this factor will allow you to choose the suitable brightness.</li>\n        <li><strong>Consider the height of your bedroom's ceiling: </strong>If you have high bedroom ceilings, you can choose a lower <em>hanging pendant lights bedroom</em> for a warmer effect. They also ensure no physical or visual hindrance. On the contrary, if you have a lower ceiling, you should choose a pendant that hangs close to the ceiling to not take up too much space.</li>\n    </ul>\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/there-are-many-tips-you-can-follow-to-find-the-best-lights-for-your-bedroom.jpg\" alt=\"there are many tips you can follow to find the best lamp for your bedroom\"><br/><em>There are many tips you can follow to find the best lights for your bedroom</em></p>\n    <h2><strong>TOP 10 modern bedroom pendant lighting devices</strong></h2>\n    <strong>Pendant lights for bedrooms </strong>are designed to match a variety of bedroom styles, from traditional to modern. Let’s explore some modern bedroom pendant lighting devices below:\n    <h3><strong>Save space with ceiling mount options</strong></h3>\n    If you don't have space for a bedside table and don't have space for <em>bedside pendant lights</em>, let’s choose a<em> hanging light fixtures bedroom</em>. This will not only free up floor space but also create an attractive and symmetrical feature in your bedroom.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/hanging-light-fixtures-bedroom-will-not-only-free-up-floor-space-but-also-create-an-attractive-space.jpg\" alt=\"hanging light fixtures bedroom will not only free up floor space but also create an attractive space\"><br/><em>Hanging light fixtures bedroom will not only free up floor space but also create an attractive space</em></p>\n    <h3><strong>Go big with pendant lights</strong></h3>\n    If your bedroom has high ceilings, this is the perfect opportunity to make the most of the space by increasing the size of your bedroom pendant lights. This will fill the space to make the room less stuffy and feel more cozy. In addition, when choosing a rattan pendant light, it will create beautiful patterns on your wall when the light is turned on.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/this-is-a-perfect-model-to-make-the-most-of-the-space-by-increasing-the-size-of-your-bedroom.jpg\" alt=\"is a perfect model to make the most of the space by increasing the size of your bedroom\"><br/><em>This is a perfect model to make the most of the space by increasing the size of your bedroom</em></p>\n    <h3><strong>Hanging fairy lights</strong></h3>\n    By producing a comfortable light in your bedroom, this model may create lovely drop lights. Additionally, fairy light ideas are the ideal recommendation if you rent your home and are unable to adorn it. Particularly, this cluster of fairy lights twinkles like stars in the wall's starry evening.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-also-make-your-bedroom-more-lovely-with-hanging-fairy-lights.jpg\" alt=\"you also make your bedroom more lovely with hanging fairy lights\"><br/><em>You also make your bedroom more lovely with hanging fairy lights</em></p>\n    <h3><strong>Multi-tasking with an adjustable main light</strong></h3>\n    In a small space, you should prioritize using as few lights as possible to avoid obstacles. So, instead of choosing a traditional lamp, why not choose an adjustable lamp that can be pulled up and down to illuminate different areas of your bedroom?\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/this-model-is-an-adjustable-lamp-that-can-illuminate-different-areas-of-your-bedroom.jpg\" alt=\"this is an adjustable lamp that can illuminate different areas of your bedroom\"><br/><em>This model is an adjustable lamp that can illuminate different areas of your bedroom</em></p>\n    <h3><strong>Hanging lights in a ceiling phrase</strong></h3>\n    Ceiling hanging decor bedrooms are the best choice to save space. This will allow you to use more floor space to decorate other furniture like drawers, and cabinets.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/hanging-light-fixtures-bedroom-will-not-only-free-up-floor-space-but-also-create-an-attractive-space.jpg\" alt=\"hanging lights are the best choice to save space\"><br/><em>Hanging lights are the best choice to save space</em></p>\n    <h3><strong>Hanging lights on both sides of the bed</strong></h3>\n    Combination pendant lights are a perfect way to light up a rustic bedroom. Featured is the pendant light over the bed that illuminates the room, while two smaller matching pendants hang at eye level above the bedside table. This pattern creates a relaxing soft glow perfect for when you're about to fall asleep.\n\n<p style=\"text-align: center;\"><img src=\"\" alt=\"\"><br/><em>Hanging lights on both sides of the bed are a perfect way to light up a rustic bedroom</em></p>\n    <h3><strong>Add visual interest with a sculptural lampshade</strong></h3>\n    If you are a gentle girl then surely this model is very suitable for you. The highlight of this model is the sculptural pendant light in soothing colors, which, combined with this bedroom's blue background, adds an extra layer of visual interest. Moreover, it creates a feeling of stillness and peace in this rustic bedroom.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-highlight-of-this-model-is-the-sculptural-pendant-light-in-soothing-colors.jpg\" alt=\"highlight of this model is the sculptural pendant light in soothing colors\"><br/><em>The highlight of this model is the sculptural pendant light in soothing colors</em></p>\n    <h3><strong>Strategically place lights</strong></h3>\n    Lighting is the perfect opportunity to show your surroundings with the illusion of space in a small bedroom. Placing a bedside lamp will make the room appear larger than it is. In addition, to increase the elegance and charm, let's choose for ourselves the gold-plated chandeliers. These will add warmth and a touch of luxury.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/this-model-can-is-a-perfect-choice-for-the-illusion-of-space-in-a-small-bedroom.jpg\" alt=\"model can is a perfect choice for the illusion of space in a small bedroom\"><br/><em>This model can is a perfect choice for the illusion of space in a small bedroom</em></p>\n    \n    <h3><strong>Modern globe pendant lights</strong></h3>\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/if-you-are-looking-for-a-minimalist-and-sleek-bedroom-don_t-miss-out-on-these-pendant-lights.jpg\" alt=\"you are looking for a minimalist and sleek bedroom, don’t miss out on these pendant lights\"><br/><em>If you are looking for a minimalist and sleek bedroom, don’t miss out on these pendant lights</em></p>\n\n    The modern globe pendant light is a perfect choice for a minimalist and sleek bedroom. These pendant lights have a simple, spherical beauty that adds a touch of elegance and sophistication to any bedroom decor.\n    <h3><strong>Light modern black ceiling light</strong></h3>\n    \n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/black-ceiling-lights-will-make-your-house-more-luxurious.jpg\" alt=\"black ceiling lights will make your house more luxurious\"><br/><em>Black ceiling lights will make your house more luxurious</em></p>\n\n    This flush-mounted black ceiling light has a more modern aesthetic compared to other lamps. This lamp is made of glass and a frosted base, which can be suitable for many spaces other than the bedroom\n    <h2><strong>Best bedroom pendant lights for home decor</strong></h2>\n    There are many types of<strong> pendant lights for the bedroom</strong>. So maybe you will be overwhelmed. Here are what we believe are the 9 best lamps to use in the bedroom\n    <h3><strong>Glass pendant lights for bedroom</strong></h3>\n    Glass pendant lights are a perfect choice for any bedroom with a timeless lifespan. These fixtures have an elegant appearance, creating soft and warm light in the room. In addition, it also makes beautiful shadows and reflections.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/glass-pendant-lights-for-the-bedroom-can-gather-natural-light-and-brighten-your-room.jpg\" alt=\"glass pendant lights for the bedroom can gather natural light and brighten your room\"><br/><em>Glass pendant lights for the bedroom can gather natural light and brighten your room</em></p>\n\n    <h3><strong>Modern globe bedroom pendant light</strong></h3>\n    Modern globe pendant lights not only illuminate the room but also create a visually stunning aesthetic. In addition, the globe pendant also helps the lamp to enhance interior lighting, giving a new meaning to the look and feel of a luxurious and worthy space.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/modern-globe-bedroom-pendant-light-will-create-a-visually-stunning-aesthetic.jpg\" alt=\"modern globe bedroom pendant light will create a visually stunning aesthetic\"><br/><em>Modern globe bedroom pendant light will create a visually stunning aesthetic</em></p>\n    <h3><strong>Hanging lightbulb bedroom pendant light</strong></h3>\n    Suspended bulbs are ideal for placing at the head of the bed. In addition, visible bulbs use transparent LEDs with filaments, as they look the most stylish. These bedroom pendant lights also span a variety of decor styles, from mid-century smiley pendants and minimalist exposed bulbs.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-hanging-lightbulb-bedroom-pendant-light-is-a-simple-design-but-modern.jpg\" alt=\"the hanging lightbulb bedroom pendant light is a simple design but modern\"><br/><em>The hanging lightbulb bedroom pendant light is a simple design but modern</em></p>\n    <h3><strong>Cylindrical bedroom pendant</strong></h3>\n    If you're looking for a permanent fixture in your bedroom, cylindrical pendant lights are also great for workplace lighting. They provide a direct source of light that helps you perform a specific task. They are also one of the most popular and timeless designs that will never go out of style. Cylindrical pendant lights are a variety of modern, contemporary, or traditional styles.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/cylindrical-bedroom-pendant-provides-a-direct-source-of-light.jpg\" alt=\"cylindrical bedroom pendant provides a direct source of light\"><br/><em>Cylindrical bedroom pendant provides a direct source of light</em></p>\n    <h3><strong>Teardrop bedroom pendant light</strong></h3>\n    If you are looking for pendant lights for your home with a classic style, why not choose the Teardrop bedroom pendant light? They offer a sleek, modern look and match the classic design, giving an instant personality to the home. These pendant lights also come in a variety of styles and colors from subtle minimalism to uniquely intricate, enhancing the overall aesthetic of your bedroom.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/teardrop-bedroom-pendant-light-is-a-perfect-suggestion-for-a-classic-style.jpg\" alt=\"the water-shaped bedroom hanging is the perfect suggestion for a classic style\"><br/><em>Teardrop bedroom pendant light is a perfect suggestion for a classic style</em></p>\n    <h3><strong>Wooden bedroom pendant light</strong></h3>\n    Whether in your bedroom as a classic or free-hanging design element, the wooden pendants collection for bedrooms can be used to emphasize your interior decor. Because wood is such a wonderful, warm-looking material, it's perfect for your room with its warm white light.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-wooden-pendants-collection-for-bedrooms-can-be-used-to-emphasize-your-interior-decor.jpg\" alt=\"wooden pendant collection for bedroom is used to emphasize the interior decoration\"><br/><em>The wooden pendants collection for bedrooms can be used to emphasize your interior decor</em></p>\n    <h3><strong>Copper globe pendant</strong></h3>\n    Why don't you consider LED lights for bedrooms made of copper? This material can be polished or left to oxidize. The biggest benefit of this model is its ease of maintenance, adding real color to the rooms that can be easily combined with other furniture for an attractive look.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/this-copper-globe-pendant-can-be-polished-or-left-to-oxidize-and-is-easy-to-maintain.jpg\" alt=\"copper globe pendant can be polished or left to oxidize and is easy to maintain\"><br/><em>This copper globe pendant can be polished or left to oxidize and is easy to maintain</em></p>\n    <h3><strong>Concrete pendant light</strong></h3>\n    Concrete is increasingly becoming a commonly used material in interior design cases, especially bedrooms. It can be combined with a variety of designs from a sturdier exterior to a slightly warmer or cozier one. In conclusion, concrete pendant lights are a great choice to create the design you want in your home.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/a-concrete-pendant-light-can-create-a-slightly-warmer-or-cozier-one.jpg\" alt=\"a concrete pendant light can create a slightly warmer or cozier one\"><br/><em>A concrete pendant light can create a slightly warmer or cozier one</em></p>\n    <h3><strong>Minimalist slim pendant light</strong></h3>\n    Minimalist slim pendant lights are designed to enhance the atmosphere of any room without overwhelming it. Moreover, minimalist lighting blends perfectly with any modern interior design. These lights will be a great opportunity to decorate your home, creating a cozy and stylish getaway.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/minimalist-slim-pendant-lights-are-designed-to-enhance-the-atmosphere-of-any-room.jpg\" alt=\"minimalist slim pendant lights are designed to enhance the atmosphere of any room\"><br/><em>Minimalist slim pendant lights are designed to enhance the atmosphere of any room</em></p>\n\n    <h2><strong>Where is the best place to buy hanging lights for the bedroom?</strong></h2>\n    Are you looking to add a little elegance and sophistication to your bedroom? Look no further than Rowabi, the best place to buy <strong>Pendant lights for bedrooms</strong> that you shouldn't miss. With so many benefits, Rowabi will meet all your lighting needs.\n    <h3><strong>Quality and diverse products</strong></h3>\n    Rowabi is always committed to providing customers with high-quality and diverse products. Whether you're looking for classic, vintage or modern style, we've got a wide selection to suit your taste. Each product is hand-selected to ensure top quality, ensuring that your bedroom pendant lights will last for years to come.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/rowabi-is-the-best-place-that-provides-quality-and-diverse-pendant-lights-for-bedroom.jpg\" alt=\"rowabi is the best place that provides quality and diverse pendant lights for bedroom\"><br/><em>Rowabi is the best place that provides quality and diverse pendant lights for bedroom</em></p>\n    <h3><strong>Affordable prices with many promotions</strong></h3>\n    Coming to Rowabi, customers do not need to worry about the price. With attractive prices and promotions, we always offer pendant lights that not only light up your bedroom but also suit your pocket. Moreover, Rowabi offers you more promotions and discounts, helping you create a stunning bedroom space without breaking the bank.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/we-also-offer-affordable-prices-with-many-promotions.jpg\" alt=\"rowabi offer affordable prices with many promotions\"><br/><em>We also offer affordable prices with many promotions</em></p>\n    <h3><strong>Personalized and modern designs</strong></h3>\n    Whether you want a rustic, cozy, or sleek feel, Rowabi's pendant lights will enhance the aesthetics of your room. With the wide range of design options available, you can choose the perfect lighting fixture to suit your personality and personal style. Each bedroom pendant light here is updated with the latest technology and never goes out of style.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-can-choose-personalized-and-modern-designs-that-meet-your-need.jpg\" alt=\"choose a personalized and modern design to meet your needs\"><br/><em>You can choose personalized and modern designs that meet your need</em></p>\n    <h3><strong>Free shipping &amp; only 3 days</strong></h3>\n    Rowabi also offers convenient shipping to make your shopping experience a breeze. We offer free shipping and delivery to your doorstep. Moreover, the shipping time is also very fast, only 3 days so you don't have to wait for weeks to place your order\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/rowabi-also-offers-convenient-shipping-within-3-days.jpg\" alt=\"rowabi also offers convenient shipping within 3 days\"><br/><em>Rowabi also offers convenient shipping within 3 days</em></p>\n    <h3><strong>Return and warranty policies</strong></h3>\n    Finally, Rowabi has a clear return and warranty policy to solve any problems that may arise with customers. If you are not completely satisfied with your purchase or the product is damaged, you can easily return or exchange the product without any hassle.\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-return-and-warranty-policies-are-clearly.jpg\" alt=\"return and warranty policies are clearly\"><br/><em>The return and warranty policies are clearly</em></p>\n\n    In this article, <strong>Rowabi </strong>has introduced <strong>pendant lights for bedrooms </strong>as well as the Top 10 most popular pendant lights. With the options above, you can find the best pendant lights to illuminate and make your bedroom more comfortable and stylish. If you have any questions, contact us directly to be supporters quickly.",
+        "text_alignment": "start",
+        "height": 300,
+        "read_more": "Read more",
+        "read_less": "Read less"
+      }
+    }
+  },
+  "order": [
+    "f52337fa-0f08-4fe7-aa7a-773193b17c4f",
+    "collection-banner",
+    "fafc8a2e-74c9-44e8-b202-6a25c6203a3b",
+    "46a6d0b9-8e9a-478c-8707-bfcf4d8f3831",
+    "main",
+    "ece2564f-16a6-4397-a5d7-96b85bf40668",
+    "eeb3c004-b6a5-4db6-94d0-9ab70b805470"
+  ]
+}

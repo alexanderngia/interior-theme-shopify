@@ -1,0 +1,473 @@
+
+[data-id='id_095fa032-975a-455d-a90c-f2d5cc63861d'].bg-animation {
+  animation: id_095fa032-975a-455d-a90c-f2d5cc63861d-bg 20s linear infinite;
+  background-position: 0 0; }
+
+@keyframes id_095fa032-975a-455d-a90c-f2d5cc63861d-bg {
+  50% {
+    background-position: 0 100%; } }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .shopify-cleanslate #shopify-svg-symbols {
+  position: absolute !important;
+  top: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  overflow: hidden !important;
+  height: 1px !important;
+  width: 1px !important;
+  padding: 0 !important;
+  border: 0 !important; }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .shopify-payment-button__button--hidden {
+  display: none !important; }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .shopify-payment-button [role="button"] {
+  border-radius: 0px !important; }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .shopify-payment-button__button {
+  margin-bottom: 1em;
+  border: none;
+  border-radius: var(--veda-buy-button-radius) !important;
+  box-shadow: 0 0 0 0 transparent;
+  color: var(--color-light-freeze);
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  transition: background 0.2s ease-in-out; }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .shopify-payment-button__button[disabled] {
+  opacity: 0.6;
+  cursor: default; }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .shopify-payment-button__button--unbranded {
+  background-color: var(--color-primary);
+  padding: 14px 20px; }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .shopify-payment-button__button--unbranded:hover:not([disabled]) {
+  background-color: var(--color-primary); }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .shopify-payment-button__more-options {
+  padding: 14px 20px;
+  background: transparent;
+  border: 0 none;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  margin-top: 0;
+  text-align: center;
+  width: 100%; }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .shopify-payment-button__more-options:hover:not([disabled]) {
+  text-decoration: underline; }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .shopify-payment-button__more-options[disabled] {
+  opacity: 0.6;
+  cursor: default; }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .shopify-payment-button__button--branded {
+  display: flex;
+  flex-direction: column;
+  min-height: 50px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .shopify-payment-button__button--branded .shopify-cleanslate {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important; }
+
+@keyframes viewEye {
+  0% {
+    opacity: 1; }
+  25% {
+    opacity: 0.6; }
+  50% {
+    opacity: 0.3; }
+  75% {
+    opacity: 0.6; }
+  100% {
+    opacity: 0.9; } }
+
+[data-id='id_9b901bb3-b964-489e-972d-de41d4fc994f'] .swiper-slide {
+  border-radius: var(--media-radius);
+  overflow: hidden; }
+
+[data-id='id_492d81ec-cb62-418f-a059-5a0bfab76a27'] .veda-grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  grid-template-areas: "large"; }
+  @media (min-width: 768px) {
+    [data-id='id_492d81ec-cb62-418f-a059-5a0bfab76a27'] .veda-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "large large" "small ."; } }
+  @media (min-width: 992px) {
+    [data-id='id_492d81ec-cb62-418f-a059-5a0bfab76a27'] .veda-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "large large small" "large large small"; } }
+
+[data-id='id_492d81ec-cb62-418f-a059-5a0bfab76a27'] .veda-grid__item h3 {
+  font-size: clamp(20px, calc(0.5vw + 18px), 24px); }
+
+[data-id='id_492d81ec-cb62-418f-a059-5a0bfab76a27'] .veda-grid__item:nth-child(1) {
+  grid-area: large; }
+  [data-id='id_492d81ec-cb62-418f-a059-5a0bfab76a27'] .veda-grid__item:nth-child(1) h3 {
+    font-size: clamp(26px, calc(1.75vw + 19px), 40px); }
+
+[data-id='id_c3ea89e3-315a-4c6c-9318-921b730bc925'].bg-animation {
+  animation: id_c3ea89e3-315a-4c6c-9318-921b730bc925-bg 20s linear infinite;
+  background-position: 0 0; }
+
+@keyframes id_c3ea89e3-315a-4c6c-9318-921b730bc925-bg {
+  50% {
+    background-position: 0 100%; } }
+
+
+body #veda-root [data-css="css_514017064"] {text-transform:uppercase !important;
+letter-spacing:3px !important;
+font-size:15px !important;
+padding-bottom:20px !important;
+}
+body #veda-root [data-css="css_2314943941"] {line-height:1.1 !important;
+font-size: clamp(32.66666666666667px, 4.416666666666666vw + 15.000000000000007px, 68px) !important;
+font-weight:500 !important;
+color:var(--color-dark-freeze) !important;
+}
+body #veda-root [data-css="css_2927378665"] {margin-bottom: clamp(18px, 1.5vw + 12px, 30px) !important;
+margin-top: clamp(18px, 1.5vw + 12px, 30px) !important;
+}
+
+
+
+
+
+
+
+
+body #veda-root [data-css="css_1911646265"] {color:rgba(132,115,95,1) !important;
+--color:rgba(132,115,95,1) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body #veda-root [data-css="css_2289875855"] {font-size: clamp(16.666666666666664px, 1.166666666666667vw + 11.999999999999996px, 26px) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body #veda-root [data-css="css_3215959886"] {font-weight:500 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body #veda-root [data-css="css_3252679968"] {font-weight:700 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body #veda-root [data-css="css_4148353258"] {text-transform:capitalize !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body #veda-root [data-css="css_314823460"] {padding-left: clamp(26.666666666666668px, 2.9166666666666665vw + 15.000000000000002px, 50px) !important;
+padding-right: clamp(26.666666666666668px, 2.9166666666666665vw + 15.000000000000002px, 50px) !important;
+padding-top:13px !important;
+padding-bottom:13px !important;
+border-radius:10px !important;
+font-weight:700 !important;
+text-transform:uppercase !important;
+font-size: clamp(15px, 0.75vw + 12px, 21px) !important;
+}
+body #veda-root [data-css="css_2574155469"] {text-align:start !important;
+}
+body #veda-root [data-css="css_285005391"] {text-transform:capitalize !important;
+font-weight:700 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body #veda-root [data-css="css_2508979138"] {color:var(--color-light) !important;
+}
+body #veda-root [data-css="css_3422187993"] {animation:pulse var(--animate-duration, 1s) both infinite !important;
+}
+
+
+
+body #veda-root [data-css="css_2953995222"] {color:var(--color-light-freeze) !important;
+width:60px !important;
+height:60px !important;
+border-radius:40px !important;
+background-color:var(--color-primary) !important;
+font-size: clamp(15.333333333333332px, 0.8333333333333335vw + 11.999999999999998px, 22px) !important;
+line-height:2.7em !important;
+}
+
+
+
+body #veda-root [data-css="css_131449436"] {font-size: clamp(16.666666666666664px, 1.166666666666667vw + 11.999999999999996px, 26px) !important;
+font-weight:700 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body #veda-root [data-css="css_3252679968"] {font-weight:700 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body #veda-root [data-css="css_3252679968"] {font-weight:700 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

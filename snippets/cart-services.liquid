@@ -1,0 +1,20 @@
+<div class="cart-service {% if hide == false %}cart-service__page{% endif %}">
+  {%- if settings.cart_show_services_1 != blank -%}
+    <div class="cart-service__item">
+      {%- render 'icon' with 'shipping', width: 28 -%}
+      <p>{{ settings.cart_show_services_1 }}</p>
+    </div>
+  {%- endif -%}
+  {%- if settings.cart_show_services_2 != blank and hide == false -%}
+    <div class="cart-service__item">
+      {%- render 'icon' with 'return', width: 28 -%}
+      <p>{{ settings.cart_show_services_2 }}</p>
+    </div>
+  {%- endif -%}
+  {%- if settings.cart_show_services_3 != blank -%}
+    <div class="cart-service__item">
+      {%- render 'icon' with 'accessories-included', width: 28 -%}
+      <p>{{ settings.cart_show_services_3 }}</p>
+    </div>
+  {%- endif -%}
+</div>

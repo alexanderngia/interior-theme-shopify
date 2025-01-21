@@ -1,0 +1,24 @@
+{%- if link == '/collections/top-picks-by-designers' 
+    or link == '/collections/patio-concepts' 
+    or link == '/pages/deliver-return'
+    or link == '/pages/studio-visit-appointment'
+    or link == 'https://af.uppromote.com/Rowabi/register'
+    or link == '/pages/live-nature-live-nurture'
+    or link == '/pages/connect-with-our-designers'
+    or link == '/pages/fair-trade'
+    or link == '/pages/good-for-people-good-for-the-planet'
+    or link == '/pages/studio-visit-appointment'
+    or link == '/pages/trade-program'
+    or link == '/blogs/lab-of-wabi-sabi-blogs'
+    or link == '/pages/wholesale'
+    or link contains '/collections/sales-campaign'
+    or link == '/pages/product-care-guide'
+    or link == '/pages/ccpa-opt-out'
+    or link == '/pages/privacy-policy'
+    or link == '/pages/terms-and-conditions'
+    or link == '/pages/faq'
+-%}
+  {%- echo true -%}
+{%- else -%}
+  {%- echo false -%}
+{%- endif -%}

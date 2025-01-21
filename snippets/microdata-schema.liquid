@@ -1,0 +1,370 @@
+{%- comment -%}
+This snippet structures the micro-data using JSON-LD specification. Please note that for Product especially,
+the schema often changes. We try to output as much info as possible, but Google may add new requirements over time,
+or change the format of some info
+{%- endcomment -%}
+
+{%- if request.page_type == 'product' -%}
+  {%- assign days_product_price_valid_until = 10 | times: 86400 -%}
+
+  {%- capture main_entity_microdata -%}
+    {%- assign is_valid_global_gtin_length = false -%}
+
+    {%- if product.selected_or_first_available_variant.barcode != blank -%}
+      {%- assign gtin_string_length = product.selected_or_first_available_variant.barcode | size -%}
+
+      {%- if gtin_string_length == 8 or gtin_string_length == 12 or gtin_string_length == 13 or gtin_string_length == 14 -%}
+        {%- assign is_valid_global_gtin_length = true -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    "@type": "Product",
+    "productID": {{ product.id | json }},
+    "offers": [
+      {%- for variant in product.variants -%}
+        {%- assign is_valid_gtin_length = false -%}
+
+        {%- if variant.barcode != blank -%}
+          {%- assign gtin_string_length = variant.barcode | size -%}
+
+          {%- if gtin_string_length == 8 or gtin_string_length == 12 or gtin_string_length == 13 or gtin_string_length == 14 -%}
+            {%- assign is_valid_gtin_length = true -%}
+          {%- endif -%}
+        {%- endif -%}
+
+        {
+          "@type": "Offer",
+          "name": {% if product.has_only_default_variant %}{{ product.title | json }}{% else %}{{ variant.title | json }}{% endif %},
+          "availability": {%- if variant.available -%}"https://schema.org/InStock"{%- elsif variant.incoming -%}"https://schema.org/BackOrder"{% else %}"https://schema.org/OutOfStock"{%- endif -%},
+          "price": {{ variant.price | divided_by: 100.0 | json }},
+          "priceCurrency": {{ cart.currency.iso_code | json }},
+          "priceValidUntil": "{{ 'now' | date: '%s' | plus: days_product_price_valid_until | date: '%Y-%m-%d' }}",
+          {%- if variant.sku != blank -%}
+            "sku": {{ variant.sku | json }},
+          {%- endif -%}
+          {%- if variant.barcode != blank -%}
+            {%- if is_valid_gtin_length -%}
+              "gtin": {{ variant.barcode | json }},
+            {%- else -%}
+              "mpn": {{ variant.barcode | json }},
+            {%- endif -%}
+          {%- endif -%}
+          "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}"
+        }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ],
+    {%- if product.metafields.reviews.rating.value != blank and product.metafields.reviews.rating_count.value > 0 -%}
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{ product.metafields.reviews.rating.value }}",
+        "reviewCount": "{{ product.metafields.reviews.rating_count.value }}",
+        "worstRating": "{{ product.metafields.reviews.rating.value.scale_min }}",
+        "bestRating": "{{ product.metafields.reviews.rating.value.scale_max }}"
+      },
+    {%- endif -%}
+    "brand": {
+      "@type": "Brand",
+      "name": {{ product.vendor | json }}
+    },
+    "name": {{ product.title | json }},
+    "description": {{ product.description | strip_html | json }},
+    "category": {{ product.type | json }},
+    "url": "{{ shop.url }}{{ product.url }}",
+    "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    {%- if product.selected_or_first_available_variant.barcode != blank -%}
+      {%- if is_valid_global_gtin_length -%}
+        "gtin": {{ product.selected_or_first_available_variant.barcode | json }},
+      {%- else -%}
+        "mpn": {{ product.selected_or_first_available_variant.barcode | json }},
+      {%- endif -%}
+    {%- endif -%}
+    {%- if product.selected_or_first_available_variant.weight -%}
+      "weight": {
+      "@type": "QuantitativeValue",
+      "unitCode": {{ product.selected_or_first_available_variant.weight_unit | json }},
+      "value": {{ product.selected_or_first_available_variant.weight_in_unit | json }}
+      },
+    {%- endif -%}
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:{{ page_image | image_url: width: 1024 }}",
+      "image": "https:{{ page_image | image_url: width: 1024 }}",
+      "name": {{ page_image.alt | json }},
+      "width": "1024",
+      "height": "1024"
+    }
+  {%- endcapture -%}
+{%- elsif request.page_type == 'article' -%}
+  {%- capture main_entity_microdata -%}
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "{{ article.url }}",
+    "articleSection": {{ blog.title | json }},
+    "keywords": "{{ article.tags | join: ', ' }}",
+    "headline": {{ article.title | json }},
+    "description": {{ article.excerpt_or_content | strip_html | truncatewords: 25 | json }},
+    "dateCreated": "{{ article.created_at | date: '%Y-%m-%dT%T' }}",
+    "datePublished": "{{ article.published_at | date: '%Y-%m-%dT%T' }}",
+    "dateModified": "{{ article.updated_at | date: '%Y-%m-%dT%T' }}",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:{{ page_image | image_url: width: 1024 }}",
+      "image": "https:{{ page_image | image_url: width: 1024 }}",
+      "name": {{ page_image.alt | json }},
+      "width": "1024",
+      "height": "1024"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "{{ article.user.first_name | escape }} {{ article.user.last_name | escape }}",
+      "givenName": {{ article.user.first_name | json }},
+      "familyName": {{ article.user.last_name | json }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ shop.name | json }}
+    },
+    "commentCount": {{ article.comments_count }},
+    "comment": [
+      {%- for comment in article.comments limit: 5 -%}
+        {
+          "@type": "Comment",
+          "author": {{ comment.author | json }},
+          "datePublished": "{{ comment.created_at | date: '%Y-%m-%dT%T' }}",
+          "text": {{ comment.content | json }}
+        }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+  {%- endcapture -%}
+{%- endif -%}
+
+{%- capture breadcrumb_entity_microdata -%}
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": {{ 'general.home' | t | json }},
+      "item": "{{ shop.url }}"
+    }
+
+    {%- if request.page_type == 'product' -%}
+      {%- if collection -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ collection.title | json }},
+          "item": "{{ shop.url }}{{ collection.url }}"
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ product.title | json }},
+          "item": "{{ shop.url }}{{ product.url }}"
+        }
+      {%- else -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ product.title | json }},
+          "item": "{{ shop.url }}{{ product.url }}"
+        }
+      {%- endif -%}
+    {%- elsif request.page_type == 'collection' -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ collection.title | json }},
+          "item": "{{ shop.url }}{{ collection.url }}"
+        }
+    {%- elsif request.page_type == 'blog' -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ blog.title | json }},
+          "item": "{{ shop.url }}{{ blog.url }}"
+        }
+    {%- elsif request.page_type == 'article' -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ blog.title | json }},
+          "item": "{{ shop.url }}{{ blog.url }}"
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ blog.title | json }},
+          "item": "{{ shop.url }}{{ article.url }}"
+        }
+    {%- elsif request.page_type == 'page' -%}
+       ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page.title | json }},
+          "item": "{{ shop.url }}{{ page.url }}"
+        }
+    {%- endif -%}
+  ]
+{%- endcapture -%}
+
+{% if main_entity_microdata != blank %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    {{ main_entity_microdata }}
+  }
+  </script>
+{% endif %}
+
+{% if breadcrumb_entity_microdata != blank %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    {{ breadcrumb_entity_microdata }}
+  }
+  </script>
+{% endif %}
+
+{%- if request.page_type == 'index' -%}
+  {%- assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" -%}
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "url": {{ shop.url | append: page.url | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": {{ shop.name | json }},
+      {%- if shop.brand.logo -%}
+        "logo": {{ shop.brand.logo | image_url: width: shop.brand.logo.width | prepend: "https:" | json }},
+      {%- endif -%}
+      {%- if shop.brand.short_description -%}
+        "description": {{ shop.brand.short_description | json }},
+      {%- endif -%}
+      {%- if shop.brand.slogan -%}
+        "slogan": {{ shop.brand.slogan | json }},
+      {%- endif -%}
+      {%- if shop.brand.metafields.social_links.size > 0 -%}
+        "sameAs": [
+          {%- for social_link in shop.brand.metafields.social_links -%}
+            {{- social_link.last.value | json -}}{%- unless forloop.last -%},{%- endunless -%}
+          {%- endfor -%}
+        ],
+      {%- endif -%}
+      "url": {{ shop.url | append: page.url | json }}
+    }
+  ]
+  </script>
+
+  <script type="application/ld+json"> 
+  [
+    {
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "image": "https://www.rowabi.com/cdn/shop/files/logo_-_website.png",
+      "@id": "kg:/g/11krzv13sz",
+      "additionalType": ["https://en.wikipedia.org/wiki/Lighting", "https://en.wikipedia.org/wiki/Pendant_light", "https://en.wikipedia.org/wiki/Light_fixture", "https://en.wikipedia.org/wiki/Architectural_lighting_design"],
+      "url": "https://www.rowabi.com/",
+      "name": "Rowabi lighting",
+      "alternatename": "Rowabi: Luxury Lights Designed To Elevate Your Home's Personality",
+      "disambiguatingdescription": "Rowabi specializes in bespoke rattan lighting, kitchen accents, and home decor in Wabi-Sabi style. Handcrafted by artisans to elevate modern organic interiors.",
+      "mainEntityOfPage": "https://www.google.com/maps?cid=4204199200074889144",
+      "areaServed": {
+          "@type": "City",
+          "name": "Houston",
+          "url": "https://www.wikidata.org/wiki/Q16555"},
+      "description": "Rowabi crafts exquisite rattan pendant lights, kitchen accents, and home decor - embracing the Wabi-Sabi essence. Each piece is meticulously handcrafted by skilled artisans, making it a luxury statement. By infusing nature's touch, Rowabi helps elevate your modern organic living space.",
+      "paymentAccepted": "Cash, Visa, Mastercard, American Express, Debit, PayPal, Apple Pay",
+      "sameAs": [
+      "https://sites.google.com/view/rowabi/home",
+      "https://www.tiktok.com/@rowabiinteriors",
+      "https://news.google.com/publications/CAAqBwgKMPv30QswupPpAw?hl=en-US&gl=US&ceid=US:en",
+      "https://www.google.com/earth/rpc/entity?lat=29.8017471&lng=-95.5607038&fid=0x8640c58904e97afb:0x3a5850e5cd71f7b8&hl=en&gl=vn&client=earth-client&cv=7.3.6.9345&useragent=GoogleEarth/7.3.6.9345(Windows;Microsoft%20Windows%20(6.2.9200.0);en;kml:2.2;client:Pro;type:default)",
+      "https://www.instagram.com/rowabi.interiors/",
+      "https://www.pinterest.com/rowabiinteriors/",
+      "https://www.facebook.com/Rowabi.Interior/",
+      "https://www.youtube.com/@rowabi.interiors/about",
+      "https://twitter.com/RowabiInterior",
+      "https://rowabi.tumblr.com/",
+      "https://rowabi.business.site/?m=true",
+      "https://scholar.google.com/citations?hl=en&user=lvOpPrEAAAAJ",
+      "https://500px.com/p/rowabiinteriors",
+      "https://vimeo.com/rowabiinteriors",
+      "https://gravatar.com/rowabi",
+      "https://about.me/rowabi",
+      "https://www.behance.net/rowabi",
+      "https://rowabi.wordpress.com/",
+      "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9lN2E1MDA0MC9wb2RjYXN0L3Jzcw",
+      "https://podcasters.spotify.com/pod/show/rowabi",
+      "https://castbox.fm/channel/id5561902?country=us",
+      "https://radiopublic.com/rowabi-rattan-lights-6nQEvM/s1!b1705",
+      "https://soundcloud.com/rowabiinteriors",
+      "https://music.amazon.com/podcasts/caca3b34-3092-46af-b6df-dcf695571ed4/rowabi-rattan-lights",
+      "https://open.spotify.com/show/7qB7Gqy7e3cMrERpeUJbge",
+      "https://podcasts.apple.com/us/podcast/rowabi-rattan-lights/id1703726375",
+      "https://rowabi.lepodcast.fr/",
+      "https://podfollow.com/rowabi/view",
+      "https://pca.st/hkco9q6c",
+      "https://castro.fm/podcast/abca54f5-bf80-41bc-b5df-a3c816ddfa89"],
+      "hasMap": "https://www.google.com/maps/d/viewer?mid=1-arSntUhZalFJAmKmhm1-2RKYNUU37o",
+      "email": "customers@rowabi.com",
+      "telephone": "+1 346-247-0171",
+      "priceRange": "$100 - $10000000",
+      "foundingDate": "2022",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Henry Phan"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1737 Stebbins Drive Suite 230C Houston, Texas 77043",
+        "addressLocality": "Houston",
+        "postalCode": "77043",
+        "addressCountry": "United States"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "Customer Support",
+          "telephone": "+1 346-247-0171",
+          "email": "customers@rowabi.com"
+        }
+      ],
+      "geo": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": "29.8017471",
+              "longitude": "-95.5607038"
+          },
+          "geoRadius": "5000"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ]
+    }
+  ]
+  </script>
+{%- endif -%}

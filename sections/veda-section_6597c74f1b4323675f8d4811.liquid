@@ -1,0 +1,183 @@
+{% assign uniqueId = 'id_095fa032-975a-455d-a90c-f2d5cc63861d' %}
+{% assign builderMode = false %}
+{% assign envatoMode = false %}
+{% liquid
+  if section.settings.background_type == 'color'
+    assign backgroundColor = 'background-color: ' | append: section.settings.background_color | append: ';'
+  else
+    assign backgroundColor = ''
+  endif
+
+  assign bgImage = section.settings.background_image__src | append: '&width=10'
+
+  if section.settings.background_type == 'image'
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: 'scroll' | append: ';background-size: ' | append: section.settings.background_size | append: ';'
+  else
+    assign backgroundImage = ''
+  endif
+
+  assign sectionPadding = 'padding-top: ' | append: section.settings.padding__top | append: 'px;padding-right: ' | append: section.settings.padding__right | append: 'px;padding-bottom: ' | append: section.settings.padding__bottom | append: 'px;padding-left: ' | append: section.settings.padding__left | append: 'px;'
+
+  if builderMode and envatoMode
+  endif
+%}
+
+<a
+  data-id="{{ uniqueId }}"
+  href="{{ section.settings["link"] }}"
+  {% if section.settings.background_animation %}
+    class="bgc:color-light c:color-gray7 {{ section.settings["color_scheme"] }} veda-lazyload bg-animation d:block pos:relative z:1 bgz:cover bgp:center"
+  {% else %}
+    class="bgc:color-light c:color-gray7 {{ section.settings["color_scheme"] }} veda-lazyload d:block pos:relative z:1 bgz:cover bgp:center"
+  {% endif %}
+  style="{{ backgroundColor }}{{ backgroundImage }}{{ sectionPadding }}"
+>
+  <div class="veda-marquee d:flex whs:nowrap" style="--duration: {{ section.settings["duration"] }}ms">
+    {% for item in (1..14) %}
+      <div class="pl:30px pr:30px fz:18px c:color-gray8">
+        <div data-css="{{ section.settings["message_design__id"] }}">
+          {{ section.settings.message }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</a>
+{% schema %}
+{
+  "name": "Announcement Bar 2",
+  "class": "veda-announcement-bar-2",
+  "blocks": [],
+  "settings": [
+    {
+      "label": "Color Scheme",
+      "id": "color_scheme",
+      "type": "text",
+      "default": "veda-color-default"
+    },
+    {
+      "label": "Background Type",
+      "id": "background_type",
+      "type": "select",
+      "default": "color",
+      "options": [
+        {
+          "label": "None",
+          "value": "none"
+        },
+        {
+          "label": "Color",
+          "value": "color"
+        },
+        {
+          "label": "Image",
+          "value": "image"
+        }
+      ]
+    },
+    {
+      "label": "Background Color",
+      "id": "background_color",
+      "type": "text",
+      "default": "var(--color-gray1)"
+    },
+    {
+      "type": "number",
+      "id": "background_image__height",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "background_image__src",
+      "label": "Background Image"
+    },
+    {
+      "type": "number",
+      "id": "background_image__width",
+      "label": "Background Image"
+    },
+    {
+      "label": "Background Fixed",
+      "id": "background_fixed",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Background Size",
+      "id": "background_size",
+      "type": "select",
+      "default": "cover",
+      "options": [
+        {
+          "label": "Cover",
+          "value": "cover"
+        },
+        {
+          "label": "Contain",
+          "value": "contain"
+        }
+      ]
+    },
+    {
+      "label": "Background Animation",
+      "id": "background_animation",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Duration",
+      "id": "duration",
+      "type": "number",
+      "default": 6000
+    },
+    {
+      "type": "number",
+      "default": 15,
+      "id": "padding__bottom",
+      "label": "Padding > Bottom"
+    },
+    {
+      "type": "number",
+      "default": 15,
+      "id": "padding__left",
+      "label": "Padding > Left"
+    },
+    {
+      "type": "number",
+      "default": 15,
+      "id": "padding__right",
+      "label": "Padding > Right"
+    },
+    {
+      "type": "number",
+      "default": 15,
+      "id": "padding__top",
+      "label": "Padding > Top"
+    },
+    {
+      "label": "Message",
+      "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
+      "id": "message",
+      "type": "liquid",
+      "default": "<p>Sale 30% OFF</p>"
+    },
+    {
+      "label": "Link",
+      "id": "link",
+      "type": "url"
+    },
+    {
+      "type": "text",
+      "id": "message_design__css",
+      "info": "Please DON'T edit this field.",
+      "label": "Message Design > Css"
+    },
+    {
+      "type": "text",
+      "id": "message_design__id",
+      "info": "Please DON'T edit this field.",
+      "label": "Message Design > Id"
+    }
+  ],
+  "tag": "div"
+}
+{% endschema %}

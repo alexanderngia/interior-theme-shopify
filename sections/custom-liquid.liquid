@@ -1,0 +1,116 @@
+{%- if section.settings.liquid != blank -%}
+  <div 
+    {% if section.settings.id_section != blank %}id="{{ section.settings.id_section }}"{% endif %} 
+    class="{% if section.settings.background %}custom-liquid--bkg{% endif %} {% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}"
+    style="{% if section.settings.background %}background-image:url({{ section.settings.background | img_url: 'master'}});{% endif %}">
+    <div class="{% unless section.settings.remove_horizontal_spacing %}container{% endunless %}">
+      <div class="text-{{ section.settings.text_alignment }} {% if section.settings.max_width != blank %}custom-liquid--maxwidth{% endif %}"
+          {% if section.settings.max_width != blank %}style="max-width: {{ section.settings.max_width }}px"{% endif %}>
+        {%- if section.settings.subheading != blank or section.settings.title != blank or section.settings.content != blank -%}
+          <div class="section--custom-liquid--header">
+            {%- render 'section-header-p', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content -%}
+          </div>
+        {%- endif -%}
+        {{- section.settings.liquid -}}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.custom_liquid.name",
+  "class": "shopify-section--custom-liquid",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "id_section",
+      "label": "ID section"
+    },
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "t:global.section.separate_section_with_border",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_vertical_spacing",
+      "label": "t:global.spacing.remove_vertical_spacing",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_horizontal_spacing",
+      "label": "t:global.spacing.remove_horizontal_spacing",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "background",
+      "label": "Upload background"
+    },
+    {
+      "type": "text",
+      "id": "max_width",
+      "label": "Max width content",
+      "info": "Set blank if you do not want to add max width"
+    },
+    {
+      "type": "liquid",
+      "id": "liquid",
+      "label": "t:global.code.liquid",
+      "info": "t:global.code.liquid_info",
+      "default": "<p>Write or copy/paste Liquid code</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "t:global.text.alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "t:global.position.left"
+        },
+        {
+          "value": "center",
+          "label": "t:global.position.center"
+        },
+        {
+          "value": "end",
+          "label": "t:global.position.right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:global.section.header_category"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "t:global.text.subheading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:global.text.heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "t:global.text.content"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name"
+    }
+  ]
+}
+{% endschema %}

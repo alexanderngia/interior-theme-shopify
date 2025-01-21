@@ -1,0 +1,13 @@
+
+                            <script src="{{ 'bss-product-label-js.js' | asset_url }}"></script>
+                            <script src="{{ 'bss-product-label-banner.aio.min.js' | asset_url }}"></script>
+                            <script src="{{ 'bss-product-label-popup.aio.min.js' | asset_url }}"></script>
+                            <script>
+                            if (window.location.search.includes("bss-pl-custom-selector")) {
+                                const src = "{{ 'bss-product-label-custom-position.aio.min.js' | asset_url }}";
+                                const scriptTag = document.createElement("script");
+                                scriptTag.src = src
+                                document.body.appendChild(scriptTag)
+                            }
+                            </script>
+                        

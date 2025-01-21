@@ -1,0 +1,225 @@
+<div {% if section.settings.id_section != blank %}id="{{ section.settings.id_section }}"{% endif %} class="section-spacing {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  <div class="container container--xs">
+    <div class="section-stack text-center">
+      {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: 'center' -%}
+      <form-google-sheet>
+        {%- form 'contact', class: 'form', return_to: '/pages/thank-you' -%}
+          {%- if form.posted_successfully? -%}
+            {%- assign content = 'contact.form.success_message' | t -%}
+            {%- render 'banner', status: 'success', content: content -%}
+          {%- endif -%}
+  
+          {%- if form.errors -%}
+            {%- capture content -%}{{ form.errors.translated_fields[form.errors.first] | capitalize }} {{ form.errors.messages[form.errors.first] }}{%- endcapture -%}
+            {%- render 'banner', status: 'error', content: content -%}
+          {%- endif -%}
+  
+          <div class="fieldset">
+            <input id="input-{{ section.id }}-{{ form }}-contactdatetime" class="input hidden" type="text" name="contact[datetime]" value="{{ 'now' | date: '%Y-%m-%d %H:%M' }}">
+            <input id="input-{{ section.id }}-{{ form }}-contacturl" class="input hidden" type="text" name="contact[url]" value="{{ canonical_url }}">
+            <div class="fieldset-row">
+              {%- assign label  = 'First Name *' -%}
+              {%- render 'input', type: 'text', name: 'contact[first_name]', label: label, value: customer.first_name, required: true, autocomplete: 'first_name' -%}
+          
+              {%- assign label  = 'Last Name *' -%}
+              {%- render 'input', type: 'text', name: 'contact[last_name]', label: label, value: customer.last_name, required: true, autocomplete: 'last_name' -%}
+            </div>
+            <div class="fieldset-row">
+              {%- assign label  = 'E-mail *' -%}
+              {%- render 'input', type: 'email', name: 'contact[email]', label: label, value: customer.email, required: true, autocomplete: 'email' -%}
+              
+              {%- assign label  = 'Phone *' -%}
+              {%- render 'input', type: 'tel', name: 'contact[phone]', label: label, value: customer.phone, required: true, autocomplete: 'tel' -%}
+            </div>
+
+            <div class="fieldset-row">
+              {%- assign label  = 'Address *' -%}
+              {%- capture id_address -%}input-{{ section.id }}--contactaddress{%- endcapture -%}
+              {%- render 'input', type: 'text', name: 'contact[address]', label: label, value: customer.addresses.address1, required: true -%}
+            </div>
+  
+            {%- for block in section.blocks -%}
+              {%- assign field_title = block.settings.title -%}
+  
+              {%- if field_title == blank -%}
+                {%- capture field_title -%}Custom field {% increment custom_field %}{%- endcapture -%}
+              {%- endif -%}
+  
+              {%- capture name -%}contact[{{ field_title | escape }}]{%- endcapture -%}
+  
+              {%- if block.type == 'text' -%}
+                {%- if block.settings.use_long_text -%}
+                  {%- render 'input', name: name, label: block.settings.title, required: block.settings.required, multiline: 4 -%}
+                {%- else -%}
+                  {%- render 'input', type: 'text', name: name, label: block.settings.title, required: block.settings.required -%}
+                {%- endif -%}
+              {%- elsif block.type == 'dropdown' and block.settings.values != blank -%}
+                {%- assign values = block.settings.values | split: ';' -%}
+                {%- render 'select', option_values: values, show_empty_value: true, name: name, label: block.settings.title, required: block.settings.required -%}
+              {%- elsif block.type == 'checkbox' and block.settings.values != blank -%}
+                {%- assign values = block.settings.values | split: ';' -%}
+                <div class="form-control" {{ block.shopify_attributes }}>
+                  {%- if block.settings.title != blank -%}
+                    <label for="{{ block.id }}">{{ block.settings.title }}</label>
+                  {%- endif -%}
+                  {%- for value in values -%}
+                    <div class="checkbox-control">
+                      <input id="{{ block.id }}{{ forloop.index }}" class="checkbox" type="checkbox" name="contact[{{ value }}]" value="Yes">
+                      <label for="{{ block.id }}{{ forloop.index }}">{{ value }}</label>
+                    </div>
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+  
+          {%- assign button_content = 'contact.form.submit' | t -%}
+          {%- if page.handle == 'business-opportunities' -%}
+            {%- assign track_clicks = "return gtag_report_conversion('https://www.rowabi.com/pages/business-opportunities')"-%}
+            {%- render 'button', track_clicks: track_clicks, content: button_content, type: 'submit' -%}                              
+          {%- else -%}
+            {%- render 'button', content: button_content, type: 'submit' -%}
+          {%- endif -%}
+        {%- endform -%}
+      </form-google-sheet>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyAupMzne0mgN1lKXfDrG7Jpp44RT2Y2XGw"></script>
+
+<script>
+  function initializeAutocomplete(id) {
+    var element = document.getElementById(id);
+    if (element) {
+      new google.maps.places.Autocomplete(element, { types: ['geocode'] });
+    }
+  }
+  
+  google.maps.event.addDomListener(window, 'load', function() {
+    initializeAutocomplete('{{ id_address }}');
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Article contact",
+  "class": "shopify-section--contact",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "id_section",
+      "label": "ID section"
+    },
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "t:global.section.separate_section_with_border",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "t:global.text.subheading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:global.text.heading",
+      "default": "Contact"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "t:global.text.content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "t:sections.contact.blocks.text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.contact.blocks.text.name_label",
+          "default": "Custom field"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_long_text",
+          "label": "t:sections.contact.blocks.text.use_long_text",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "t:sections.contact.blocks.text.required",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "dropdown",
+      "name": "t:sections.contact.blocks.dropdown.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.contact.blocks.dropdown.name_label",
+          "default": "Custom field"
+        },
+        {
+          "type": "text",
+          "id": "values",
+          "label": "t:sections.contact.blocks.dropdown.values",
+          "info": "Separate each value by ';'",
+          "default": "value 1; value 2; value 3"
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "t:sections.contact.blocks.text.required",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "name": "Checkbox",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.contact.blocks.dropdown.name_label",
+          "default": "Custom field"
+        },
+        {
+          "type": "text",
+          "id": "values",
+          "label": "t:sections.contact.blocks.dropdown.values",
+          "info": "Separate each value by ';'",
+          "default": "value 1; value 2; value 3"
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "t:sections.contact.blocks.text.required",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Article contact",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

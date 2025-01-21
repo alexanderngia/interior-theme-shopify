@@ -1,0 +1,83 @@
+{% comment %} List products {% endcomment %}
+{% capture product_html_01 %}
+  {%- if article.metafields.custom.product_list_01.value != blank -%}
+    <div class="product-list--article">
+      <product-list class="product-list justify-center">
+        {% assign product_list = article.metafields.custom.product_list_01.value %}
+        {%- for product in product_list -%}
+          {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, hide_product_information: false, shop_now: true, block: section -%}
+        {%- endfor -%}
+      </product-list>
+    </div>
+  {%- endif -%}
+{% endcapture %}
+{% capture product_html_02 %}
+  {%- if article.metafields.custom.product_list_02.value != blank -%}
+    <div class="product-list--article">
+      <product-list class="product-list justify-center">
+        {% assign product_list = article.metafields.custom.product_list_02.value %}
+        {%- for product in product_list -%}
+          {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, hide_product_information: false, shop_now: true, block: section -%}
+        {%- endfor -%}
+      </product-list>
+    </div>
+  {%- endif -%}
+{% endcapture %}
+{% capture product_html_03 %}
+  {%- if article.metafields.custom.product_list_03.value != blank -%}
+    <div class="product-list--article">
+      <product-list class="product-list justify-center">
+        {% assign product_list = article.metafields.custom.product_list_03.value %}
+        {%- for product in product_list -%}
+          {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, hide_product_information: false, shop_now: true, block: section -%}
+        {%- endfor -%}
+      </product-list>
+    </div>
+  {%- endif -%}
+{% endcapture %}
+
+{% comment %} Collections {% endcomment %}
+{% capture collection_html_01 %}
+  {%- if article.metafields.custom.collection_01.value != blank -%}
+    <div class="product-list--article">
+      <product-list class="product-list justify-center">
+        {% assign collection_list = article.metafields.custom.collection_01.value.products %}
+        {%- for product in collection_list limit:12 -%}
+          {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, hide_product_information: false, shop_now: true, block: section -%}
+        {%- endfor -%}
+      </product-list>
+    </div>
+  {%- endif -%}
+{% endcapture %}
+{% capture collection_html_02 %}
+  {%- if article.metafields.custom.collection_02.value != blank -%}
+    <div class="product-list--article">
+      <product-list class="product-list justify-center">
+        {% assign collection_list = article.metafields.custom.collection_02.value.products %}
+        {%- for product in collection_list limit:12 -%}
+          {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, hide_product_information: false, shop_now: true, block: section -%}
+        {%- endfor -%}
+      </product-list>
+    </div>
+  {%- endif -%}
+{% endcapture %}
+{% capture collection_html_03 %}
+  {%- if article.metafields.custom.collection_03.value != blank -%}
+    <div class="product-list--article">
+      <product-list class="product-list justify-center">
+        {% assign collection_list = article.metafields.custom.collection_03.value.products %}
+        {%- for product in collection_list limit:12 -%}
+          {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, hide_product_information: false, shop_now: true, block: section -%}
+        {%- endfor -%}
+      </product-list>
+    </div>
+  {%- endif -%}
+{% endcapture %}
+
+{{- article.content 
+| replace: '/product_html_01/', product_html_01 
+| replace: '/product_html_02/', product_html_02 
+| replace: '/product_html_03/', product_html_03
+| replace: '/collection_html_01/', collection_html_01
+| replace: '/collection_html_02/', collection_html_02
+| replace: '/collection_html_03/', collection_html_03 -}}

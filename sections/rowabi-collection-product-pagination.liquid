@@ -1,0 +1,113 @@
+<div class="rowabi-mx-[16px] md:rowabi-mx-[98px] rowabi-flex rowabi-justify-center rowabi-mt-[32px] md:rowabi-mt-[60px]">
+  <{{ section.settings.heading_tag }} style='font-family: "Sainte Colombe", serif;' class="rowabi-text-lg md:rowabi-text-[24px] rowabi-text-[#49392B] rowabi-uppercase rowabi-text-center">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
+</div>
+<div class="rowabi-mx-[16px] md:rowabi-mx-[98px] rowabi-mt-5 md:rowabi-mt-9 rowabi-mb-[32px] md:rowabi-mb-[60px]">
+  {%- paginate section.settings.collection.products by section.settings.products_per_page -%}
+    <product-list id="product-list-{{ section.id }}" class="rowabi-grid rowabi-grid-cols-2 md:rowabi-grid-cols-4 rowabi-gap-[16px] md:rowabi-gap-x-[30px] md:rowabi-gap-y-[36px]" >
+       {%- for product in section.settings.collection.products -%}
+        {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, hide_product_information: section.settings.hide_product_information, stacked: true -%}
+      {%- endfor -%}
+     </product-list>
+    {%- assign current_offset = paginate.current_offset -%}
+    {%- assign page_size = paginate.page_size -%}
+      {%- if current_offset == 0 -%}
+       {% if paginate.items > page_size %}
+         {%- assign item = "1-" | append: page_size -%}
+       {% else %}
+          {%- assign item = "1-" | append: paginate.items -%}
+        {% endif %}
+      {%- else -%}
+        {%- assign start = current_offset | plus: 1 -%}
+        {%- assign end = current_offset | plus: page_size -%}
+        {%- assign item = start | append: "-" | append: end -%}
+      {%- endif -%}
+      
+    <h3 class="rowabi-text-[14px] md:rowabi-text-xl rowabi-text-[#444139] rowabi-text-center rowabi-w-full rowabi-mt-4 md:rowabi-mt-6">
+      <span class="rowabi-font-bold">{{ item }}</span> of <span class="rowabi-font-bold">{{ paginate.items }}</span>
+    </h3>
+    <div class="rowabi-w-full rowabi-flex rowabi-justify-center rowabi-mt-[8px] md:rowabi-mt-[12px]">
+      {%- render 'pagination', paginate: paginate, facet: true -%}
+    </div>
+  {%- endpaginate -%}
+</div>
+
+{% if section.settings.show_border == true %}
+<div class="rowabi-h-[1px] rowabi-bg-[#44413933] md:rowabi-mx-[98px]"> </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Rowabi product pagination",
+  "class": "rowabi-collection-product-pagination",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "P"
+        }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_border",
+      "label": "Separate section with border",
+      "default": false
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:global.text.heading",
+      "default": "Contemporary PENDANT Accessories"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 4,
+      "max": 24,
+      "step": 4,
+      "label": "Product per page",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rowabi collection product pagination",
+    }
+  ]
+}
+{% endschema %}

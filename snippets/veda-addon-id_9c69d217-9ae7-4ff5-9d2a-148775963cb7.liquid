@@ -1,0 +1,33 @@
+{% comment %}
+You SHOULD NOT modify source code in this page because
+It is automatically generated from Veda
+{% endcomment %}
+<!--VEDA_CSS_HERE-->
+
+<div data-id="id_9c69d217-9ae7-4ff5-9d2a-148775963cb7" data-veda-plan="free" style="padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;">
+  
+    {% if builderMode %}      <div class="d:inline-flex ai:center p:10px bdrs:8px bgc:#2C36DC" style="background-color: {{ '#ccc' }}">
+  <img
+    class="mr:10px w:50px bdrs:6px"
+    src="{{ 'https://cdn.shopify.com/app-store/listing_images/4b6b591765c9b36332c4e599aea727c6/icon/CLGpvt70lu8CEAE=.png' }}"
+    width="50"
+    height="50"
+    alt="addon placeholder"
+    loading="lazy"
+  >
+  <span class="c:color-light-freeze fz:16px ff:font-secondary pr:10px">{{ 'Fera Product Reviews App' }}</span>
+</div>
+
+    {% else %}      {% if productItem %}        {% assign product = productItem %}      {% endif %}      {% case "review" %}        {% when 'review' %}          {% if request.page_type == 'product' %}            <div data-fera-container="{{ "584485" }}" data-product_id="{{ product.id }}"></div>
+          {% else %}            <div data-fera-container="{{ "584485" }}"></div>
+          {% endif %}        {% when 'rating_product' %}          <div class="compare-rating-js">
+            <div data-fera-container="{{ "584485" }}" data-product_id="{{ product.id }}"></div>
+          </div>
+        {% when 'store_rating' %}          <div data-fera-container="{{ "584485" }}"></div>
+        {% when 'photo_videos' %}          {% if request.page_type == 'product' %}            <div data-fera-container="{{ "584485" }}" data-product_id="{{ product.id }}"></div>
+          {% else %}            <div data-fera-container="{{ "584485" }}"></div>
+          {% endif %}      {% endcase %}    {% endif %}  
+</div>
+
+
+<link rel="preload" as="script" class="veda-page-script" href="{{ 'veda-addon-id_9c69d217-9ae7-4ff5-9d2a-148775963cb7.js' | asset_url }}" />

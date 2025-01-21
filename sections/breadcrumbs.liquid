@@ -1,0 +1,136 @@
+{%- style -%}
+  /* .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  } */
+  .section-{{ section.id }}-padding {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  @media screen and (min-width: 750px) {
+    /* .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    } */
+    .section-{{ section.id }}-padding {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+{%- endstyle -%}
+<div class="section--breadcrumbs section-{{ section.id }}-padding">
+  <div class="container {% if template contains 'collection' and collection.handle %}md:rowabi-py-[5px] md:rowabi-ml-[100px] {% endif %}">
+    <nav class="breadcrumb" aria-label="{{ 'general.breadcrumb.label' | t | escape }}">
+      <ol class="breadcrumb__list unstyled-list">
+        <li class="breadcrumb__list-item">
+          <a href="{{ routes.root_url }}" class="smallcaps link-faded">{{ 'general.breadcrumb.home' | t }}</a>
+        </li>
+        {% if template contains 'page' %}
+          <li class="breadcrumb__list-item">
+            <a href="{{ page.url }}" class="smallcaps link-faded">{{ page.title }}</a>
+          </li>
+        {% elsif template contains 'product' %}
+          {% if collection.url %}
+            <li class="breadcrumb__list-item">
+              <a href="{{ collection.url }}" class="smallcaps link-faded">{{ collection.title }}</a>
+            </li>
+          {% endif %}
+          <li class="breadcrumb__list-item">
+            <a href="{{ product.url }}" class="smallcaps link-faded">{{ product.title }}</a>
+          </li>
+        {% elsif template contains 'list-collections' %}
+          <li class="breadcrumb__list-item">
+            <a href="{{ routes.collections_url }}" class="smallcaps link-faded">{{ 'general.breadcrumb.collections' | t }}</a>
+          </li>
+        {% elsif template contains 'collection' and collection.handle %}
+          <li class="breadcrumb__list-item">
+            <a href="{{ routes.all_products_collection_url }}" class="smallcaps link-faded">{{ 'general.breadcrumb.shop' | t }}</a>
+          </li>
+          {%- if current_tags -%}
+            <li class="breadcrumb__list-item">
+              <a href="{{ collection.url }}" aria-current="page" class="smallcaps link-faded">{{ collection.title }}</a>
+            </li>
+            <li class="breadcrumb__list-item">
+              {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+              <a href="{{ tag_url }}" aria-current="page" class="smallcaps link-faded">{{ current_tags | join: " + " }}</a>
+            </li>
+          {%- else -%}
+            <li class="breadcrumb__list-item">
+              <a href="{{ collection.url }}" aria-current="page" class="smallcaps link-faded">{{ collection.title }}</a>
+            </li>
+          {%- endif -%}
+    
+        {% elsif template == 'blog' %}
+          {%- if current_tags -%}
+            <li class="breadcrumb__list-item">
+              <a href="{{ blog.url }}" aria-current="page" class="smallcaps link-faded">{{ blog.title }}</a>
+            </li>
+            <li class="breadcrumb__list-item">
+              {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
+              <a href="{{ tag_url }}" aria-current="page" class="smallcaps link-faded">{{ current_tags | join: " + " }}</a>
+            </li>
+          {%- else -%}
+            <li class="breadcrumb__list-item">
+              <a href="{{ blog.url }}" aria-current="page" class="smallcaps link-faded">{{ blog.title }}</a>
+            </li>
+          {%- endif -%}
+        {% elsif template == 'article' %}
+          <li class="breadcrumb__list-item">
+            <a href="{{ blog.url }}" aria-current="page" class="smallcaps link-faded">{{ blog.title }}</a>
+          </li>
+          <li class="breadcrumb__list-item">
+            <a href="{{ article.url }}" aria-current="page" class="smallcaps link-faded">{{ article.title }}</a>
+          </li>
+        {% elsif template contains 'search' and search.performed %}
+          <li class="breadcrumb__list-item">
+            <a href="{{ routes.search_url }}" aria-current="page" class="smallcaps link-faded">{{ 'general.breadcrumb.search'| t: terms: search.terms}}</a>
+          </li>
+        {% elsif template == 'cart' %}
+          <li class="breadcrumb__list-item">
+            <a href="{{ routes.cart_url }}" aria-current="page" class="smallcaps link-faded">{{ 'general.breadcrumb.cart' | t }}</a>
+          </li>
+        {% endif %}
+      </ol>
+    </nav>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Breadcrumbs",
+  "class": "shopify-section--breadcrumbs",
+  "tag": "section",
+  "disabled_on": {
+    "templates": ["index"],
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Breadcrumbs"
+    }
+  ]
+}
+{% endschema %}
+{% render "cart-script.mczr" %}

@@ -1,0 +1,175 @@
+<style>
+  .rowabi-collection-categories .swiper {
+      width: 100%;
+    }
+
+    .rowabi-collection-categories .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 270px;
+    }
+    @media only screen and (max-width: 768px) {
+      .rowabi-collection-categories .swiper-slide img{
+        height: 300px!important;
+      }
+      
+    }
+
+
+    .rowabi-collection-categories .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<{{ section.settings.heading_tag }} style='font-family: "Sainte Colombe", serif;' class="rowabi-text-[20px] md:rowabi-text-3xl rowabi-text-[#444139] rowabi-px-[16px] md:rowabi-px-[100px] rowabi-text-center md:rowabi-text-left">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
+<div class="rowabi-relative rowabi-px-[16px] md:rowabi-px-[100px] rowabi-py-5 md:rowabi-py-9 rowabi-mb-[12px] md:rowabi-mb-[16px]">
+  <div class="swiper myCollectionCategories" >
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <div class="rowabi-flex rowabi-flex-col rowabi-w-full rowabi-h-full">
+            <img width="100%" height="auto" src="{{ block.settings.image | img_url: 'large'}}" />
+            <a href="{{ block.settings.link }}" class="rowabi-flex rowabi-justify-center">
+              <h3 class="rowabi-font-bold rowabi-text-center rowabi-text-[#444139] rowabi-text-xs md:rowabi-text-sm rowabi-w-max rowabi-border-b rowabi-border-[#595343] rowabi-pb-[4px] rowabi-pt-[10px] md:rowabi-py-[6px] md:rowabi-mt-[12px]">{{ block.settings.label }}</h3>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+     </div>
+  </div>
+    <div class="swiper-button-prev-collection-categories rowabi-absolute rowabi-top-[42%] rowabi-left-[1%] rowabi-z-[99] rowabi-hidden md:rowabi-block">
+      <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20.492" cy="20.1332" r="19.8885" fill="#F9F9F9"/><circle cx="20.492" cy="20.1332" r="19.3885" stroke="#444139" stroke-opacity="0.2"/><mask id="mask0_815_2216" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="13" y="13" width="15" height="15"><rect x="27.4531" y="13.1724" width="13.922" height="13.922" transform="rotate(90 27.4531 13.1724)" fill="#C4C4C4"/></mask><g mask="url(#mask0_815_2216)"><path d="M22.5035 25.3616C22.3512 25.3637 22.2027 25.3163 22.082 25.2271L15.5266 20.2823C15.448 20.2229 15.3841 20.1473 15.3399 20.061C15.2956 19.9748 15.272 19.88 15.2708 19.7838C15.2696 19.6876 15.2908 19.5923 15.3329 19.5049C15.375 19.4176 15.4369 19.3404 15.514 19.279L21.916 14.1982C21.9839 14.1444 22.0622 14.104 22.1464 14.0793C22.2305 14.0546 22.3189 14.046 22.4065 14.0542C22.5833 14.0706 22.746 14.154 22.8588 14.2859C22.9716 14.4179 23.0252 14.5875 23.008 14.7577C22.9907 14.9278 22.9039 15.0844 22.7666 15.1931L17.0076 19.7627L22.9089 24.2112C23.0179 24.2933 23.0977 24.406 23.1373 24.5338C23.1769 24.6615 23.1742 24.7979 23.1297 24.9242C23.0852 25.0505 23.0011 25.1604 22.8889 25.2387C22.7767 25.3171 22.642 25.36 22.5035 25.3616Z" fill="#444139"/></g></svg>
+    </div>
+    <div class="swiper-button-next-collection-categories rowabi-absolute rowabi-top-[42%] rowabi-right-[1%] rowabi-z-[99] rowabi-hidden md:rowabi-block">
+      <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20.5086" cy="20.2108" r="19.8885" fill="#444139"/><rect width="13.922" height="13.922" transform="translate(13.5479 27.1719) rotate(-90)" fill="#444139"/><mask id="mask0_815_2422" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="13" y="13" width="15" height="15"><rect x="13.5479" y="27.1719" width="13.922" height="13.922" transform="rotate(-90 13.5479 27.1719)" fill="#C4C4C4"/></mask><g mask="url(#mask0_815_2422)"><path d="M18.4975 14.9826C18.6498 14.9806 18.7983 15.0279 18.919 15.1171L25.4744 20.0619C25.553 20.1213 25.6168 20.1969 25.6611 20.2832C25.7054 20.3695 25.729 20.4642 25.7302 20.5604C25.7314 20.6567 25.7102 20.752 25.6681 20.8393C25.626 20.9267 25.5641 21.0039 25.487 21.0652L19.085 26.1461C19.017 26.1999 18.9387 26.2403 18.8546 26.265C18.7704 26.2897 18.6821 26.2982 18.5945 26.2901C18.4177 26.2736 18.255 26.1902 18.1422 26.0583C18.0294 25.9264 17.9757 25.7567 17.993 25.5866C18.0103 25.4165 18.0971 25.2598 18.2343 25.1512L23.9934 20.5815L18.0921 16.133C17.9831 16.0509 17.9032 15.9382 17.8637 15.8105C17.8241 15.6828 17.8268 15.5463 17.8713 15.42C17.9158 15.2938 17.9999 15.1838 18.1121 15.1055C18.2243 15.0271 18.359 14.9842 18.4975 14.9826Z" fill="#FCF9F5"/></g></svg>
+    </div>
+  
+</div>
+
+{% if section.settings.show_border == true %}
+<div class="rowabi-h-[1px] rowabi-bg-[#44413933] md:rowabi-mx-[98px]"> </div>
+{% endif %}
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".myCollectionCategories", {
+    slidesPerView: "auto",
+    spaceBetween: 15,
+    navigation: {
+      nextEl: ".swiper-button-next-collection-categories",
+      prevEl: ".swiper-button-prev-collection-categories",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: "{{ section.settings.products_per_page }}",
+        spaceBetween: 30,
+      },
+    },
+  });
+</script>
+          
+{% schema %}
+{
+  "name": "Collection categories",
+  "class": "rowabi-collection-categories",
+  "tag": "section",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "P"
+        }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_border",
+      "label": "Separate section with border",
+      "default": false
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:global.text.heading",
+      "default": "STYLE BY YOU"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Number of collumns",
+      "default": 4
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "t:sections.timeline.blocks.item.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:global.image.image",
+          "info": "t:sections.timeline.blocks.item.image_info"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "label",
+          "label": "t:sections.timeline.blocks.item.label",
+          "default": "Shop pendant lights"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Category url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection categories",
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,293 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b14d8b31-4a4c-4d5b-9d59-b9b735a3bf43": {
+      "type": "slideshow-popup",
+      "blocks": {
+        "image_feykFq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kitchen-island-web-banner.jpg",
+            "mobile_image": "shopify://shop_images/kitchen-island-mobile-banner.jpg",
+            "subheading": "",
+            "subheading_below": false,
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_popup": false,
+            "button_1_link": "https://www.rowabi.com/collections/pendant-lighting?utm_source=website&utm_medium=banner-kitchen&utm_campaign=holiday-lighting",
+            "klaviyo_form_trigger": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_popup": false,
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "image_feykFq"
+      ],
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "form_heading": "REGISTRATION FORM",
+        "field_title_1": "Custom field",
+        "field_values_1": "value 1; value 2; value 3",
+        "field_required_1": false,
+        "field_title_2": "Custom field",
+        "field_values_2": "value 1; value 2; value 3",
+        "field_required_2": false,
+        "field_title_3": "Custom field",
+        "field_values_3": "value 1; value 2; value 3",
+        "field_required_3": false,
+        "field_title_4": "Custom field",
+        "field_values_4": "value 1; value 2; value 3",
+        "field_required_4": false
+      }
+    },
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/collection-christmas-banner-super-annual-sales.jpg",
+        "mobile_image": "shopify://shop_images/banner-collection-black-friday-mobile.jpg",
+        "image_size": "auto",
+        "allow_transparent_header": false,
+        "reveal": true,
+        "enable_parallax": false,
+        "show_collection_title": false,
+        "show_collection_description": false,
+        "content_width": "xs",
+        "background": "#000000",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "fafc8a2e-74c9-44e8-b202-6a25c6203a3b": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 15,
+        "padding_bottom": 15
+      }
+    },
+    "46a6d0b9-8e9a-478c-8707-bfcf4d8f3831": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Rattan Pendant Lights For Kitchen Island</strong>",
+            "heading_tag": "h1",
+            "h1_tag": true
+          }
+        },
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-2": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><em>Transform your culinary space with our designed rattan </em><a href=\"https://www.rowabi.com/collections/pendant-lighting\" target=\"_blank\"><em><strong>pendant lights</strong></em></a><em>. Meticulously handwoven, these island centerpieces blend rustic charm with modern sophistication. Each </em><a href=\"https://www.rowabi.com/\"><em><strong>Rowabi </strong></em></a><em>light diffuses a warm, inviting glow, elevating your kitchen's ambiance and functionality. Embrace the natural beauty of sustainably sourced materials in a design that's both timeless and uniquely yours.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-1",
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-2"
+      ],
+      "custom_css": [
+        ".h1 {font-size: 30px;}"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "content_width": "lg",
+        "text_position": "start",
+        "remove_vertical_spacing": true,
+        "background": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "load_more": true,
+        "hide_product_information": false,
+        "products_per_page": 48,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": true,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "filter_layout": "sidebar",
+        "quick_links_menu": "",
+        "show_sort_by": false,
+        "show_filters": true,
+        "show_results_count": false,
+        "show_filter_group_name": false,
+        "show_empty_filter_values": false,
+        "show_filter_values_count": false,
+        "show_color_swatch": false,
+        "open_filters_by_default": false
+      }
+    },
+    "fac2eb95-ca5d-4f4b-b45e-49f2ac09dadc": {
+      "type": "shop-the-look",
+      "blocks": {
+        "template--16752707469570__fac2eb95-ca5d-4f4b-b45e-49f2ac09dadc-1684480856bab0750a-0": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1031-1026_1200X1200_43c1f144-3013-451c-8ab6-78b9c1e0d821.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "rufflewisp-rattan-pendant-light",
+            "product_1_horizontal_position": 35,
+            "product_1_vertical_position": 35,
+            "product_2": "rowabi-beatrice-dome-rattan-pendant-light",
+            "product_2_horizontal_position": 34,
+            "product_2_vertical_position": 65,
+            "product_3": "",
+            "product_3_horizontal_position": 66,
+            "product_3_vertical_position": 42,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        },
+        "53fb32ca-c710-4ea9-ba37-5f0151c07be1": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1025-1004_-_3000x3000_fef50866-2a77-4ad5-af91-61317da25d90.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "jace-rattan-pendant-light-bundle",
+            "product_1_horizontal_position": 35,
+            "product_1_vertical_position": 35,
+            "product_2": "belle-rattan-pendant-light-bundle",
+            "product_2_horizontal_position": 34,
+            "product_2_vertical_position": 65,
+            "product_3": "",
+            "product_3_horizontal_position": 66,
+            "product_3_vertical_position": 42,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        },
+        "18ae33ef-b931-4e55-9eea-904ef430dd10": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1031-1032_1200X1200_edb393f9-8847-48cf-a14f-93370ec1a9a0.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "serena-rattan-dome-light-1",
+            "product_1_horizontal_position": 35,
+            "product_1_vertical_position": 35,
+            "product_2": "kloe-rattan-pendant-light-bundle",
+            "product_2_horizontal_position": 34,
+            "product_2_vertical_position": 65,
+            "product_3": "",
+            "product_3_horizontal_position": 66,
+            "product_3_vertical_position": 42,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        },
+        "cdb953d2-dbdf-402d-b725-dd5e002e4bf8": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1022-1027_1200X1200_9220f10c-a977-4bdb-a187-0720ab1007aa.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "avery-rattan-pendant-light",
+            "product_1_horizontal_position": 35,
+            "product_1_vertical_position": 35,
+            "product_2": "rowabi-callie-rattan-pendant-light",
+            "product_2_horizontal_position": 34,
+            "product_2_vertical_position": 65,
+            "product_3": "",
+            "product_3_horizontal_position": 66,
+            "product_3_vertical_position": 42,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        },
+        "f5d1c788-ed32-4595-ba07-d32034c34aea": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1925-1004_-_3000x3000_6d6249d4-f71f-40a8-a632-956c3f6b9494.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "santana-rattan-pendant-light-bundle",
+            "product_1_horizontal_position": 55,
+            "product_1_vertical_position": 30,
+            "product_2": "rowabi-beehive-rattan-pendant-light",
+            "product_2_horizontal_position": 25,
+            "product_2_vertical_position": 40,
+            "product_3": "",
+            "product_3_horizontal_position": 65,
+            "product_3_vertical_position": 60,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        }
+      },
+      "block_order": [
+        "template--16752707469570__fac2eb95-ca5d-4f4b-b45e-49f2ac09dadc-1684480856bab0750a-0",
+        "53fb32ca-c710-4ea9-ba37-5f0151c07be1",
+        "18ae33ef-b931-4e55-9eea-904ef430dd10",
+        "cdb953d2-dbdf-402d-b725-dd5e002e4bf8",
+        "f5d1c788-ed32-4595-ba07-d32034c34aea"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "subheading": "",
+        "title": "<strong>Crafted Kitchen Island Concepts</strong>",
+        "content": "",
+        "popover_title": "Shop the look"
+      }
+    },
+    "007ea1dd-a54e-4d48-a43f-f62feea5b3b6": {
+      "type": "read-more",
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<h2><strong>What are Pendant lights for kitchen island? </strong></h2>\n    \n    <p><strong>Pendant lights for kitchen islands</strong> are lighting fixtures that are specifically designed to hang above the kitchen island area. These lights typically feature a single hanging pendant or multiple pendants arranged in a row to provide focused illumination for tasks and activities carried out in the kitchen.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/pendant-lights-for-kitchen-island.jpg?v=1692173521\" alt=\"pendant lights for kitchen island\"><br /><em>Pendant lights for the kitchen island add a stylish element to the design of the kitchen</em></p>\n\n    <p>Kitchen pendant lights for the island not only serve a practical purpose by providing sufficient lighting for food preparation and cooking, but they also add a stylish and decorative element to the overall design of the kitchen.</p>\n    \n    <h2><strong>The character of Pendant lights for kitchen island</strong></h2>\n    \n    <p>The characteristics of <strong>pendant lights for kitchen islands</strong> can vary depending on the specific design and style. However, some common characteristics and features of pendant lights for the kitchen island include:</p>\n    \n    <h3><strong>Hanging Design</strong></h3>\n    \n    <p>One of the distinguishing features of <strong>pendant lights for the kitchen island</strong> is their hanging design. These lights are suspended from the ceiling using a cord, chain, or rod, allowing them to hang over the kitchen island at a desired height. This hanging design not only provides functional lighting but also adds a decorative element to the kitchen space.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-hanging-design-of-lights-adds-a-touch-of-elegance-to-the-kitchen-design.jpg?v=1692173520\" alt=\"adds a touch of elegance to the kitchen design\"><br /><em>The hanging design of lights adds a touch of elegance to the kitchen design</em></p>\n\n    <p>Pendant lights for kitchen island height can be adjusted to suit individual preferences and the specific requirements of the kitchen island, ensuring optimal lighting and aesthetic balance. Whether it's a single pendant or a row of pendants, the hanging design of these lights adds a touch of elegance and sophistication to the overall kitchen design.</p>\n    \n    <h3><strong>Task Lighting</strong></h3>\n    \n    <p>In addition to their hanging design, <strong>pendant lights for the kitchen island </strong>are known for their task lighting capabilities. These lights serve as a primary source of focused illumination, specifically targeting the surface area of the kitchen island. This makes them well-suited for tasks that require clear visibility and precision, such as food preparation, cooking, and dining.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/task-lighting-reduces-the-risk-of-accidents-in-the-kitchen.jpg?v=1692173520\" alt=\"reduces the risk of accidents in the kitchen\"><br /><em>Task lighting reduces the risk of accidents in the kitchen</em></p>\n\n    <p>The pendant lights are strategically positioned above the kitchen island to provide direct lighting where it's needed most, minimizing shadows and ensuring optimal visibility. The focused lighting also enhances safety by reducing the risk of accidents and promoting efficient workflow in the kitchen.</p>\n    \n    <h3><strong>Aesthetic Appeal</strong></h3>\n    \n    <p>With a wide range of styles, shapes, and materials available, these lights offer versatility that can complement various kitchen designs and suit individual preferences. Moreover, <strong>pendant lights for the kitchen island </strong>come in various shapes, such as globes, cylinders, and domes. This diversity of shapes allows you to choose a pendant light as an eye-catching focal point in the kitchen.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/pendant-lights-come-in-various-shapes-and-styles.jpg?v=1692173520\" alt=\"come in various shapes and styles\"><br /><em>Pendant lights come in various shapes and styles</em></p>\n\n    <p>Pendant lights come in an array of styles, ranging from modern and minimalist to traditional and ornate. This allows you to find a design that seamlessly integrates with your kitchen's overall aesthetic theme.</p>\n    \n    <h3><strong>Height Adjustment</strong></h3>\n    \n    <p>Another notable feature of<strong> pendant lights for kitchen islands</strong> is their height adjustment capability. Many pendant lights are designed with adjustable cords or chains, providing homeowners with the flexibility to customize the height according to their specific requirements and the dimensions of their kitchen.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/height-adjustment-allows-for-enhanced-visual-aesthetics.jpg?v=1692173521\" alt=\"enhanced visual aesthetics when height adjustment\"><br /><em>Height adjustment allows for enhanced visual aesthetics</em></p>\n\n    <p>This height adjustment feature enables you to achieve optimal lighting placement for your kitchen island. Whether you have a low-hanging ceiling or a higher ceiling, pendant lights can be easily adjusted to hang at the perfect distance above the island's surface. This ensures that the light is distributed evenly and effectively illuminates the workspace below.</p>\n\n    <p>The ability to adjust the height of pendant lights also allows for enhanced visual aesthetics. By precisely positioning the lights, you can create a visually pleasing composition and balance in the kitchen.</p>\n    \n    <h3><strong>Lighting Controls</strong></h3>\n    \n    <p>Another advantageous feature of<strong> pendant lights for kitchen islands </strong>is the ability to integrate them with lighting controls, specifically dimmer switches. This feature allows you to have control over the brightness level of the lights, tailoring the ambiance and illumination to suit their preferences and specific lighting needs.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/lighting-control-allows-for-reducing-the-brightness-level.jpg?v=1692173520\" alt=\"control allows for reducing the brightness level\"><br /><em>Lighting control allows for reducing the brightness level</em></p>\n\n    <p>The utilization of dimmer switches with pendant lights provides significant benefits in terms of functionality and energy efficiency. Not only does it enable you to easily customize the lighting to match your activities and preferences, but it also allows for the conservation of energy by reducing the brightness level when necessary.</p>\n    \n    <h3><strong>Multiple Pendants</strong></h3>\n    \n    <p>In more spacious kitchen settings, particularly larger kitchen islands or open-concept kitchens, the use of multiple<strong> Pendant lights for kitchen island</strong> has become a popular choice. This approach ensures the provision of sufficient and well-balanced lighting throughout the area.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/multiple-pendants-allow-for-more-flexibility-in-lighting-control.jpg?v=1692173520\" alt=\"multiple allow for more flexibility in lighting control\"><br /><em>Multiple pendants allow for more flexibility in lighting control</em></p>\n\n    <p>By incorporating multiple pendant lights, you can effectively distribute light across the entire kitchen island surface, minimizing any potential shadows or dark spots. This creates an evenly illuminated workspace, enhancing visibility and facilitating seamless food preparation, cooking, and other kitchen activities.</p>\n\n    <p>In terms of functionality, having multiple pendant lights allows for more flexibility in lighting control. Each pendant light can be operated individually, giving you the option to adjust the brightness or turn on specific lights based on your lighting preferences or particular task requirements.</p>\n    \n    <h2><strong>Tips to choose the best suitable Pendant lights for kitchen island for your house</strong></h2>\n    \n    <p>To choose the most suitable<strong> pendant lights for your kitchen island</strong>, consider the following tips:</p>\n    <ul>\n        <li><strong>Consider the Size and Scale:</strong> First, you should look at the size of your kitchen island and the overall dimensions of your kitchen space. Ensure the pendant lights you choose are proportionate to the island's size and the room's scale. Oversized or undersized lights can disrupt the overall aesthetic balance.</li>\n        <li><strong>Height and Placement:</strong> You should measure the height of your kitchen ceiling and the clearance above the island most accurately. This will help you determine the right length for the pendant lights to ensure they hang at a suitable height. Consider adjustable options if you want flexibility in adjusting the height.</li>\n        <li><strong>Style and Design:</strong> It is essential to consider the existing style and design of your kitchen. Choose pendant lights that complement the overall theme and blend well with the other elements, such as cabinets, countertops, and flooring. For example, if you have a modern kitchen, sleek and minimalist pendant lights may be the best choice.</li>\n        <li><strong>Number of Pendants: </strong>A common guideline suggests having one pendant light for every two feet of the island's length. This helps ensure adequate lighting coverage and balance. However, it's essential to find the right balance and not overcrowd the space with too many pendant lights, as that could lead to an overwhelming and cluttered look.</li>\n    </ul>\n    \n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/focus-on-the-size-of-your-kitchen-and-the-overall-dimensions-of-your-kitchen-space.jpg?v=1692173521\" alt=\"focus on the size and the overall dimensions of your\"><br /><em>Focus on the size of your kitchen and the overall dimensions of your kitchen space</em></p>\n    \n    <h2><strong>The best Pendant lights idea for the kitchen island </strong></h2>\n    \n    <p>When it comes to choosing<strong> pendant lights for your kitchen island</strong>, there are several popular and stylish ideas to consider. Here are five of the best pendant lighting for kitchen island ideas:</p>\n    \n    <h3><strong>Industrial Dome Pendants</strong></h3>\n    \n    <p>Industrial dome pendants with metal finishes, exposed bulbs, and unique designs can add a modern and edgy touch to your kitchen island. These lights often feature materials such as brushed steel or iron, and their minimalist aesthetic enhances a contemporary or urban-style kitchen.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/industrial-dome-pendants-add-a-modern-touch-to-your-kitchen.jpg?v=1692173520\" alt=\"bring modern touch to your kitchen\"><br /><em>Industrial dome pendants add a modern touch to your kitchen</em></p>\n    \n    <h3><strong>Crystal Chandeliers</strong></h3>\n    \n    <p>Crystal chandeliers are known for their elegant and luxurious appearance. They typically feature a central light fixture adorned with hanging crystals or glass accents. Crystal chandeliers add a touch of glamor and sparkle to the kitchen island. The crystals reflect and refract light, creating a beautiful play of light and shadow.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/crystal-chandeliers-have-a-luxurious-appearance.jpg?v=1692173520\" alt=\"have a luxurious appearance\"><br /><em>Crystal chandeliers have a luxurious appearance</em></p>\n\n    <p>To incorporate crystal chandeliers into your kitchen, you should consider pairing them with other elegant elements like marble countertops or polished stainless steel appliances. This will create a cohesive and sophisticated look.</p>\n    \n    <h3><strong>Rattan or Bamboo Pendants</strong></h3>\n    \n    <p>Rattan or bamboo pendants are ideal choices in the range of<strong> pendant lights for kitchen island</strong>. They often feature intricately woven or layered designs using rattan or bamboo materials. These natural materials give the pendants a rustic and organic look. The weaving technique allows for light to pass through the gaps, creating a warm and inviting ambiance in the kitchen.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/rattan-or-bamboo-pendants-bring-a-natural-vibe.jpg?v=1692173521\" alt=\"rattan and bamboo bring a natural vibe\"><br /><em>Rattan or Bamboo Pendants bring a natural vibe </em></p>\n    \n    <h3><strong>Glass Jar Pendants</strong></h3>\n    \n    <p>Glass jar pendants are the popular choice for those who prefer a vintage or industrial style. These pendants resemble old-fashioned mason jars and can provide a charming and nostalgic touch to your kitchen island. They are versatile and can be used in various kitchen styles, adding a unique flair to the space.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/glass-jar-pendants-are-the-best-choice-for-those-who-prefer-a-vintage-style.jpg?v=1692173521\" alt=\"best choice for those who prefer a vintage style\"><br /><em>Glass jar pendants are the best choice for those who prefer a vintage style</em></p>\n    \n    <h3><strong>Modern Geometric Pendants</strong></h3>\n    \n    <p>If you have a contemporary or modern kitchen, geometric pendants can be a great choice. These pendants feature sleek lines and angular designs, adding a touch of sophistication to your kitchen island. They come in various materials like metal, glass, or even wood, allowing you to find one that fits your style.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/modern-geometric-pendants-add-a-touch-of-sophistication-to-your-kitchen.jpg?v=1692173520\" alt=\"sophistication to your kitchen\"><br /><em>Modern Geometric Pendants add a touch of sophistication to your kitchen</em></p>\n    \n    <h2><strong>types of Pendant lights for kitchen island are available at Rowabi</strong></h2>\n    \n    <p>At Rowabi, there are seven types of <strong>pendant lights for kitchen island</strong>. Here are the options for your reference:</p>\n    \n    <h3><strong>Aurelia Rattan Pendant Light</strong></h3>\n    \n    <p>The Aurelia Rattan Pendant Light at Rowabi showcases a beautifully crafted rattan design that exudes an organic charm. The intricate rattan weaving adds texture and depth to the light fixture, creating a visually captivating look.</p>\n\n    <p>The Aurelia Rattan Pendant Light is available in various finishes and tones. Whether you prefer a light, natural rattan shade that enhances a bright and airy ambiance or a darker, more dramatic tone that adds depth and richness, you can find the perfect match for your kitchen island.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/aurelia-rattan-pendant-light-offers-a-versatile-style.jpg?v=1692173520\" alt=\"aurelia pendant light offers a versatile style\"><br /><em>Aurelia Rattan Pendant Light offers a versatile style</em></p>\n\n    <p>In terms of design, the Aurelia Rattan Pendant Light offers a versatile style that seamlessly blends with different interior aesthetics. Whether your kitchen has a farmhouse, coastal, bohemian, or even a modern theme, this pendant light can effortlessly integrate into the overall design, adding a touch of warmth and character.</p>\n\n    <p>When it comes to pricing, the Aurelia Rattan Pendant Light is designed to cater to a range of budgets, making it an accessible option for homeowners looking to enhance their kitchen island lighting without compromising on quality or style.</p>\n    \n    <h3><strong>Callie Rattan Pendant Light</strong></h3>\n    \n    <p>The Callie Rattan Pendant Light's unique rattan design brings a natural and rustic touch to your kitchen island, creating a warm and inviting atmosphere for cooking and dining. The intricate weaving of the rattan adds texture and depth to the pendant light, making it a visually captivating focal point in your kitchen.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/callie-rattan-pendant-light-creates-a-warm-atmosphere-for-cooking.jpg?v=1692173521\" alt=\"creates a warm atmosphere for cooking\"><br /><em>Callie Rattan Pendant Light creates a warm atmosphere for cooking</em></p>\n\n    <p>Also, the Callie Rattan Pendant Light is available in a variety of natural rattan tones. Whether you prefer a light, blonde finish that emanates a fresh and breezy vibe or a darker, richer tone that adds sophistication and depth, you can select the perfect shade that complements your kitchen decor.</p>\n\n    <p>With just about $99, you can own the stunning Callie Rattan Pendant Light. The reasonable price offered by Rowabi makes it a great deal, so why hesitate? Let’s choose to purchase a<strong> pendant light for the kitchen island</strong> and enhance its beauty even more.</p>\n    \n    <h3><strong>Sepherina Rattan Pendant Light</strong></h3>\n    \n    <p>The Sepherina Rattan Pendant Light stands out with its unique rattan construction, which sets it apart from traditional lighting fixtures. The intricate rattan construction adds an element of intricacy and craftsmanship, making it an eye-catching focal point.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/sepherina-rattan-pendant-light-stands-out-with-its-unique-rattan-construction.jpg?v=1692173520\" alt=\"stands out with its unique rattan construction\"><br /><em>Sepherina Rattan Pendant Light stands out with its unique rattan construction</em></p>\n\n    <p>This pendant light not only offers a striking visual aesthetic but also provides functional lighting for your kitchen island. Whether you need focused task lighting for meal preparation or a warm ambient glow for casual gatherings, the Sepherina Rattan Pendant Light delivers both functionality and style.</p>\n\n    <p>The price range of $200 for the Sepherina Rattan Pendant Light suggests that it caters to a mid-range segment of customers. This price point appeals to customers who are looking for a higher-quality pendant light with unique rattan construction while still being mindful of their budget.</p>\n    \n    <h3><strong>Santana Rattan Pendant Light</strong></h3>\n    \n    <p>The Santana Rattan Pendant Light's rattan weave design not only enhances the visual appeal of your kitchen but also creates a cozy and inviting ambiance. The natural materials used in its construction bring a warm and earthy element to your kitchen space, making it a welcoming environment for cooking, dining, and entertaining.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/santana-rattan-pendant-light-enhances-the-visual-appeal-of-your-kitchen.jpg?v=1692173520\" alt=\"enhances the visual appeal of your kitchen\"><br /><em>Santana Rattan Pendant Light enhances the visual appeal of your kitchen</em></p>\n\n    <p>With its intricate rattan weave, the Santana pendant light adds depth and texture to your kitchen decor. It becomes a focal point of the room, drawing the attention of guests and creating a captivating visual impact.</p>\n\n    <p>At $120, the Santana Rattan Pendant Light offers great value for its craftsmanship, design, and functionality. It is an attractive option for homeowners who want to enhance the aesthetic appeal of their kitchen while staying within a reasonable budget. If you're in search of <strong>pendant lights for your kitchen island</strong>, don't overlook this particular model!</p>\n    \n    <h3><strong>5.5 Jace Rattan Pendant Light</strong></h3>\n    \n    <p>The Jace Rattan Pendant Light combines the timeless appeal of rattan with a sleek and clean aesthetic, creating a unique blend of natural warmth and modern sophistication. Its minimalistic design allows it to seamlessly integrate into various kitchen styles, whether you have a contemporary, Scandinavian, or even a minimalist design theme.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/jace-rattan-pendant-light-offers-a-sophisticated-lighting-solution-for-your-kitchen.jpg?v=1692173520\" alt=\"offers a sophisticated lighting solution for your kitchen\"><br /><em>Jace Rattan Pendant Light offers a sophisticated lighting solution for your kitchen</em></p>\n\n    <p>With an average price of approximately $148, the Jace Rattan Pendant Light offers a stylish and sophisticated lighting solution for your kitchen island. It can be said that this pendant light is an exceptional choice for those seeking a minimalistic and modern lighting fixture that adds a touch of contemporary elegance to their kitchen island</p>\n    \n    <h3><strong>Althea Rattan Bowl Pendant Light</strong></h3>\n    \n    <p>The Althea Rattan Bowl Pendant Light available at Rowabi offers a unique and eye-catching lighting solution for your kitchen island. This pendant light combines a rattan framework with a bowl-shaped design, resulting in a captivating and stylish piece that enhances the overall ambiance of your kitchen space.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/althea-rattan-bowl-pendant-light-combines-a-rattan-framework-with-a-bowl-shaped-design.jpg?v=1692173520\" alt=\"althea combines a rattan framework with a bowl-shaped design\"><br /><em>Althea Rattan Bowl Pendant Light combines a rattan framework with a bowl-shaped design</em></p>\n\n    <p>With regards to the price segment, the Althea Rattan Bowl Pendant Light is positioned in the mid-range to higher-end segment. While specific pricing may vary, it typically falls within a higher price category, reflecting its unique design and quality craftsmanship.</p>\n    \n    <h3><strong>Amira Jute Pendant Light</strong></h3>\n    <p>The use of jute in the construction of the Amira pendant light sets it apart from other conventional lighting fixtures. Jute, a natural fiber, contributes to the eco-friendly aspect of the pendant light, making it an excellent choice for those who prioritize sustainability in their home decor.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/amira-jute-pendant-light-brings-a-cheap-price-just-50.jpg?v=1692173520\" alt=\"amira jute pendant light a cheap price\"><br /><em>Amira Jute Pendant Light brings a cheap price, just $50</em></p>\n\n    <p>The bohemian style of the Amira Jute Pendant Light allows you to infuse a sense of relaxed and carefree atmosphere into your kitchen space. It harmonizes well with Boho, coastal, or eclectic interior design styles, bringing a unique and earthy charm to your kitchen decor.</p>\n\n    <p>With a price tag of around $50, this pendant light makes it an accessible choice for those who are looking to enhance the visual appeal of their kitchen without making a significant financial investment. Despite its affordable price, the Amira Jute Pendant Light does not compromise on quality or design.</p>\n    \n    <h2><strong>Rowabi - The place to inspire light for your kitchen space</strong></h2>\n    \n    <p>Rowabi takes pride in curating a collection of lighting products that feature the latest in modern design, including <strong>pendant lights for kitchen islands</strong>. Our goal is to ignite your creativity and provide you with the inspiration you need to transform your kitchen into a captivating and inviting area with our cloud-inspired pendant lights.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/rowabi-an-ideal-destination-radiating-light-into-your-kitchen-space.jpg?v=1692173520\" alt=\"we deal destination radiating light into your kitchen space\"><br /><em>Rowabi - An ideal destination radiating light into your kitchen space</em></p>\n\n    <p>One of our standout collections is the cloud-inspired pendant lights. These unique designs draw inspiration from the beauty and tranquility of clouds, adding a touch of whimsy and charm to your kitchen. Made with high-quality materials and attention to detail, our cloud-inspired pendant lights create a focal point that transforms your kitchen into a captivating space.</p>\n\n    <p>At Rowabi, we are dedicated to helping you find the perfect lighting solutions for your kitchen. Let our products inspire you and ignite your creativity as you transform your kitchen into a space that reflects your unique style and personality.</p>\n\n    <p>The above article has provided you with information about <strong>pendant lights for kitchen islands</strong>. These pendant lights not only make your kitchen space more beautiful but also make cooking easier. If you require to purchase a pendant light for your home, please contact <strong>Rowabi </strong>for more detailed advice!</p>",
+        "text_alignment": "start",
+        "height": 300,
+        "read_more": "Read more",
+        "read_less": "Read less"
+      }
+    }
+  },
+  "order": [
+    "b14d8b31-4a4c-4d5b-9d59-b9b735a3bf43",
+    "collection-banner",
+    "fafc8a2e-74c9-44e8-b202-6a25c6203a3b",
+    "46a6d0b9-8e9a-478c-8707-bfcf4d8f3831",
+    "main",
+    "fac2eb95-ca5d-4f4b-b45e-49f2ac09dadc",
+    "007ea1dd-a54e-4d48-a43f-f62feea5b3b6"
+  ]
+}

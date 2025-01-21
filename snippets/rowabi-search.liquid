@@ -1,0 +1,58 @@
+<div class="md:rowabi-relative 2xl:rowabi-max-w-[80%]">
+  <header-search id="header-search-{{ section.id }}" class="header-search rowabi-mt-[-65px] md:rowabi-mt-[-30px] rowabi-px-[16px] rowabi-py-[12px] md:rowabi-p-0">
+    <div class="">
+      <form id="predictive-search-form" action="{{ routes.search_url }}" method="GET" aria-owns="header-predictive-search" class="header-search__form" role="search" style="border: 1px solid rgba(89, 83, 67, 0.30);height: 40px;max-width: 434px;overflow: hidden;">
+        <div class="header-search__form-control" style="padding: 3px 16px;column-gap: 12px;">
+          <span class="rowabi-mt-[5px]">
+            {%- render 'icon' with 'search', width: 20 -%}
+          </span>
+          <input id="header-search__input" type="search" name="q" spellcheck="false" class="header-search__input h5 sm:h5" style="line-height: 18px;" aria-label="{{ 'search.general.title' | t | escape }}" placeholder="Search">
+          <!-- <button type="button" is="close-button">
+            <span class="sr-only">{{ 'general.accessibility.close' | t }}</span>
+            {%- render 'icon' with 'close', width: 16 -%}
+          </button> -->
+        </div>
+      </form>
+  
+      <predictive-search id="header-predictive-search" class="predictive-search rowabi-px-[5%]">
+        <div class="predictive-search__content rowabi-grid rowabi-grid-cols-1" slot="results"></div>
+      </predictive-search>
+    </div>
+  </header-search>
+  
+</div>
+<style>
+  .predictive-search__results.predictive-search__results--with-suggestions {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  #header-search__input::placeholder {
+    font-size: 14px;
+    color: rgba(114, 114, 114, 0.70);
+    font-family: "Sainte Colombe";
+  }
+  
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.querySelector("#header-search__input");
+  const predictiveSearch = document.querySelector("#header-predictive-search");
+
+  // Khi input nhận focus, hiển thị predictive search
+  searchInput.addEventListener("focus", () => {
+    predictiveSearch.style.display = "block";
+  });
+
+  document.addEventListener("click", (event) => {
+    const isClickInsideInput = searchInput.contains(event.target);
+    const isClickInsidePredictive = predictiveSearch.contains(event.target);
+
+    if (!isClickInsideInput && !isClickInsidePredictive) {
+      predictiveSearch.style.display = "none";
+    }
+  });
+    
+});
+
+</script>

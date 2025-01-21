@@ -1,0 +1,232 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --product-list-items-per-row: {{ section.settings.products_per_row_mobile | times: 1 }};
+    --product-list-horizontal-spacing-factor: {{ section.settings.horizontal_spacing_factor }};
+    --product-list-vertical-spacing-factor: {{ section.settings.vertical_spacing_factor }};
+  }
+
+  @media screen and (min-width: 700px) {
+    #shopify-section-{{ section.id }} {
+      --product-list-items-per-row: {{ section.settings.products_per_row_desktop }};
+    }
+  }
+</style>
+
+<div {% if section.settings.id_section != blank %}id="{{ section.settings.id_section }}"{% endif %} class="section-spacing {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  <div class="container">
+    {%- assign wrapper_carousel_id = 'featured-collections-grid-' | append: section.id -%}
+
+    <div class="section-stack">
+      <div class="v-stack justify-self-center gap-4 text-center sm:gap-5">
+        {%- if section.settings.subheading != blank and section.settings.subheading_below == false -%}
+          <p class="h6 text-center">{{- section.settings.subheading -}}</p>
+        {%- endif -%}
+          
+        <p class="h2">{{ section.settings.heading | default: section.settings.collection.title | default: 'Collection' }}</p>
+
+        {%- if section.settings.subheading != blank and section.settings.subheading_below == true -%}
+          <p class="h6 text-center">{{- section.settings.subheading -}}</p>
+        {%- endif -%}
+      </div>
+
+      <featured-collections-grid id="{{ wrapper_carousel_id }}" class="featured-collections-carousel {% if section.settings.container_small %}container container--xl{% endif %}">
+        <div class="featured-collections-carousel__item is-selected">
+          {%- capture product_list -%}
+            {%- assign should_reveal = false -%}
+
+            {%- if settings.stagger_products_apparition and forloop.first -%}
+              {%- assign should_reveal = true -%}
+            {%- endif -%}
+
+            {%- for product in section.settings.collection.products limit: section.settings.products_count -%}
+              {%- render 'product-card', product: product, reveal: should_reveal, hide_product_information: section.settings.hide_product_information, block: section -%}
+            {%- else -%}
+              {%- for i in (1..section.settings.products_count) -%}
+                {%- render 'product-card-placeholder', reveal: should_reveal, loop_index: forloop.index0, hide_product_information: section.settings.hide_product_information -%}
+              {%- endfor -%}
+            {%- endfor -%}
+          {%- endcapture -%}
+
+          <product-list 
+            class="product-list {% if section.settings.hide_product_information %}product-list--compact{% endif %} justify-center"
+            data-collection-handle="{{ section.settings.collection.url }}"
+            data-section-id="{{ section.id }}"
+            >
+            {{- product_list -}}
+          </product-list>
+
+          {%- if section.settings.link_text != blank and section.settings.collection and section.settings.collection.all_products_count > section.settings.products_count -%}
+            <div class="justify-self-center">
+              <a data-load-more="2" class="button" href="javascript:void(0)" rel="nofollow">
+                {{- section.settings.link_text -}}
+              </a>
+            </div>
+
+            {%- if collection and collection.handle == section.settings.collection.handle -%}
+              <div class="hidden" data-collection-content data-paginate="">
+                {%- for product in collection.products offset: section.settings.products_count -%}
+                  {%- assign should_reveal = false -%}
+
+                  {%- if settings.stagger_products_apparition -%}
+                    {%- assign should_reveal = true -%}
+                  {%- endif -%}
+    
+                  {%- render 'product-card', product: product, reveal: should_reveal, hide_product_information: section.settings.hide_product_information, block: section -%}
+                {%- endfor -%}
+              </div>
+              {%- comment -%}
+              {%- paginate collection.products by section.settings.products_count -%}
+                <div class="hidden" data-collection-content data-paginate="{% if paginate.next %}{{ paginate.current_page | plus: 1 }}{% endif %}">
+                  {%- for product in collection.products -%}
+                    {%- assign should_reveal = false -%}
+
+                    {%- if settings.stagger_products_apparition -%}
+                      {%- assign should_reveal = true -%}
+                    {%- endif -%}
+      
+                    {%- render 'product-card', product: product, reveal: should_reveal, hide_product_information: section.settings.hide_product_information, block: section -%}
+                  {%- endfor -%}
+                </div>
+              {%- endpaginate -%}
+              {%- endcomment -%}
+            {%- endif -%}
+          {%- endif -%}
+        </div>
+      </featured-collections-grid>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured collections grid",
+  "class": "shopify-section--featured-collections",
+  "tag": "section",
+  "disabled_on": {
+    "templates": ["password"],
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "id_section",
+      "label": "ID section"
+    },
+    {
+      "type": "checkbox",
+      "id": "container_small",
+      "label": "Enable container small",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "t:global.section.separate_section_with_border",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_product_information",
+      "label": "t:global.product_list.hide_product_information",
+      "info": "t:global.product_list.hide_product_information_info"
+    },
+    {
+      "type": "header",
+      "content": "t:global.product_list.product_list_category"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.featured_collections.blocks.collection.collection"
+    },
+    {
+      "type": "range",
+      "id": "products_count",
+      "min": 2,
+      "max": 50,
+      "label": "t:global.product_list.products_to_show",
+      "default": 3
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "t:global.text.link_text",
+      "default": "View all"
+    },
+    {
+      "type": "select",
+      "id": "products_per_row_mobile",
+      "label": "t:global.product_list.products_per_row_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "range",
+      "id": "products_per_row_desktop",
+      "min": 2,
+      "max": 6,
+      "label": "t:global.product_list.products_per_row_desktop",
+      "info": "t:global.product_list.products_per_row_desktop_info",
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "t:global.product_list.spacing_category",
+      "info": "t:global.product_list.spacing_category_info"
+    },
+    {
+      "type": "range",
+      "min": 0.2,
+      "max": 2,
+      "step": 0.1,
+      "id": "horizontal_spacing_factor",
+      "label": "Horizontal spacing factor",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "min": 0.2,
+      "max": 2,
+      "step": 0.1,
+      "id": "vertical_spacing_factor",
+      "label": "Vertical spacing factor",
+      "default": 1
+    },
+    {
+      "type": "header",
+      "content": "t:global.section.header_category"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "t:global.text.heading",
+      "info": "t:sections.featured_collections.blocks.collection.title_info"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "t:global.text.subheading"
+    },
+    {
+      "type": "checkbox",
+      "id": "subheading_below",
+      "label": "Displayed below the Heading",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured collections grid"
+    }
+  ]
+}
+{% endschema %}

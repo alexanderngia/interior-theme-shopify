@@ -1,0 +1,176 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "image_size": "auto",
+        "allow_transparent_header": false,
+        "reveal": true,
+        "enable_parallax": false,
+        "show_collection_title": false,
+        "show_collection_description": false,
+        "content_width": "xs",
+        "background": "#000000",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "slideshow_popup_ff6J8a": {
+      "type": "slideshow-popup",
+      "blocks": {
+        "image_CXyhQD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/dining-room-web-banner.jpg",
+            "mobile_image": "shopify://shop_images/dining-room-mobile-banner.jpg",
+            "subheading": "",
+            "subheading_below": false,
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_popup": false,
+            "button_1_link": "https://www.rowabi.com/collections/pendant-lighting?utm_source=website&utm_medium=banner-diningroom&utm_campaign=holiday-lighting",
+            "klaviyo_form_trigger": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_popup": false,
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "image_CXyhQD"
+      ],
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "form_heading": "REGISTRATION FORM",
+        "field_title_1": "Custom field",
+        "field_values_1": "value 1; value 2; value 3",
+        "field_required_1": false,
+        "field_title_2": "Custom field",
+        "field_values_2": "value 1; value 2; value 3",
+        "field_required_2": false,
+        "field_title_3": "Custom field",
+        "field_values_3": "value 1; value 2; value 3",
+        "field_required_3": false,
+        "field_title_4": "Custom field",
+        "field_values_4": "value 1; value 2; value 3",
+        "field_required_4": false
+      }
+    },
+    "fafc8a2e-74c9-44e8-b202-6a25c6203a3b": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 15,
+        "padding_bottom": 15
+      }
+    },
+    "46a6d0b9-8e9a-478c-8707-bfcf4d8f3831": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Rattan Pendant Lights For Dining Room</strong>",
+            "heading_tag": "h1",
+            "h1_tag": true
+          }
+        },
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-2": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><em>Elevate your dining experience with our handcrafted rattan light collection. Each piece marries centuries-old weaving techniques with contemporary design, casting captivating shadows that transform your space. Crafted from premium, sustainably sourced rattan, these lights offer unparalleled durability and natural elegance. Invest in a </em><a href=\"https://www.rowabi.com/\"><em><strong>Rowabi</strong></em></a><em> masterpiece that enhances your culinary gatherings with refined luxury.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-1",
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-2"
+      ],
+      "custom_css": [
+        ".h1 {font-size: 30px;}"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": true,
+        "background": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "load_more": true,
+        "hide_product_information": false,
+        "products_per_page": 48,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": true,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "filter_layout": "sidebar",
+        "quick_links_menu": "",
+        "show_sort_by": false,
+        "show_filters": true,
+        "show_results_count": false,
+        "show_filter_group_name": false,
+        "show_empty_filter_values": false,
+        "show_filter_values_count": false,
+        "show_color_swatch": false,
+        "open_filters_by_default": false
+      }
+    },
+    "3b5d9b28-42c2-4809-ae09-555e7865a5dd": {
+      "type": "read-more",
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<h2><strong>Why do people choose and use dining room pendant lights instead of other lights? </strong></h2>\n    \n    <p>Many customers are still wondering about the use of pendant lights. Now, Rowabi will show you 6  reasons why you should choose this product for your house.</p>\n    \n    <h3><strong>Versatility and convenience </strong></h3>\n    \n    <p>The key benefits of pendant lighting are its versatility and convenience. This item can be used to offer light where it is most needed. In detail, you can apply the product in any space, including the kitchen and bedroom. For example, many customers will put a single<em> pendant light over a dining table </em>to add closeness and warmth between family members at meals.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/pendant-light-for-dining-room.jpg?v=1692179457\" alt=\"pendant lights for dining room\"><br /><em>The key benefit of pendant lighting is its versatility</em></p>\n    \n    <h3><strong>Elegant furniture for the kitchen </strong></h3>\n    \n    <p>The dining room pendant is not only used to bring brightness but also enhances the luxury of your space. The product’s visually appealing shape and vibrant colors make it simple to mix and match with other pieces of furniture. Hence, your kitchen will be more harmonious and impressive.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-dining-room-pendant-enhances-the-luxury-of-your-space.jpg?v=1692179456\" alt=\"add elegance to your space\"><br /><em>The dining room pendant enhances the luxury of your space</em></p>\n    \n    <h3><strong>Make use of space in the dining rooms</strong></h3>\n    \n    <p>One of the most benefits of<strong> pendant lights for dining rooms </strong>is that these can be utilized to split your dining room into multiple zones. For instance, you could want to set up a certain space for an espresso bar or brunch. Hence, <em>hanging dining room light fixtures</em> can help you to make use of spaces and separate them into small areas for different activities.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/it-can-be-utilized-to-split-your-dining-room-into-multiple-zones.jpg?v=1692179457\" alt=\"can be utilized to split your dining room into multiple zones\"><br /><em>It can be utilized to split your dining room into multiple zones</em></p>\n    \n    <h3><strong>Avoid destroying the ceiling</strong></h3>\n    \n    <p>The light has a suitable height so it will not affect the ceiling fan. Customers can select lamps with an appropriate height if their area is not large enough. This also helps ensure the safety of family members when having a dining meal.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-light-has-a-suitable-height-so-it-will-not-affect-the-ceiling-fan.jpg?v=1692179456\" alt=\"due to the appropriate height, it does not affect the ceiling fan\"><br /><em>The light has a suitable height so it will not affect the ceiling fan</em></p>\n    \n    <h3><strong>Customized designs for lights</strong></h3>\n    \n    <p>Depending on the <em>dining room lamp</em>, you can create a valuable and trending space where you and the whole family are going to enjoy spending time. The item has various sizes, colors, and shapes so it will provide a sense of uniqueness to your home.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-will-be-guided-and-consulted-carefully-about-the-product.jpg?v=1692179457\" alt=\"products at rowabi come in different sizes, colors and shapes\"><br /><em>The item has various sizes, colors, and shapes</em></p>\n\n    <p>Whether you're looking to set up an inviting atmosphere, an elegant appearance in your kitchen, or a sophisticated mood, <em>pendant lamps for the dining room</em> can adapt to all of your requirements.</p>\n    \n    <h3><strong>Soft and cozy light </strong></h3>\n    \n    <p>The light of this item bounces off many surfaces so it will create a soft and cozy light that is pleasant for your eyes. So, you can create a welcoming and comfortable ambiance for your guests when having private events or special meals.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-product-will-create-a-soft-and-cozy-light.jpg?v=1692179457\" alt=\"these pendant lights create a soft and cozy light\"><br /><em>The product will create a soft and cozy light</em></p>\n    \n    <h2><strong>Tips for buying the right hanging lights for dining room</strong></h2>\n    \n    <p>Selecting the right <strong>pendant lights for dining room</strong> will help your living space be more harmonious and beautiful. Let's find out some tips to get a suitable product.</p>\n    <ul>\n        <li>It's crucial to consider your kitchen size when choosing pendant lights. To make a visual impact in a large space, you should consider selecting larger ones.</li>\n        <li>The height is an important factor that you need to consider. If you choose an item that is too high or too low, it will not create a good look and limit its functionality.</li>\n        <li>You should determine the amount of light that the product must provide because different areas demand various illumination levels.</li>\n        <li>You should select the<em> dining table pendant light</em> that will be harmonious with your other furniture. To do this, let’s think about the shape, color, and concept.</li>\n    </ul>\n    \n    <h2><strong>Best pendant lights for kitchen decor on Rowabi </strong></h2>\n    \n    <p>Dining area pendant light is a gorgeous piece of furniture for every home. Let’s take a look at the top 5 unique products from Rowabi.</p>\n    \n    <h3><strong>Yara Rattan Pendant Light</strong></h3>\n    \n    <p>Yara Rattan Pendant Light has a natural brown color which helps to make your room more cozy and warm. The unique feature of this product is the pyramidal form that was originally designed such as the hat for farmers. Moreover, Yara Rattan also provides an open form that makes one light source produce a lot of brightness for your dining room.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/yara-rattan-pendant-light-has-a-natural-brown-color.jpg?v=1692179457\" alt=\"yara is a natural brown light brown rattan string light in the dining room\"><br /><em>Yara Rattan Pendant Light has a natural brown color</em></p>\n    \n    <h3><strong>Avery Rattan Pendant Light</strong></h3>\n    \n    <p>The Avery Rattan Pendant Light has a traditional shape which will impress customers who love minimalism style. The product has a natural light brown color so it can bring your home a natural and vintage look. Because light adjusts through the slightly translucent, their diverse colors will give an atmosphere of relaxing vibe and softness.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-avery-rattan-pendant-light-has-a-traditional-shape.jpg?v=1692179457\" alt=\"avery is a traditional shaped rattan chandelier\"><br /><em>The Avery Rattan Pendant Light has a traditional shape</em></p>\n    \n    <h3><strong>Sepherina Rattan Pendant Light</strong></h3>\n    \n    <p>Sepherina Rattan Pendant Light is created by hand from high-quality rattan by trained craftsmen. So, Rowabi makes sure that every single one is unique. The organic fiber and complex weaving approach will create an inviting and comfortable atmosphere when your guests come home.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/sepherina-rattan-pendant-light-is-created-from-high-quality-rattan.jpg?v=1692179457\" alt=\"sepherina is a high quality rattan pendant light for the dining room\"><br /><em>Sepherina Rattan Pendant Light is created from high-quality rattan</em></p>\n    \n    <h3><strong>Callie Rattan Pendant Light</strong></h3>\n    \n    <p>Callie Rattan Pendant Light is a piece of deal furniture for your dining room. It is made of braided rattan and is designed with a unique shape so customers can easily mix this item with other furniture to enhance the aesthetic of the house. Moreover, the product also provides natural light which helps your eyes be more comfortable.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/callie-rattan-pendant-light-is-an-ideal-furniture.jpg?v=1692179457\" alt=\"callie pendant lights are an ideal piece of furniture for the dining room\"><br /><em>Callie Rattan Pendant Light is an ideal furniture</em></p>\n    \n    <h3><strong>Santana Rattan Pendant Light</strong></h3>\n    \n    <p>Santana Rattan Pendant Light's outstanding appearance can transform your living space into an atmosphere of tranquility and elegance. Its hemispheric form provides a soft and warming glow to diffuse through the fibers. Hence, you can use this product to set up a room with a modern and unique look.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/its-hemispheric-form-provides-a-soft-and-warming-glow.jpg?v=1692179457\" alt=\"its hemispheric form provides a soft and warming\"><br /><em>Its hemispheric form provides a soft and warming glow</em></p>\n    \n    <h2><strong>Rowabi - Upgrade your house with designed rattan lights</strong></h2>\n    \n    <p>Rowabi is a business that specializes in providing <em>dining pendant lights</em> made of rattan. Let’s find out the reasons why you should choose Rowabi for your home.</p>\n    \n    <h3><strong>Quality and diverse products</strong></h3>\n    \n    <p>Rowabi is famous for the brand’s collection of quality and diverse products. Customers will have a wide selection of pendant light models with various styles, forms, and colors. The products are particularly appropriate for typical home settings. As a result, you can use furniture that has been specially made by Robiwa's artisans to decorate your kitchen, bedroom, and dining room.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/rowabi-is-famous-for-the-brands-collection-of-quality-and-diverse-products.jpg?v=1692179457\" alt=\"our products are famous for their quality and variety\"><br /><em>Rowabi is famous for the brand’s collection of quality and diverse products</em></p>\n    \n    <h3><strong>Affordable prices with many promotions</strong></h3>\n    \n    <p>Rowabi not only offers a wide range of products but also provides customers with a large choice of costs. Moreover, the brand also provides many attractive promotions for clients to experience pleasure when buying products here. Therefore, Rowabi is always loved and trusted by many customers when they need to buy furniture.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-brand-also-provides-many-attractive-promotions-for-clients.jpg?v=1692179457\" alt=\"we offer many attractive promotions for customers\"><br /><em>The brand also provides many attractive promotions for clients</em></p>\n    \n    <h3><strong>Personalized and modern designs</strong></h3>\n    \n    <p>Each Rowabi product is created with a different appearance and style. Hence, you can use these designs to make the inside of your home more impressive. From that, your living space will become distinct and has your vibe. Moreover, you will also make your guests feel impressed and excited when they visit your home.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/each-rowabi-product-is-created-with-a-distinctive-appearance.jpg?v=1692179457\" alt=\"each rrowabi product is made with a personalized brand\"><br /><em>Each Rowabi product is created with a distinctive appearance</em></p>\n    \n    <h3><strong>Detailed product care guide</strong></h3>\n    \n    <p>One of the things that Rowabi is most proud of is customer service. You will be guided and consulted carefully about the product by the staff. If an issue occurs during the buying process, Robiwa team will be addressed immediately for customers. In particular, you will still get a quick response whether you go to the store or call the staff.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-will-be-guided-and-consulted-carefully-about-the-product.jpg?v=1692179457\" alt=\"when you buy, you will be thoroughly guided and consulted about the product\"><br /><em>You will be guided and consulted carefully about the product</em></p>\n    \n    <h3><strong>Return and warranty policies</strong></h3>\n    \n    <p>When consumers use the store's products, Rowabi always makes sure they get the most excellent experience. Therefore, Robiwa is willing to assist you in returning the purchased item within a 30-day free return if it has a problem while being used.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/robiwa-is-willing-to-assist-you-in-returning-the-purchased-item.jpg?v=1692179457\" alt=\"we support return of purchased items\"><br /><em>Robiwa is willing to assist you in returning the purchased item</em></p>\n    \n    <h3><strong>Environmentally friendly furniture</strong></h3>\n    \n    <p>The whole product of Rowabi is made up of rattan. It is a form of climbing or trailing palm which is usually seen in tropical rainforests of Australia. This material is harmless for both human and environmental health. As a result, you can use the product to make your place sparkle while maintaining environmental and health safety.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-whole-product-of-rowabi-is-made-up-of-rattan.jpg?v=1692179457\" alt=\"our products are made of rattan which is friendly to the environment and users\"><br /><em>The whole product of Rowabi is made up of rattan</em></p>\n\n    <p><strong>Rowabi</strong> is a reputable brand specializing in providing <strong>pendant lights for dining room</strong>. The products are eco-friendly and completely handmade. Especially, Rowabi has many different items with affordable prices for customers to choose. Hence, you can update your house and make it more outstanding.</p>",
+        "text_alignment": "start",
+        "height": 300,
+        "read_more": "Read more",
+        "read_less": "Read less"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "slideshow_popup_ff6J8a",
+    "fafc8a2e-74c9-44e8-b202-6a25c6203a3b",
+    "46a6d0b9-8e9a-478c-8707-bfcf4d8f3831",
+    "main",
+    "3b5d9b28-42c2-4809-ae09-555e7865a5dd"
+  ]
+}

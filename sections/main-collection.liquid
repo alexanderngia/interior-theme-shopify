@@ -1,0 +1,578 @@
+{%- liquid
+  assign active_values_count = 0
+
+  for filter in collection.filters
+    if filter.type == 'price_range'
+      if filter.max_value.value != blank or filter.min_value.value != blank
+        assign active_values_count = active_values_count | plus: 1
+      endif
+    else
+      assign active_values_count = active_values_count | plus: filter.active_values.size
+    endif
+  endfor
+
+  if section.settings.quick_links_menu.links.size > 0 or section.settings.show_filters and collection.filters.size > 0
+    assign show_filters = true
+  else
+    assign show_filters = false
+  endif
+
+  # First, we retrieve, based on the merchant settings, the user preferences and the available space the most appropriate size
+  assign products_mobile_grid_mode = cart.attributes.products_mobile_grid_mode
+
+  if request.design_mode
+    # In the theme editor we do not use the choice selected manually, to reduce confusion when changing the theme editor values
+    assign products_desktop_grid_mode = section.settings.products_size_desktop
+  else
+    assign products_desktop_grid_mode = cart.attributes.products_desktop_grid_mode | default: section.settings.products_size_desktop
+  endif
+
+  if products_mobile_grid_mode == blank or request.design_mode
+    if section.settings.products_per_row_mobile == '1'
+      assign products_mobile_grid_mode = 'large'
+    else
+      assign products_mobile_grid_mode = 'medium'
+    endif
+  endif
+-%}
+
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+CSS
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --product-list-horizontal-spacing-factor: {{ section.settings.horizontal_spacing_factor }};
+    --product-list-vertical-spacing-factor: {{ section.settings.vertical_spacing_factor }};
+
+    {% comment %}On mobile, it's simple! No sidebar or whatever{% endcomment %}
+    --collection-items-per-row-medium: 2;
+    --collection-items-per-row-large: 1;
+  }
+
+  #shopify-section-{{ section.id }} .product-list {
+    --product-list-max-items-per-row-allowed: 99 !important; {% comment %}On collection page, we explicitly set a number of items so we don't want this{% endcomment %}
+  }
+
+  @media screen and (min-width: 700px) {
+    #shopify-section-{{ section.id }} {
+      {% comment %}On tablet, we do not have any sidebar, so we can fix it{% endcomment %}
+      --collection-items-per-row-compact: 4;
+      --collection-items-per-row-medium: 3;
+      --collection-items-per-row-large: 2;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #shopify-section-{{ section.id }} {
+      {%- comment -%}Starting from 1000px it starts to get funky, as we can have or not the sidebar{%- endcomment -%}
+
+      {%- if section.settings.filter_layout == 'sidebar' and show_filters -%}
+        --collection-items-per-row-compact: 4;
+        --collection-items-per-row-medium: 3;
+        --collection-items-per-row-large: 2;
+      {%- else -%}
+        --collection-items-per-row-compact: 6;
+        --collection-items-per-row-medium: 4;
+        --collection-items-per-row-large: 3;
+      {%- endif -%}
+    }
+
+    #shopify-section-{{ section.id }} .collection {
+      {%- if section.settings.filter_layout == 'sidebar' and show_filters -%}
+        --collection-grid-template: var(--collection-sidebar-width, 0) minmax(0,1fr);
+      {%- endif -%}
+
+      {%- if section.settings.filter_layout == 'top' and show_filters -%}
+        --collection-gap: 1.5rem;
+      {%- endif -%}
+    }
+  }
+  
+
+  @media screen and (min-width: 1400px) {
+    #shopify-section-{{ section.id }} {
+      {%- comment -%}Starting from 1400px we can afford having more content even in sidebar mode{%- endcomment -%}
+
+      {%- if section.settings.filter_layout == 'sidebar' and show_filters -%}
+        --collection-items-per-row-compact: 6;
+        --collection-items-per-row-medium: 4;
+        --collection-items-per-row-large: 3;
+      {%- endif -%}
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .collection {margin-bottom: 32px}
+  }
+</style>
+
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+LIQUID
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+<style>
+  .rowabi-filter {
+    box-shadow: 0 0px #4441394D, 0 -1px #4441394D;
+    padding: 20px 0 0;
+  }
+  .product-list {
+    column-gap: 30px;
+    row-gap: 36px;
+  }
+  .collection__main {
+    row-gap: 12px;
+  }
+  .collection-toolbar__button.rowabi-text-sm {
+    padding: 11px 16px;
+  }
+  .container {margin:0 98px}
+  @media only screen and (max-width: 768px) {
+    .rowabi-filter {
+      box-shadow: 0 1px #4441394D, 0 -1px #4441394D;
+      padding: 16px 0 18px;
+    }
+    .product-list {
+        column-gap: 10px;
+        row-gap: 10px;
+      }
+    .collection__main {
+      row-gap: 8px;
+    }
+    .collection-toolbar__button.rowabi-text-sm {
+      padding: 10px 12px;
+    }
+    #relevance {
+      font-size: 13px;
+      font-weight: 400
+    }
+    .container {margin:0 20px}
+
+    {%- if section.settings.filter_layout == 'top' and show_filters -%}
+      .collection-toolbar__button {
+        opacity: 1
+      }
+    {%- endif -%}
+  }
+</style>
+
+<div class="container">
+  <div class="v-stack gap-6 sm:gap-12 rowabi{%- if section.settings.filter_layout == 'top' -%}-gap-6{% endif %}">
+    {%- if collection.all_products_count == 0 -%}
+      <div class="empty-state">
+        <div class="prose">
+          <h1 class="h4">{{ collection.title }}</h1>
+          <p>{{ 'collection.general.empty_collection' | t }}</p>
+
+          {%- assign button_content = 'collection.general.continue_shopping' | t -%}
+          {%- render 'button', href: routes.all_products_collection_url, size: 'xl', content: button_content -%}
+        </div>
+      </div>
+    {%- else -%}
+      {%- if show_filters or section.settings.show_sort_by or section.settings.show_grid_mode_selector or section.settings.show_results_count -%}
+        <height-observer variable="collection-toolbar" class="collection-toolbar full-bleed rowabi-filter">
+          <div class="collection-toolbar__button-list">
+            {%- if show_filters -%}
+              <div class="collection-toolbar__button-container {% if section.settings.filter_layout != 'drawer' %}md:hidden{% endif %} {%- if section.settings.filter_layout == 'top' -%}rowabi-mt-[32px]{% endif %}" >
+                <button type="button" aria-controls="facets-drawer" class="collection-toolbar__button heading text-sm w-full rowabi-flex rowabi-justify-center rowabi-items-center rowabi-gap-[6px] rowabi-py-[10px] rowabi-px-[12px] rowabi-ml-[20px]" style="font-family: 'Proxima Nova', sans-serif; color: #595343; font-size: 13px; font-weight:700; width:max-content; height: 36px; border: 1px solid rgba(68, 65, 57, 0.30);">
+                  FILTER BY {% if active_values_count > 0 %}({{ active_values_count }}){% endif -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M9.03843 0.449826L9.03843 2.59062L10.0666 2.59062L10.0666 0.449826C10.0667 0.390065 10.0532 0.330961 10.027 0.276467C10.0008 0.221974 9.96245 0.173346 9.91453 0.133837C9.81843 0.0467354 9.6894 -0.00125923 9.55561 0.000329597C9.41983 -0.00204218 9.28856 0.0459543 9.19047 0.133837C9.14254 0.173346 9.10419 0.221974 9.07797 0.276467C9.05175 0.330961 9.03827 0.390065 9.03843 0.449826ZM5.49291 0.472563L5.49291 6.5533L6.51481 6.5533L6.51481 0.472563C6.51611 0.409735 6.50324 0.347358 6.47705 0.289496C6.45085 0.231635 6.41191 0.179589 6.36277 0.136752C6.31464 0.0924728 6.25756 0.0576046 6.19486 0.0341823C6.13217 0.0107601 6.06512 -0.000747902 5.99763 0.000329753C5.93101 -0.000533319 5.86488 0.0111072 5.80315 0.0345629C5.74143 0.0580185 5.68535 0.0928133 5.63824 0.136891C5.59113 0.180969 5.55394 0.233435 5.52887 0.29119C5.5038 0.348944 5.49136 0.410816 5.49228 0.473146L5.49291 0.472563ZM5.49291 10.5387C5.49161 10.5998 5.5039 10.6605 5.529 10.7169C5.5541 10.7733 5.59147 10.8242 5.63871 10.8664C5.68587 10.9101 5.74196 10.9444 5.80363 10.9673C5.8653 10.9903 5.93128 11.0013 5.99763 10.9999C6.06512 11.0009 6.13217 10.9894 6.19487 10.966C6.25756 10.9426 6.31464 10.9077 6.36277 10.8634C6.41107 10.8223 6.44957 10.7722 6.47576 10.7162C6.50196 10.6603 6.51526 10.5998 6.51481 10.5387L6.51481 8.3233L5.49291 8.3233L5.49291 10.5387ZM1.93492 4.36703L1.93492 10.5271C1.93353 10.5896 1.94605 10.6518 1.97169 10.7096C1.99733 10.7674 2.03552 10.8196 2.08385 10.8629C2.18105 10.9506 2.31083 10.9996 2.44587 10.9996C2.58092 10.9996 2.7107 10.9506 2.8079 10.8629C2.85623 10.8196 2.89442 10.7674 2.92006 10.7096C2.9457 10.6518 2.95822 10.5896 2.95683 10.5271L2.95683 4.36703L1.93492 4.36703ZM1.93492 0.449826L1.93492 2.65883L2.95558 2.65883L2.95558 0.449826C2.95586 0.390326 2.94274 0.33144 2.91708 0.276997C2.89142 0.222555 2.8538 0.173777 2.80666 0.133838C2.70851 0.0478477 2.57909 -6.90241e-08 2.44463 -6.31467e-08C2.31017 -5.72693e-08 2.18074 0.0478477 2.0826 0.133838C2.03569 0.173881 1.9983 0.222706 1.97286 0.277143C1.94741 0.33158 1.93449 0.390414 1.93492 0.449826ZM9.03843 4.38977L9.03843 10.5271C9.03713 10.5899 9.05 10.6523 9.0762 10.7101C9.10239 10.768 9.14133 10.82 9.19047 10.8629C9.23861 10.9071 9.29569 10.942 9.35838 10.9654C9.42107 10.9889 9.48812 11.0004 9.55561 10.9993C9.62214 11.0001 9.68817 10.9885 9.74981 10.965C9.81146 10.9416 9.86746 10.9069 9.91453 10.8629C9.96367 10.82 10.0026 10.768 10.0288 10.7101C10.055 10.6523 10.0679 10.5899 10.0666 10.5271L10.0666 4.38977L9.03843 4.38977ZM3.13005 3.52984C3.13177 3.61478 3.11511 3.69916 3.08105 3.77791C3.047 3.85667 2.99626 3.92815 2.9319 3.98808C2.86826 4.04997 2.79162 4.09886 2.70679 4.13167C2.62196 4.16448 2.53079 4.1805 2.43902 4.17872C2.34769 4.18066 2.25693 4.16471 2.17258 4.13187C2.08823 4.09904 2.01216 4.05006 1.94925 3.98808C1.82221 3.86339 1.75134 3.69773 1.75134 3.52547C1.75134 3.3532 1.82221 3.18754 1.94925 3.06285C2.01262 3.00163 2.08885 2.95334 2.17314 2.92103C2.25743 2.88872 2.34796 2.87309 2.43902 2.87512C2.53053 2.87325 2.62147 2.88894 2.70624 2.92123C2.79101 2.95351 2.86781 3.00171 2.9319 3.06285C2.99755 3.12379 3.04916 3.19666 3.08356 3.27698C3.11796 3.35729 3.13442 3.44335 3.13192 3.52984L3.13005 3.52984ZM3.87779 3.52984C3.88112 3.29063 3.81385 3.05521 3.68338 2.84947C3.5563 2.64896 3.37739 2.48156 3.16308 2.36266C2.94308 2.24335 2.69331 2.18051 2.43902 2.18051C2.18473 2.18051 1.93496 2.24335 1.71496 2.36266C1.50065 2.48156 1.32174 2.64896 1.19466 2.84947C1.06716 3.05479 1 3.28801 1 3.52547C1 3.76292 1.06716 3.99615 1.19466 4.20146C1.32104 4.40324 1.50006 4.57173 1.71496 4.69118C1.93496 4.8105 2.18473 4.87334 2.43902 4.87334C2.69331 4.87334 2.94308 4.8105 3.16308 4.69118C3.37798 4.57173 3.557 4.40324 3.68338 4.20146C3.8134 3.99863 3.8815 3.76634 3.88028 3.52984L3.87779 3.52984ZM6.69489 7.40682C6.69679 7.49268 6.67967 7.57798 6.6446 7.65735C6.60954 7.73671 6.55728 7.80843 6.49113 7.86797C6.42602 7.92929 6.34824 7.97755 6.26253 8.00983C6.17683 8.0421 6.085 8.05771 5.99264 8.0557C5.90127 8.05672 5.8106 8.04063 5.72596 8.00838C5.64133 7.97613 5.56444 7.92837 5.49982 7.86791C5.43521 7.80745 5.38416 7.73552 5.3497 7.65633C5.31523 7.57714 5.29803 7.49231 5.29912 7.40682C5.29636 7.32111 5.31278 7.23581 5.34733 7.15639C5.38189 7.07698 5.43381 7.0052 5.49976 6.94566C5.56471 6.88596 5.64179 6.83906 5.72645 6.80771C5.81111 6.77637 5.90162 6.76123 5.99264 6.76318C6.08448 6.761 6.17586 6.77597 6.26145 6.8072C6.34704 6.83843 6.42512 6.8853 6.49113 6.94508C6.55843 7.00404 6.61161 7.07567 6.64716 7.15526C6.68271 7.23485 6.69983 7.32059 6.69739 7.40682L6.69489 7.40682ZM7.43702 7.40682C7.43979 7.16952 7.37251 6.93611 7.24261 6.73228C7.11508 6.53133 6.93632 6.36307 6.72231 6.24256C6.50354 6.12144 6.25401 6.05755 5.99981 6.05755C5.74561 6.05755 5.49608 6.12144 5.27731 6.24256C5.06194 6.36244 4.88202 6.53078 4.75389 6.73228C4.62399 6.93611 4.55672 7.16952 4.55948 7.40682C4.55713 7.64506 4.62459 7.87936 4.75451 8.08427C4.88148 8.28661 5.06167 8.4552 5.27793 8.57399C5.49737 8.69328 5.74664 8.75612 6.00043 8.75612C6.25422 8.75612 6.50349 8.69328 6.72293 8.57399C6.93784 8.45454 7.11685 8.28605 7.24323 8.08427C7.37382 7.87953 7.44192 7.64523 7.44014 7.40682L7.43702 7.40682ZM10.2485 3.52984C10.2485 3.61509 10.2306 3.6995 10.1957 3.77827C10.1608 3.85703 10.1097 3.92859 10.0453 3.98887C9.98087 4.04916 9.90438 4.09697 9.8202 4.1296C9.73602 4.16222 9.64579 4.17901 9.55468 4.17901C9.46356 4.17901 9.37334 4.16222 9.28916 4.1296C9.20498 4.09697 9.12849 4.04916 9.06406 3.98887C8.99963 3.92859 8.94852 3.85703 8.91365 3.77827C8.87879 3.6995 8.86084 3.61509 8.86084 3.52984C8.85851 3.4434 8.87511 3.35743 8.90961 3.27722C8.94412 3.19701 8.9958 3.12426 9.06148 3.06343C9.15931 2.97308 9.28356 2.91188 9.41854 2.88757C9.55352 2.86325 9.69318 2.87691 9.81987 2.92682C9.94656 2.97673 10.0546 3.06065 10.1303 3.16798C10.2061 3.2753 10.2461 3.40123 10.2454 3.52984L10.2485 3.52984ZM10.9963 3.52984C10.9996 3.29063 10.9323 3.05521 10.8018 2.84947C10.6742 2.6484 10.4941 2.48091 10.2784 2.36266C10.0584 2.24334 9.80865 2.18051 9.55437 2.18051C9.30008 2.18051 9.0503 2.24334 8.83031 2.36266C8.61512 2.4805 8.43595 2.64814 8.31001 2.84947C8.18445 3.0554 8.11841 3.28839 8.11841 3.52547C8.11841 3.76254 8.18445 3.99553 8.31001 4.20146C8.43523 4.40407 8.61451 4.57281 8.83031 4.69118C9.0503 4.8105 9.30008 4.87334 9.55437 4.87334C9.80865 4.87334 10.0584 4.8105 10.2784 4.69118C10.4947 4.57239 10.6749 4.4038 10.8018 4.20146C10.9323 3.99875 11.0008 3.76645 11 3.52984L10.9963 3.52984Z" fill="#595343"/>
+                  </svg>
+                </button>
+              </div>
+            {%- endif -%}
+
+            {%- if section.settings.show_sort_by and section.settings.filter_layout == 'top' -%}
+
+              
+              {%- assign selected_sort_by_value = collection.sort_by | default: collection.default_sort_by -%}
+              <div class="collection-toolbar__button-container md:rowabi-mr-[50px] rowabi-flex rowabi-flex-col md:rowabi-flex-row rowabi-items-center rowabi-gap-[8px]" style="border-inline-start-width: 0px;">
+                {%- paginate collection.products by section.settings.products_per_page -%}
+                {%- assign current_offset = paginate.current_offset -%}
+                {%- assign page_size = paginate.page_size -%}
+      
+                {%- if current_offset == 0 -%}
+                  {% if paginate.items > page_size %}
+                    {%- assign item = "1-" | append: page_size -%}
+                  {% else %}
+                    {%- assign item = "1-" | append: paginate.items -%}
+                  {% endif %}
+                {%- else -%}
+                  {%- assign start = current_offset | plus: 1 -%}
+                  {%- assign end = current_offset | plus: page_size -%}
+                  {%- assign item = start | append: "-" | append: end -%}
+                {%- endif -%}
+    
+                  <p class="rowabi-text-[13px] rowabi-font-[400] rowabi-leading-[18px] rowabi-text-[#8C6F51] rowabi-text-right rowabi-whitespace-nowrap rowabi-my-auto rowabi-mr-[20px] md:rowabi-order-first">
+                    Showing <span class="rowabi-font-bold">{{ item }}</span> of <span class="rowabi-font-bold">{{ paginate.items }}</span> item(s)
+                  </p>
+              {% endpaginate %}
+                
+                <button type="button" aria-controls="sort-by-popover" class="collection-toolbar__button heading rowabi-text-sm rowabi-w-[70%] md:rowabi-w-full" style="border: 1px solid rgba(68, 65, 57, 0.30);color:#444139">
+                  <span id="relevance" class="text-with-icon justify-center">
+                    Relevance
+                    {%- render 'icon' with 'chevron-down' -%}
+                  </span>
+                </button>
+
+                <facets-sort-popover id="sort-by-popover" section-id="{{ section.id }}" class="popover popover--bottom-end" close-on-listbox-select>
+                  <p class="h4" slot="header">{{ 'collection.faceting.sort_by' | t }}</p>
+
+                  <x-listbox class="popover__value-list">
+                    {%- for sort_option in collection.sort_options -%}
+                      <button type="button" class="popover-listbox__option group" role="option" value="{{ sort_option.value }}" {% if sort_option.value == selected_sort_by_value %}aria-selected="true"{% endif %}>
+                        <span class="reversed-link">{{ sort_option.name }}</span>
+                      </button>
+                    {%- endfor -%}
+                  </x-listbox>
+                </facets-sort-popover>
+              </div>
+            {% elsif section.settings.show_sort_by and section.settings.filter_layout != 'top' %}
+              {%- assign selected_sort_by_value = collection.sort_by | default: collection.default_sort_by -%}
+
+              <div class="collection-toolbar__button-container">
+                <button type="button" aria-controls="sort-by-popover" class="collection-toolbar__button heading text-xxs w-full">
+                  <span class="text-with-icon justify-center">
+                    {{- 'collection.faceting.sort_by' | t -}}
+                    {%- render 'icon' with 'chevron-down' -%}
+                  </span>
+                </button>
+
+                <facets-sort-popover id="sort-by-popover" section-id="{{ section.id }}" class="popover popover--bottom-end" close-on-listbox-select>
+                  <p class="h4" slot="header">{{ 'collection.faceting.sort_by' | t }}</p>
+
+                  <x-listbox class="popover__value-list">
+                    {%- for sort_option in collection.sort_options -%}
+                      <button type="button" class="popover-listbox__option group" role="option" value="{{ sort_option.value }}" {% if sort_option.value == selected_sort_by_value %}aria-selected="true"{% endif %}>
+                        <span class="reversed-link">{{ sort_option.name }}</span>
+                      </button>
+                    {%- endfor -%}
+                  </x-listbox>
+                </facets-sort-popover>
+              </div>
+            {%- endif -%}
+          </div>
+
+          <!-- {%- paginate collection.products by section.settings.products_per_page -%}
+            {%- assign current_offset = paginate.current_offset -%}
+            {%- assign page_size = paginate.page_size -%}
+  
+            {%- if current_offset == 0 -%}
+              {% if paginate.items > page_size %}
+                {%- assign item = "1-" | append: page_size -%}
+              {% else %}
+                {%- assign item = "1-" | append: paginate.items -%}
+              {% endif %}
+            {%- else -%}
+              {%- assign start = current_offset | plus: 1 -%}
+              {%- assign end = current_offset | plus: page_size -%}
+              {%- assign item = start | append: "-" | append: end -%}
+            {%- endif -%}
+
+              <h3 class="rowabi-text-sm rowabi-text-[#8C6F51] rowabi-text-right md:rowabi-w-[96%] rowabi-my-auto roawbi-mr-[16px] md:rowabi-mr-auto rowabi-hidden md:rowabi-block">
+                Showing <span class="rowabi-font-bold">{{ item }}</span> of <span class="rowabi-font-bold">{{ paginate.items }}</span> item(s)
+              </h3>
+              
+          {% endpaginate %} -->
+          
+          {%- if section.settings.show_results_count -%}
+            <p class="collection-toolbar__products-count h6 text-subdued md-max:hidden {%- if section.settings.filter_layout == 'top' -%}rowabi-hidden{% endif %}">
+              {{ 'collection.products_count' | t: count: collection.products_count }}
+            </p>
+          {%- endif -%}
+
+          {%- if section.settings.show_grid_mode_selector -%}
+            <collection-layout-switch device="mobile" class="collection-toolbar__layout-switch-list sm:hidden" aria-controls="product-list-{{ section.id }}">
+              <button type="button" value="large" class="collection-toolbar__button {% if products_mobile_grid_mode == 'large' %}is-active{% endif %}" aria-label="Switch to larger product images">{%- render 'icon' with 'collection-layout-1' -%}</button>
+              <button type="button" value="medium" class="collection-toolbar__button {% if products_mobile_grid_mode == 'medium' %}is-active{% endif %}" aria-label="Switch to smaller product images">{%- render 'icon' with 'collection-layout-2' -%}</button>
+            </collection-layout-switch>
+
+            <collection-layout-switch device="desktop" class="collection-toolbar__layout-switch-list sm-max:hidden" aria-controls="product-list-{{ section.id }}">
+              <button type="button" value="large" class="collection-toolbar__button {% if products_desktop_grid_mode == 'large' %}is-active{% endif %}" aria-label="Switch to larger product images">{%- render 'icon' with 'collection-layout-2' -%}</button>
+              <button type="button" value="medium" class="collection-toolbar__button {% if products_desktop_grid_mode == 'medium' %}is-active{% endif %}" aria-label="Switch to smaller product images">{%- render 'icon' with 'collection-layout-3' -%}</button>
+              <button type="button" value="compact" class="collection-toolbar__button {% if products_desktop_grid_mode == 'compact' %}is-active{% endif %}" aria-label="Switch to compact product images">{%- render 'icon' with 'collection-layout-4' -%}</button>
+            </collection-layout-switch>
+          {%- endif -%}
+        </height-observer>
+        <div class="rowabi-w-full rowabi-h-[1px] rowabi-bg-[#4441394D] rowabi-mx-auto rowabi-hidden md:rowabi-block"> </div>
+      {%- endif -%}
+
+      <div class="collection">
+        {%- paginate collection.products by section.settings.products_per_page -%}
+          {%- assign current_offset = paginate.current_offset -%}
+          {%- if show_filters -%}
+            <facets-drawer id="facets-drawer" class="facets-drawer drawer drawer--sm {% if section.settings.filter_layout != 'drawer' %}md:hidden{% endif %}">
+              <p class="h4" slot="header">{{ 'collection.faceting.filters' | t }}</p>
+
+              {%- render 'facets', results: collection, show_filters: section.settings.show_filters, open_filters_by_default: section.settings.open_filters_by_default, update_on_change: false, quick_links_menu: section.settings.quick_links_menu, context: 'drawer' -%}
+
+              <div slot="footer">
+                {%- assign button_content = 'collection.faceting.apply_filters' | t -%}
+                {%- render 'button', type: 'button', content: button_content, stretch: true, is: 'dialog-close-button' -%}
+              </div>
+            </facets-drawer>
+
+            {%- if section.settings.filter_layout == 'sidebar' -%}
+              <safe-sticky class="facets-sidebar md-max:hidden">
+                {%- render 'facets', results: collection, show_filters: section.settings.show_filters, open_filters_by_default: section.settings.open_filters_by_default, update_on_change: true, quick_links_menu: section.settings.quick_links_menu, context: 'sidebar' -%}
+              </safe-sticky>
+            {%- endif -%}
+            {%- if section.settings.filter_layout == 'top' -%}
+              <safe-sticky class="facets-sidebar md-max:hidden md:rowabi-contents">
+                <div class="rowabi-flex rowabi-items-center rowabi-gap-4">
+                  <span class="rowabi-text-base rowabi-font-bold rowabi-text-[#595343]">FILTER BY</span>
+                  {%- render 'facets-top', results: collection, show_filters: section.settings.show_filters, open_filters_by_default: section.settings.open_filters_by_default, update_on_change: true, quick_links_menu: section.settings.quick_links_menu, context: 'sidebar' -%}
+                </div>
+              </safe-sticky>
+              {% if collection.handle == 'accessories' %}
+              <div class="rowabi-mx-[16px] md:rowabi-mx-[98px] rowabi-flex rowabi-justify-center rowabi-my-[36px] md:rowabi-mt-[36px]">
+                <h1 class="rowabi-text-lg md:rowabi-text-[24px] rowabi-text-[#49392B] rowabi-uppercase rowabi-text-center">{{ section.settings.collection_page_heading }}</h1>
+              </div>
+              {% endif %}
+            {%- endif -%}
+          {%- endif -%}
+
+          {%- if collection.products_count == 0 -%}
+            <div class="empty-state">
+              <div class="prose">
+                <p>{{ 'collection.faceting.no_results' | t }}</p>
+
+                {%- assign button_content = 'collection.faceting.clear_filters' | t -%}
+                {%- render 'button', href: collection.url, is: 'facet-link', content: button_content -%}
+              </div>
+            </div>
+          {%- else -%}
+            <div data-section-id="{% if section.id %}{{section.id}}{% endif %}" data-sectionId="{% if section.id %}{{section.id}}{% endif %}" {% if section.blocks %}data-blocks='{ {%- capture blocks_json -%}{% for block in section.blocks %}{%- capture block_json -%}"{{ block.type }}":{{ block.settings | json }}{%- endcapture -%}{{ block_json | prepend: ","  }}{% endfor %}{%- endcapture -%}{{ blocks_json | remove_first: "," }} }' {% endif %} data-settings='{% if section.settings %}{{section.settings | json}}{% endif %}' data-globo-filter-items class="collection__main">
+              {%- render 'active-facets', results: collection -%}
+              {%- if section.settings.load_more -%}
+              <collection-load-more>
+              {%- endif -%}
+
+                <product-list id="product-list-{{ section.id }}" class="product-list" collection-mobile-layout="{{ products_mobile_grid_mode }}" collection-desktop-layout="{{ products_desktop_grid_mode }}">
+                  {%- for product in collection.products -%}
+                    {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, hide_product_information: section.settings.hide_product_information, stacked: true -%}
+                  {%- endfor -%}
+                </product-list>
+                
+                {%- assign current_offset = paginate.current_offset -%}
+                {%- assign page_size = paginate.page_size -%}
+      
+                {%- if current_offset == 0 -%}
+                  {% if paginate.items > page_size %}
+                    {%- assign item = "1-" | append: page_size -%}
+                  {% else %}
+                    {%- assign item = "1-" | append: paginate.items -%}
+                  {% endif %}
+                {%- else -%}
+                  {%- assign start = current_offset | plus: 1 -%}
+                  {%- assign end = current_offset | plus: page_size -%}
+                  {%- assign item = start | append: "-" | append: end -%}
+                {%- endif -%}
+              
+                <p class="rowabi-text-[14px] md:rowabi-text-xl rowabi-text-[#444139] rowabi-text-center rowabi-w-full rowabi-mt-4 md:rowabi-mt-6">
+                  <span class="rowabi-font-bold">{{ item }}</span> of <span class="rowabi-font-bold">{{ paginate.items }}</span>
+                </p>
+                
+                {%- render 'pagination', paginate: paginate, facet: true -%}
+                
+              {%- if section.settings.load_more -%}
+              </collection-load-more>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endpaginate -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main_collection.name",
+  "class": "shopify-section--main-collection",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "load_more",
+      "label": "Enable load more",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_product_information",
+      "label": "t:global.product_list.hide_product_information",
+      "info": "t:global.product_list.hide_product_information_collection_info"
+    },
+    {
+      "type": "text",
+      "id": "collection_page_heading",
+      "label": "Collection heading",
+      "default": "RATTAN PENDANT ACCESSORIES"
+    },
+    {
+      "type": "header",
+      "content": "t:global.product_list.product_list_category"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "label": "t:global.faceting.products_per_page",
+      "min": 8,
+      "max": 50,
+      "step": 1,
+      "default": 48
+    },
+    {
+      "type": "select",
+      "id": "products_per_row_mobile",
+      "label": "t:global.product_list.products_per_row_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "products_size_desktop",
+      "label": "t:global.product_list.products_size_desktop",
+      "info": "t:global.product_list.products_size_desktop_info",
+      "options": [
+        {
+          "value": "compact",
+          "label": "t:global.product_list.products_size_desktop_options.compact"
+        },
+        {
+          "value": "medium",
+          "label": "t:global.product_list.products_size_desktop_options.medium"
+        },
+        {
+          "value": "large",
+          "label": "t:global.product_list.products_size_desktop_options.large"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_grid_mode_selector",
+      "label": "t:global.product_list.show_grid_mode_selector",
+      "info": "t:global.product_list.show_grid_mode_selector_info",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:global.product_list.spacing_category",
+      "info": "t:global.product_list.spacing_category_info"
+    },
+    {
+      "type": "range",
+      "min": 0.2,
+      "max": 2,
+      "step": 0.1,
+      "id": "horizontal_spacing_factor",
+      "label": "t:global.product_list.horizontal_spacing_factor",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "min": 0.2,
+      "max": 2,
+      "step": 0.1,
+      "id": "vertical_spacing_factor",
+      "label": "t:global.product_list.vertical_spacing_factor",
+      "default": 1
+    },
+    {
+      "type": "header",
+      "content": "t:global.faceting.filters_and_sorting_category"
+    },
+    {
+      "type": "select",
+      "id": "filter_layout",
+      "label": "t:global.faceting.desktop_layout",
+      "options": [
+        {
+          "value": "sidebar",
+          "label": "t:global.faceting.desktop_layout_options.sidebar"
+        },
+        {
+          "value": "drawer",
+          "label": "t:global.faceting.desktop_layout_options.drawer"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        }
+      ],
+      "default": "sidebar"
+    },
+    {
+      "type": "link_list",
+      "id": "quick_links_menu",
+      "label": "t:sections.main_collection.quick_links_menu",
+      "info": "t:sections.main_collection.quick_links_menu_info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sort_by",
+      "label": "t:global.faceting.show_sort_by",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filters",
+      "label": "t:global.faceting.show_filters",
+      "info": "t:global.faceting.show_filters_info",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_results_count",
+      "label": "t:global.faceting.show_results_count",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filter_group_name",
+      "label": "t:global.faceting.show_group_name",
+      "info": "t:global.faceting.show_group_name_info",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_empty_filter_values",
+      "label": "t:global.faceting.show_empty_filter_values",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filter_values_count",
+      "label": "t:global.faceting.show_filter_values_count",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_color_swatch",
+      "label": "t:global.faceting.show_filter_color_swatch",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "open_filters_by_default",
+      "label": "t:global.faceting.open_filters_by_default",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,293 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/banner-collection-black-friday-pc.jpg",
+        "mobile_image": "shopify://shop_images/banner-collection-black-friday-mobile.jpg",
+        "image_size": "auto",
+        "allow_transparent_header": false,
+        "reveal": true,
+        "enable_parallax": false,
+        "show_collection_title": false,
+        "show_collection_description": false,
+        "content_width": "xs",
+        "background": "#000000",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "46f92edd-7092-4261-a669-8f29afbdfd51": {
+      "type": "slideshow-popup",
+      "blocks": {
+        "image_rhXCTm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/living-room-web-banner.jpg",
+            "mobile_image": "shopify://shop_images/living-room-mobile-banner.jpg",
+            "subheading": "",
+            "subheading_below": false,
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_popup": false,
+            "button_1_link": "https://www.rowabi.com/collections/pendant-lighting?utm_source=website&utm_medium=banner-livingroom&utm_campaign=holiday-lighting",
+            "klaviyo_form_trigger": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_popup": false,
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "image_rhXCTm"
+      ],
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "form_heading": "REGISTRATION FORM",
+        "field_title_1": "Custom field",
+        "field_values_1": "value 1; value 2; value 3",
+        "field_required_1": false,
+        "field_title_2": "Custom field",
+        "field_values_2": "value 1; value 2; value 3",
+        "field_required_2": false,
+        "field_title_3": "Custom field",
+        "field_values_3": "value 1; value 2; value 3",
+        "field_required_3": false,
+        "field_title_4": "Custom field",
+        "field_values_4": "value 1; value 2; value 3",
+        "field_required_4": false
+      }
+    },
+    "fafc8a2e-74c9-44e8-b202-6a25c6203a3b": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 15,
+        "padding_bottom": 15
+      }
+    },
+    "46a6d0b9-8e9a-478c-8707-bfcf4d8f3831": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Rattan Lights Designed For Living Room</strong>",
+            "heading_tag": "h1",
+            "h1_tag": true
+          }
+        },
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-2": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><em>Infuse your living room with natural elegance using our artisanal rattan pendant lights. </em><a href=\"https://www.rowabi.com/\" target=\"_blank\"><em><strong>Rowabi</strong></em></a><em> meticulously crafted pieces create a warm and inviting atmosphere, becoming the focal point of your space. The intricate weave patterns cast enchanting shadows, transforming your living area into a haven of sophistication. Elevate your home's aesthetics with these sustainable, handwoven masterpieces that seamlessly blend form and function.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-1",
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-2"
+      ],
+      "custom_css": [
+        ".h1 {font-size: 30px;}"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "content_width": "lg",
+        "text_position": "start",
+        "remove_vertical_spacing": true,
+        "background": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "load_more": true,
+        "hide_product_information": false,
+        "products_per_page": 48,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": true,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "filter_layout": "sidebar",
+        "quick_links_menu": "",
+        "show_sort_by": false,
+        "show_filters": true,
+        "show_results_count": false,
+        "show_filter_group_name": false,
+        "show_empty_filter_values": false,
+        "show_filter_values_count": false,
+        "show_color_swatch": false,
+        "open_filters_by_default": false
+      }
+    },
+    "2cab0973-5b00-402c-8217-010d4f4e12e5": {
+      "type": "shop-the-look",
+      "blocks": {
+        "template--16752707502338__2cab0973-5b00-402c-8217-010d4f4e12e5-1684480856bab0750a-0": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1025-1031_1200X1200_852c87d8-02c5-4bc6-8540-e7dbd82de028.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "kloe-rattan-pendant-light-bundle",
+            "product_1_horizontal_position": 35,
+            "product_1_vertical_position": 35,
+            "product_2": "santana-rattan-pendant-light-bundle",
+            "product_2_horizontal_position": 34,
+            "product_2_vertical_position": 65,
+            "product_3": "",
+            "product_3_horizontal_position": 66,
+            "product_3_vertical_position": 42,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        },
+        "1b8f7aec-935e-4ffc-8c1c-7226b27a99f0": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/10232-1031_BLACK_-_1200X1200_314922ad-af49-4ce3-8078-b7eec5672a1e.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "serena-rattan-dome-light-1",
+            "product_1_horizontal_position": 35,
+            "product_1_vertical_position": 35,
+            "product_2": "latigo-rattan-pendant-light",
+            "product_2_horizontal_position": 34,
+            "product_2_vertical_position": 65,
+            "product_3": "",
+            "product_3_horizontal_position": 66,
+            "product_3_vertical_position": 42,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        },
+        "59f8a953-af91-4377-8bae-95d3539d9700": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/COMBO_1036-1032-1200X1200.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "belle-rattan-pendant-light-bundle",
+            "product_1_horizontal_position": 35,
+            "product_1_vertical_position": 35,
+            "product_2": "serena-rattan-dome-light-1",
+            "product_2_horizontal_position": 34,
+            "product_2_vertical_position": 65,
+            "product_3": "",
+            "product_3_horizontal_position": 66,
+            "product_3_vertical_position": 42,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        },
+        "09e01115-fb75-4c8c-a22f-fc008cc08c4c": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1034-1030_1200X1200_fced9648-9332-472e-92db-5b915c49b6f9.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "rufflewisp-rattan-pendant-light",
+            "product_1_horizontal_position": 35,
+            "product_1_vertical_position": 35,
+            "product_2": "",
+            "product_2_horizontal_position": 34,
+            "product_2_vertical_position": 65,
+            "product_3": "",
+            "product_3_horizontal_position": 66,
+            "product_3_vertical_position": 42,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        },
+        "template--16752707502338__2cab0973-5b00-402c-8217-010d4f4e12e5-1684480856bab0750a-1": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/1034-1051_3000x3000_12c225c3-a9d0-42f1-8b63-b24a9c7a051b.jpg",
+            "hot_spots_background": "#ffffff",
+            "product_1": "althea-rattan-bowl-pendant-light-bundle",
+            "product_1_horizontal_position": 30,
+            "product_1_vertical_position": 35,
+            "product_2": "",
+            "product_2_horizontal_position": 70,
+            "product_2_vertical_position": 30,
+            "product_3": "",
+            "product_3_horizontal_position": 60,
+            "product_3_vertical_position": 65,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        }
+      },
+      "block_order": [
+        "template--16752707502338__2cab0973-5b00-402c-8217-010d4f4e12e5-1684480856bab0750a-0",
+        "1b8f7aec-935e-4ffc-8c1c-7226b27a99f0",
+        "59f8a953-af91-4377-8bae-95d3539d9700",
+        "09e01115-fb75-4c8c-a22f-fc008cc08c4c",
+        "template--16752707502338__2cab0973-5b00-402c-8217-010d4f4e12e5-1684480856bab0750a-1"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "subheading": "",
+        "title": "<strong>Curated Living Room Lighting Looks</strong>",
+        "content": "",
+        "popover_title": "Shop the look"
+      }
+    },
+    "8737c857-6763-4cac-801e-764e8b8f99a5": {
+      "type": "read-more",
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<h2><strong>The advantages of pendant lights for the living room </strong></h2>\n    \n    <p>Both traditional and <em>modern pendant lights for living rooms</em> are used commonly in interior design for many reasons. Let’s find out now!</p>\n    \n    <h3><strong>Standout Interior Designs</strong></h3>\n    \n    <p><a href=\"https://www.rowabi.com/collections/pendant-lighting\" target=\"_blank\">Pendant lighting</a> is an excellent approach to adding a touch of luxury to the design of your house. Pendant lighting is versatile and can be utilized in a variety of places. All of the design details, artwork, and focus areas will become attractive if you choose the appropriate pendant lights.</p>\n    \n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/pendant-lighting-is-an-excellent-approach-to-add-a-touch-of-luxury.jpg?v=1694584927\" alt=\"is an excellent approach to add a touch of luxury\"><br /><em>Pendant lighting is an excellent approach to add a touch of luxury</em></p>\n\n    <p>Moreover, this type of lighting also helps you to offer harmony and elegance for your living room. You can adjust the lights to match your feelings and set up an ideal atmosphere. So, your interior space can be up-level and more outstanding.</p>\n    \n    <h3><strong>Take up less space in the house</strong></h3>\n    \n    <p>The main advantage of having a pendant light is that it tends to be smaller than any other light. This is the primary reason why they are usually utilized in tiny homes. Because it takes up little space you can hang them at whatever height you want.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/individual-fixtures-vary-from-small-to-large.jpg?v=1694584927\" alt=\"individual fixtures vary from small to large\"><br /><em>Individual fixtures vary from small to large</em></p>\n\n    <p>Now, to offer customers more selection, <strong>pendant lights for living rooms </strong>are easily adjustable in size. Individual fixtures vary from small to large so you can select the product which is suitable for your home space. If you have a large enough space, you can set up two or more lights close together to provide additional illumination and brightness to your living room.</p>\n    \n    <h3><strong>Affordable budget</strong></h3>\n    \n    <p>The pendant light is affordable and available in a variety of styles such as traditional, modern, vintage, and trendy. Hence, you can easily find an option that is suitable to your budget and can be matched with any aesthetic you want. Rowabi believes that these products are the best way if you are searching for a simple and cost-effective approach to update your home's design.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-pendant-light-is-affordable-and-available-in-a-variety-of-styles.jpg?v=1694584927\" alt=\"is affordable and available in a variety of styles\"><br /><em>The pendant light is affordable and available in a variety of styles</em></p>\n    \n    <h3><strong>Soft and comfortable light</strong></h3>\n    \n    <p>Pendant lights for the living room are unique because of the way they integrate soft and comfortable light into the design. They commonly use warm and gentle light bulbs to enhance the natural atmosphere. So, pendant lighting brings an additional touch of natural beauty and gives your space a distinctive and soft light.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/they-commonly-use-warm-and-gentle-light-bulbs.jpg?v=1694584926\" alt=\"use warm and gentle light bulbs\"><br /><em>They commonly use warm and gentle light bulbs</em></p>\n    \n    <h3><strong>No damage to wall and ceiling</strong></h3>\n    \n    <p>Many consumers are still concerned about whether <em>hanging pendant lights in the living room</em> could cause issues with the wall or ceiling fan. The answer is no. Installing a pendant lamp will not damage your walls or disrupt the operation of the ceiling. This type of light will be designed to bring the harmonious arrangement of the furnishings in the living room.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/installing-a-pendant-lamp-will-not-damage-your-walls.jpg?v=1694584927\" alt=\"pendant lamp tnstalling will not damage your walls\"><br /><em>Installing a pendant lamp will not damage your walls</em></p>\n    \n    <h3><strong>Customized pendant lights </strong></h3>\n    \n    <p>If you are looking for distinctive lighting fixtures to add an updated look to your living room, pendant lights could be one of the best choices. You can personalize your pendant light by selecting not only the size but also the shade color and pattern. As a result, you will create a living room space that is distinct from everyone else's.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-can-personalize-your-pendant-light.jpg?v=1694584926\" alt=\"can personalize your pendant light\"><br /><em>You can personalize your pendant light</em></p>\n    \n    <h2><strong>Tips for selecting the perfect pendant lights </strong></h2>\n    \n    <p>Choosing proper<strong> pendant lights for living room</strong> is important because it will reflect your style and the harmony of furniture inside the space. Here are some tips that you can apply to get the perfect products. Read it.</p>\n    \n    <ul>\n        <li><strong>Purpose</strong>: In the living room, illumination not only serves an eye-catching purpose but is also practical. For example, the pendants you decide to set up for your space need to offer a mood that you want.</li>\n        <li><strong>Size</strong>: To make the best decision, you should understand the square footage of the space as well as the height of the ceiling. Moreover, you need to consider the dimensions including length, depth, height, and weight.</li>\n        <li><strong>Positioning</strong>: You should take into account the pendant light's placement and how it will affect the design's balance, overall brightness in the space, and aesthetic</li>\n        <li><strong>Colors</strong>: One tip to choosing the<em> best pendant light for living room</em> is to select one that matches well with the color scheme of your space. This helps to improve harmony and personalize your area in the way that you want.</li>\n        <li><strong>Brightness</strong>: The overall size of the room determines the appropriate brightness count for light sources. If the living room is not too large, you should use a moderate brightness to create eye comfort.</li>\n    </ul>\n    \n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/you-should-take-into-account-the-pendant-lights-placement.jpg?v=1694584927\" alt=\"you should take into account the pendant light's placement\"><br /><em>You should take into account the pendant light's placement</em></p>\n    \n    <h2><strong>TOP 10 modern living room pendant lighting devices</strong></h2>\n    \n    <p>Selecting the<em> best pendant lights for living room</em> is not easy because you need to determine your house style. Let’s find out the top 10 modern items that you can consider for your home.</p>\n    \n    <ul>\n        <li><strong>Vertigo pendant light</strong>: This architectural light is a highly technological illumination piece that is ready to add outstanding aesthetic value to any home with its fiberglass center and curtain of graphical lines.</li>\n        <li><strong>Leo Globe pendant light</strong>: This globe light is an antique item that adds timeless elegance to living rooms with its classical minimalist style and luxurious metal finishes.</li>\n        <li><strong>Silvia pendant light</strong>: This contemporary classic item is distinguished by its charismatic and triangular-shaped blades. It will add attractiveness to any space with its remarkably layered look.</li>\n        <li><strong>Terho pendant light</strong>: The product is a modern mix of classic accents to your home. It was inspired by the natural sense, notably acorns, and blends the cozy texture that comes from genuine alder wood.</li>\n        <li><strong>Semi-pendant light</strong>: This pendant is a stylish feature for living spaces that require attractive and useful lighting. Thanks to its characteristic shape, the product can offer visual brightness and timeless appeal.</li>\n        <li><strong>Octo pendant light</strong>: This enormous pendant features an oval shape and transparent light in its center, which makes it ideal for overhead in many parts of the living room. It is a gorgeous piece of craftsmanship.</li>\n        <li><strong>Somerset pendant</strong>: The product provides opportunities for contemporary textures with a modern and exquisite touch. Its engraved opal glass floats inside a beautifully crafted brass.</li>\n        <li><strong>Nelson Saucer Bubble pendant light</strong>: George Nelson's 1952 design is a mid-century modern symbol that requires no further explanation. Its large surface area distributes an alluring atmospheric illumination.</li>\n        <li><strong>PH 5 pendal light</strong>: This product is the definition of elegance. It will grace the structure of your ceiling with a mid-century contemporary shape and eternal beauty.</li>\n        <li><strong>Swirl pendant light</strong>: This modern pendant light is made from exquisite wooden veneers which brings a natural modern style to any living area.</li>\n    </ul>\n    \n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-product-provides-opportunities-for-contemporary-textures.jpg?v=1694584927\" alt=\"product provides opportunities for contemporary textures\"><br /><em>The product provides opportunities for contemporary textures</em></p>\n    \n    <h2><strong>Best pendant lights for kitchen decor on Rowabi </strong></h2>\n    \n    <p>To bring a wide range of choices for customers, the design team at Rowabi has created many unique and innovative pendant lights. Let’s explore the top 5 outstanding products from the brand right now.</p>\n    \n    <h3><strong>Yara Rattan Pendant Light</strong></h3>\n    \n    <p>With its conical shape and natural brown color, the product will help you to create a focus point for your living room. Moreover, the product is made of rattan which is woven into an open, breezy pattern that allows plenty of light from the glow of only one light bulb. Hence, your living room will have a good light source that is comfortable for your eyes.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-product-will-help-you-create-a-focus-point.jpg?v=1694584926\" alt=\"the product will help you create a highlight for the space\"><br /><em>The product will help you create a focus point</em></p>\n    \n    <h3><strong>Avery Rattan Pendant Light</strong></h3>\n    \n    <p>Avery Rattan Pendant Light is one of the most popular products at Rowabi. It is made from weaving with natural rattan which gives it an antique and rustic touch. Moreover, Avery Rattan Pendant Light also helps customers to modernize the appearance and feel of their living rooms. Therefore, you can use it to add an eye-catching item to your house or make your space cozier.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/avery-rattan-pendant-light-is-one-of-the-most-popular-products.jpg?v=1694584926\" alt=\"avery is one of the most popular products\"><br /><em>Avery Rattan Pendant Light is one of the most popular products</em></p>\n    \n    <h3><strong>Sepherina Rattan Pendant Light</strong></h3>\n    \n    <p>There are numerous alternatives when selecting <strong>pendant lights for living room, </strong>and Sepherina Rattan can be such a good idea for you. The product is handcrafted from high-quality rattan by professional craftsmen, making certain that every single one is distinctive.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-product-is-handcrafted-from-high-quality-rattan.jpg?v=1694584927\" alt=\"product is handcrafted from high-quality rattan\"><br /><em>The product is handcrafted from high-quality rattan</em></p>\n\n    <p>The unique thing about Sepherina Rattan Pendant Light is the natural material along with the complicated weaving method. Hence, it can create an atmosphere of comfort and relaxation in any space. Furthermore, this product also contributes to the decoration and additionally gives eye comfort.</p>\n    \n    <h3><strong>Callie Rattan Pendant Light</strong></h3>\n    \n    <p>If you would like to light up your living room, let’s take a look at Callie Rattan Pendant Light. The unique selling point of this product is creating a cozy and welcoming atmosphere by softly diffusing light. Moreover, the Callie Rattan Pendant Light is also made of environmentally friendly materials. So, this can be an excellent choice to improve light comfort as well as light quality.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/callie-rattan-pendant-light-is-also-made-of-environmentally-friendly-materials.jpg?v=1694584927\" alt=\"callie is also made of environmentally friendly materials\"><br /><em>Callie Rattan Pendant Light is also made of environmentally friendly materials</em></p>\n\n    <h3><strong>Santana Rattan Pendant Light </strong></h3>\n\n    <p>With this sophisticated Santana Rattan Pendant Light, you can transform your living room into a place of tranquility and grace. Its unique weaving processes and domed structure create an intimate and comfortable atmosphere in any space. In particular, Santana Rattan Pendant Light also creates a natural and evenly distributed reflection of light throughout a space, eliminating any darkness or excessively bright spots.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/its-unique-weaving-processes-and-domed-structure-create-an-intimate.jpg?v=1694584927\" alt=\"it is unique weaving processes and domed structure create an intimate\"><br /><em>Its unique weaving processes and domed structure create an intimate</em></p>\n\n    <h2><strong>Rowabi - the reputable distributor of pendant lights for livingroom</strong></h2>\n\n    <p>Rowabi has gained a loyal customer base by supplying sophisticated and high-quality <em>pendant lights for living room</em>. Let's talk about some of the other reasons why the brand is popular right now.</p>\n\n    <h3><strong>Quality and diverse products</strong></h3>\n\n    <p>At Rowabi, pendant lights are available in a wide variety of patterns, forms, colors, styles, and dimensions. They also pay attention to the aesthetic appeal of interior lighting and keep attractive lights at an ideal point of high brightness.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/pendant-lights-are-available-in-a-wide-variety-of-patterns.jpg?v=1694584927\" alt=\"its available in a wide variety of patterns\"><br /><em>Pendant lights are available in a wide variety of patterns</em></p>\n\n    <p>In particular, all of our high-quality pendant lights are handcrafted from eco-friendly materials which are good for your health and environment. They create excellent illumination so that individuals using the space can perform visual functions safely, effectively, and efficiently without being uncomfortable.</p>\n\n    <h3><strong>Affordable prices with many promotions</strong></h3>\n\n    <p>Customers frequently review the price of a product before purchasing it. As a result, Rowabi consistently commits to the standard of offering you high-quality goods at reasonable prices. The brand's pendant lights come in a variety of designs and sizes, so there will be a wide range of costs to pick from.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-brands-pendant-lights-come-in-a-variety-of-price.jpg?v=1694584927\" alt=\"pendant lights come in a variety of price\"><br /><em>The brand's pendant lights come in a variety of price</em></p>\n\n    <h3><strong>Personalized and Modern Designs</strong></h3>\n\n    <p>Rowabi's items are distinguished by their unique patterns and special look. Therefore, you can customize the perfect pendant lights based on your home style. This will allow you to express yourself without compromising with everything else. In particular, pendant lights also match with other household furnishings well. Consequently, it's simple to blend different items in your home to set the tone for a good mood.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/rowabi-items-are-distinguished-by-their-unique-patterns.jpg?v=1694584927\" alt=\"items of rowabi is distinguished by their unique patterns\"><br /><em>Rowabi's items are distinguished by their unique patterns</em></p>\n\n    <h3><strong>Fast and safe shipping (only 3 days)</strong></h3>\n\n    <p>Fast and safe shipping is one of the reasons why customers have never hesitated to put their trust in Rowabi. Our goal is to deliver products to you as quickly and efficiently as possible. Within 2 to 3 working days, you can receive the pendant lights that you select on the website. We guarantee that the product will not be damaged during shipment.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/within-2-to-3-working-days-you-can-receive-the-pendant-lights.jpg?v=1694584926\" alt=\"2 to 3 working days, you can receive the pendant lights\"><br /><em>Within 2 to 3 working days, you can receive the pendant lights</em></p>\n\n    <h3><strong>Return policies and installation guidance</strong></h3>\n\n    <p>Rowabi allows customers to have 30 days to exchange or return an item if they're not satisfied with the product. To be accepted as a return, the pendant light is required to be in its original and complete with all parts. Rowabi will also eagerly support you in the installation and use directions for the greatest customer experience.</p>\n\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/rowabi-allows-customers-to-have-30-days-to-exchange-or-return.jpg?v=1694584926\" alt=\"customers to have 30 days to exchange or return\"><br /><em>Rowabi allows customers to have 30 days to exchange or return</em></p>\n\n    <h2><strong>Conclusion</strong></h2>\n\n    <p>If you are interested in lighting and architecture, you should not hesitate to get the opportunity to explore Rowabi's <strong>pendant lights for living room</strong>. These products will help to illuminate your space and make it more distinctive. Check out all pendant lights <strong>Rowabi</strong> has to pick your preferred light right away!</p>",
+        "text_alignment": "start",
+        "height": 300,
+        "read_more": "Read more",
+        "read_less": "Read less"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "46f92edd-7092-4261-a669-8f29afbdfd51",
+    "fafc8a2e-74c9-44e8-b202-6a25c6203a3b",
+    "46a6d0b9-8e9a-478c-8707-bfcf4d8f3831",
+    "main",
+    "2cab0973-5b00-402c-8217-010d4f4e12e5",
+    "8737c857-6763-4cac-801e-764e8b8f99a5"
+  ]
+}

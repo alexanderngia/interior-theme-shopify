@@ -1,0 +1,164 @@
+<style>
+  .rowabi-join-us .swiper-mb {
+      width: 100%;
+      height: auto;
+    }
+
+    .rowabi-join-us .swiper-slide {
+      width: 270px;
+      height: 300px;
+    }
+
+    .rowabi-join-us .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+</style>
+
+<div class="rowabi-bg-[#F9F9F9] rowabi-pt-[32px] rowabi-pb-[32px] md:rowabi-py-[60px]">
+  <{{ section.settings.heading_tag }} style='font-family: "Sainte Colombe", serif;' class="rowabi-text-lg rowabi-leading-[31px] md:rowabi-text-[32px] rowabi-text-center rowabi-text-[#444139]">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
+  <p class="rowabi-text-[13px] rowabi-font-[400] rowabi-leading-[19px] md:rowabi-text-[16px] rowabi-text-center rowabi-text-[#8C6F51] rowabi-mt-1 md:rowabi-mt-4 rowabi-mx-[16px]">{{ section.settings.subheading }}</p>
+  <div class="rowabi-flex rowabi-justify-center">
+    <a href="{{ section.settings.button_link }}" class="rowabi-w-max rowabi-flex rowabi-justify-center rowabi-items-center rowabi-gap-2 rowabi-font-bold rowabi-text-center rowabi-text-white rowabi-text-xs md:rowabi-text-sm rowabi-bg-[#444139] rowabi-px-[12px] rowabi-py-[10px] md:rowabi-px-[30px] md:rowabi-py-[12px] rowabi-mt-5 md:rowabi-mt-6">
+        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8248 0.5H5.17524C2.86932 0.5 1 2.36932 1 4.67524V12.3248C1 14.6307 2.86932 16.5 5.17524 16.5H12.8248C15.1307 16.5 17 14.6307 17 12.3248V4.67524C17 2.36932 15.1307 0.5 12.8248 0.5Z" stroke="#F8F8F8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.00005 12.6903C11.3144 12.6903 13.1905 10.8141 13.1905 8.4998C13.1905 6.18547 11.3144 4.30933 9.00005 4.30933C6.68571 4.30933 4.80957 6.18547 4.80957 8.4998C4.80957 10.8141 6.68571 12.6903 9.00005 12.6903Z" stroke="#F8F8F8" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.5714 3.54779C13.7818 3.54779 13.9523 3.37724 13.9523 3.16684C13.9523 2.95645 13.7818 2.78589 13.5714 2.78589C13.361 2.78589 13.1904 2.95645 13.1904 3.16684C13.1904 3.37724 13.361 3.54779 13.5714 3.54779Z" stroke="#F8F8F8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        {{ section.settings.button_content }}
+    </a>
+  </div>
+  <div class="rowabi-hidden md:rowabi-grid rowabi-grid-cols-4 rowabi-gap-[30px] rowabi-mt-9 rowabi-max-w-[1176px] rowabi-mx-auto">
+    {% for block in section.blocks %}
+      <div class="rowabi-flex rowabi-flex-col">
+        <img width="100%" height="333px" class="rowabi-h-[333px]" src="{{ block.settings.image | img_url: 'large'}}" />
+        <a href="{{ block.settings.link }}" class="rowabi-flex rowabi-justify-center">
+          <p class="rowabi-font-medium rowabi-text-center rowabi-text-[#444139] rowabi-text-base rowabi-w-max rowabi-mt-[15px]" style="font-family: 'Sainte Colombe'!important">{{ block.settings.label }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- mobile version -->
+  <div class="md:rowabi-hidden rowabi-mt-5 overflow-hidden rowabi-h-[337px]">
+    <div class="swiper-mb myStyleByMeMobile rowabi-px-4">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="rowabi-flex rowabi-flex-col">
+              <img width="100%" height="333px" class="rowabi-h-[300px]" src="{{ block.settings.image | img_url: 'large'}}" />
+              <a href="{{ block.settings.link }}" class="rowabi-flex rowabi-justify-center">
+                <p class="rowabi-font-medium rowabi-text-center rowabi-text-[#444139] rowabi-text-sm rowabi-w-max rowabi-mt-[12px]" style="font-family: 'Sainte Colombe'!important">{{ block.settings.label }}</p>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+       </div>
+    </div>
+  </div>
+  
+</div>
+
+<script>
+  var swiper = new Swiper(".myStyleByMeMobile", {
+    grabCursor: true,
+    slidesPerView: "auto",
+    spaceBetween: 16,
+  });
+</script>
+          
+{% schema %}
+{
+  "name": "Rowabi Join us",
+  "class": "rowabi-join-us",
+  "tag": "section",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "P"
+        }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:global.text.heading",
+      "default": "JOIN US ON INSTAGRAM"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "t:global.text.subheading",
+      "default": "Discover stunning designs, innovative styles, and expert tips that will illuminate your space."
+    },
+    {
+       "type": "url",
+       "id": "button_link",
+       "label": "Button url"
+     },
+    {
+      "type": "inline_richtext",
+      "id": "button_content",
+      "label": "Button Content",
+      "default": "FOLLOW NOW"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "t:sections.timeline.blocks.item.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:global.image.image",
+          "info": "t:sections.timeline.blocks.item.image_info"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "label",
+          "label": "t:sections.timeline.blocks.item.label",
+          "default": "@rosie012345"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Picture link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rowabi Join us",
+    }
+  ]
+}
+{% endschema %}

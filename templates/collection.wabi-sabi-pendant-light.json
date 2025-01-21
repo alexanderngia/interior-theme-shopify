@@ -1,0 +1,176 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/RLC1031_web_82f31425-ed80-4fd5-b438-07868caa37cb.jpg",
+        "image_size": "auto",
+        "allow_transparent_header": true,
+        "reveal": true,
+        "enable_parallax": false,
+        "show_collection_title": false,
+        "show_collection_description": false,
+        "content_width": "xs",
+        "background": "#000000",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "slideshow_popup_6TRLAP": {
+      "type": "slideshow-popup",
+      "blocks": {
+        "image_NRXCyp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sepherina-semi-pendant-holiday-lighting.jpg",
+            "mobile_image": "shopify://shop_images/sepherina-semi-rattan-holiday-lighting.jpg",
+            "subheading": "",
+            "subheading_below": false,
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_popup": false,
+            "button_1_link": "https://www.rowabi.com/collections/pendant-lighting?utm_source=website&utm_medium=banner-wabi-sabi&utm_campaign=holiday-lighting",
+            "klaviyo_form_trigger": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_popup": false,
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "image_NRXCyp"
+      ],
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "form_show": false,
+        "form_delay": 3,
+        "form_heading": "REGISTRATION FORM",
+        "field_title_1": "Custom field",
+        "field_values_1": "value 1; value 2; value 3",
+        "field_required_1": false,
+        "field_title_2": "Custom field",
+        "field_values_2": "value 1; value 2; value 3",
+        "field_required_2": false,
+        "field_title_3": "Custom field",
+        "field_values_3": "value 1; value 2; value 3",
+        "field_required_3": false,
+        "field_title_4": "Custom field",
+        "field_values_4": "value 1; value 2; value 3",
+        "field_required_4": false
+      }
+    },
+    "fafc8a2e-74c9-44e8-b202-6a25c6203a3b": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 15,
+        "padding_bottom": 15
+      }
+    },
+    "46a6d0b9-8e9a-478c-8707-bfcf4d8f3831": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-1": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Wabi Sabi Pendant Light</strong>",
+            "heading_tag": "h1",
+            "h1_tag": true
+          }
+        },
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-2": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>The <strong>Wabi-Sabi Style Pendant Lights</strong> collection offers a distinctive blend of traditional Japanese craftsmanship and contemporary design in each pendant light</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-1",
+        "template--16736889241858__46a6d0b9-8e9a-478c-8707-bfcf4d8f3831-168189352207b231f2-2"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "content_width": "lg",
+        "text_position": "start",
+        "remove_vertical_spacing": true,
+        "background": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "load_more": true,
+        "hide_product_information": false,
+        "products_per_page": 48,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": true,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "filter_layout": "sidebar",
+        "quick_links_menu": "",
+        "show_sort_by": false,
+        "show_filters": true,
+        "show_results_count": true,
+        "show_filter_group_name": false,
+        "show_empty_filter_values": false,
+        "show_filter_values_count": true,
+        "show_color_swatch": false,
+        "open_filters_by_default": false
+      }
+    },
+    "e772ddcc-d740-4d0c-ad91-1f1b36694a97": {
+      "type": "read-more",
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<p>Tired of the same old, soulless light fixtures? A <strong>Wabi-Sabi pendant light</strong> might be just what you need for a change. Celebrating the beauty in imperfection and the richness of natural materials, this light fixture brings a sense of calm and authenticity to your home.</p>\n\n    <p>When mass-produced just won't do, this <a href=\"https://www.rowabi.com/collections/pendant-lighting\"><span style=\"text-decoration: underline;\"><strong>pendant light</strong></span></a> is the perfect way to refresh your space and make it uniquely yours! Let's explore these pendant lights with <strong>Rowabi</strong> to see how they have the power to change the game entirely.</p>\n\n    <!-- Begin Table of Contents -->\n    <div style=\"position:relative;border: 1px solid #CCC; padding: 20px 20px 20px 20px; margin-bottom: 35px; border-radius: 10px;\">\n        <ul style=\"list-style-type: none;\">\n            <li><a href=\"#what-is-wabi-sabi-and-how-does-it-apply-to-interior-design\">What is Wabi-Sabi and How does it apply to interior design?</a></li>\n            <li><a href=\"#what-is-a-wabi-sabi-pendant-light-and-why-should-you-choose-it\">What is a Wabi-Sabi pendant light, and why should you choose it?</a></li>\n            <li><a href=\"#ways-to-integrate-wabi-sabi-pendant-lights-into-your-space\">Ways to integrate Wabi-Sabi pendant lights into your space</a></li>\n            <ul style=\"list-style-type: none;\">\n                <li><a href=\"#kitchen-island\">Kitchen island</a></li>\n                <li><a href=\"#living-room\">Living room</a></li>\n                <li><a href=\"#dining-room\">Dining room</a></li>\n                <li><a href=\"#bedroom\">Bedroom</a></li>\n                <li><a href=\"#other-areas\">Other areas</a></li>\n            </ul>\n            <li><a href=\"#best-wabi-sabi-pendant-light-designs-you-can-find-in-rowabi\">Best Wabi-Sabi pendant light designs you can find in Rowabi</a></li>\n            <ul style=\"list-style-type: none;\">\n                <li><a href=\"#cloud-shaped-pendant-light-for-a-softer-look\">Cloud-shaped pendant light for a softer look</a></li>\n                <li><a href=\"#bloom-like-a-flower-with-a-unique-rattan-pendant-light\">Bloom like a flower with a unique rattan pendant light</a></li>\n                <li><a href=\"#add-in-the-majestic-vibe-of-highlands\">Add in the majestic vibe of highlands</a></li>\n                <li><a href=\"#blend-between-simplistic-and-modern-elements\">Blend between simplistic and modern elements</a></li>\n            </ul>\n            <li><a href=\"#advantages-of-opting-for-wabi-sabi-pendant-lights\">Advantages of Opting for Wabi-Sabi Pendant Lights</a></li>\n            <li><a href=\"#conclusion\">Conclusion</a></li>\n        </ul>\n    </div>\n    <!-- End Table of Contents -->\n\n\n\n    <h2 id=\"what-is-wabi-sabi-and-how-does-it-apply-to-interior-design\"><strong>What is Wabi-Sabi and How does it apply to interior design?</strong></h2>\n    <p><a href=\"https://www.rowabi.com/blogs/lab-of-wabi-sabi-blogs/what-is-wabi-sabi\"><span style=\"text-decoration: underline;\"><strong>Wabi-Sabi is</strong></span></a> a Japanese philosophy that finds beauty in imperfection, impermanence, and the natural cycle of life. Rooted in Zen Buddhism, it values simplicity and authenticity, appreciating things as they are. In interior design, Wabi-Sabi creates modest, organic, and serene spaces by using natural materials like wood, stone, and clay that age gracefully.</p>\n    <p>The style embraces <strong>imperfections</strong>, such as weathered furniture, viewing them as marks of time and history. By applying Wabi-Sabi principles, you craft a home that invites relaxation and highlights the beauty in everyday moments and the stories within your surroundings.</p>\n\n    <h2 id=\"what-is-a-wabi-sabi-pendant-light-and-why-should-you-choose-it\"><strong>What is a Wabi-Sabi pendant light, and why should you choose it?</strong></h2>\n    <p>As we've discussed, Wabi-Sabi is a style that embraces imperfection, impermanence, and natural beauty. Thus, applying this style to pendant lights emphasizes simplicity, modernity, authenticity, and natural beauty while still maintaining strong character.</p>\n    <p>So, what are the distinctive features of Wabi-Sabi pendant lights, and how do they contribute to your home? Let's explore the information below to find out.</p>\n\n    <ul>\n        <li><strong>Common materials</strong>: Wabi-Sabi pendant lights often feature materials that age gracefully and gain unique character over time. Common materials include:\n            <ul>\n                <li><strong>Wood</strong>: Wood is a preferred material due to its natural aging process and unique grain patterns.</li>\n                <li><strong>Ceramic</strong>: With its ability to develop a patina over time, ceramic offers a rustic yet elegant feel.</li>\n                <li><strong>Metal</strong>: Often used in an unpolished or patinated finish to highlight its inherent imperfections and natural wear.</li>\n            </ul>\n        </li>\n        <li><strong>Design characteristics</strong>: Wabi-Sabi pendant lights are designed to reflect the beauty of life's natural imperfections. Key characteristics include:</li>\n        <li><strong>Imperfect shapes</strong>: These lights often feature asymmetrical or irregular shapes that embrace imperfections.</li>\n        <li><strong>Textured surfaces</strong>: Surface textures that display the effects of time, such as weathering or handcrafting marks, are common.</li>\n        <li><strong>Simplicity</strong>: The design emphasizes minimalism, focusing on essential forms without unnecessary embellishments.</li>\n        <li><strong>Color palette</strong>: The color palette of Wabi-Sabi pendant lights typically mirrors natural, earthy tones that promote a calming atmosphere. This includes:</li>\n        <li><strong>Neutral shades</strong>: Colors like beige, gray, and muted brown reflect the natural aging process and blend seamlessly with various interiors.</li>\n        <li><strong>Soft earth tones</strong>: Shades inspired by nature, such as olive green or terracotta, enhance the organic feel of the design.</li>\n        <li><strong>Subtle variations</strong>: Slight variations in color and finish add depth and character, aligning with the philosophy of embracing imperfection.</li>\n    </ul>\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/these-lights-embrace-imperfection-with-raw-materials-and-natural-forms.jpg\" alt=\"these lights embrace imperfection with raw materials and natural forms\"><br /><em>These lights embrace the beauty of imperfection, focusing on raw, unfinished materials and natural forms. Source: Lighting-Forest <sup>(1)</sup></em></p>\n\n    <h2 id=\"ways-to-integrate-wabi-sabi-pendant-lights-into-your-space\"><strong>Ways to integrate Wabi-Sabi pendant lights into your space</strong></h2>\n    <p>Although Wabi-Sabi pendant lights are designed with simplicity in mind, choosing the right model and placing it appropriately is crucial.</p>\n    <p>Each space in your home has specific functions and requires a pendant light that suits its unique needs. Below, Rowabi offers some tips on how to use pendant lights effectively in different rooms.</p>\n\n    <h3 id=\"kitchen-island\"><strong>Kitchen island</strong></h3>\n    <p>When it comes to your <a href=\"https://www.rowabi.com/collections/kitchen-concepts\"><span style=\"text-decoration: underline;\">kitchen island</span></a>, the priority should be ensuring the area is <strong>well-lit for all your cooking, plating, and cleaning tasks</strong>. Opting for a single large pendant or clusters of smaller pendants at varying heights can add a unique and stylish touch without being overly formal.</p>\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/a-small-simple-pendant-light-suits-the-kitchen-best.jpg\" alt=\"a small simple pendant light suits the kitchen best\"><br /><em>A small, simple pendant light that provides sufficient illumination is the best fit for the kitchen. Source: Homediy <sup>(2)</sup></em></p>\n    <p>Pendant lights made from weathered metal or hammered copper, featuring asymmetrical shapes or simple geometric forms, not only enhance the kitchen’s aesthetic but are also practical, as they are easy to clean and resistant to stains and smudges.</p>\n\n    <h3 id=\"living-room\"><strong>Living room</strong></h3>\n    <p>In the <a href=\"https://www.rowabi.com/collections/living-room-concepts\"><span style=\"text-decoration: underline;\">living room</span></a>, <strong>Wabi-Sabi pendant lights</strong> can serve as both a <strong>striking aesthetic focal point and a functional element</strong>. Placing a single, artistically crafted pendant above a seating area or coffee table can draw attention while creating a calming and inviting atmosphere.</p>\n    <p>To truly embrace the essence of Wabi-Sabi, consider designs with handmade details, such as uneven textures or natural finishes. These details reflect the philosophy’s appreciation for imperfection, adding a unique character and warmth to your living space.</p>\n\n    <h3 id=\"dining-room\"><strong>Dining room</strong></h3>\n    <p>Similar to the living room, Wabi-Sabi pendant lights in the <a href=\"https://www.rowabi.com/collections/pendant-lights-for-dining-room\"><span style=\"text-decoration: underline;\">dining room</span></a> can act as a centerpiece while providing the perfect lighting for enjoyable meals. Choosing fixtures made from <strong>natural materials like bamboo or ceramic</strong> with a weathered finish can add a sense of character and warmth to the space.</p>\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/wabi-sabi-lighting-recreates-natural-element-shapes.jpg\" alt=\"wabi sabi lighting recreates natural element shapes\"><br /><em>Recreating the shapes of natural elements is a defining characteristic of Wabi-Sabi lighting. Source: Homediy <sup>(3)</sup></em></p>\n    <p>The soft, diffused light emitted by these pendants creates a welcoming glow, ideal for intimate gatherings and relaxed dining experiences.</p>\n\n    <h3 id=\"bedroom\"><strong>Bedroom</strong></h3>\n    <p>In the <a href=\"https://www.rowabi.com/collections/pendant-lights-for-bedroom\"><span style=\"text-decoration: underline;\">bedroom</span></a>, the goal is to create a peaceful and tranquil environment with soft, harmonious lighting. Installing a pendant light with a <strong>simple, elegant design</strong> above the bed or in a reading nook can contribute to a serene atmosphere. It’s important to select bulbs with the right brightness to promote restful sleep and relaxation.</p>\n    <p>A well-chosen pendant light can enhance the overall ambiance of your bedroom, making it a soothing retreat.</p>\n\n    <h3 id=\"other-areas\"><strong>Other areas</strong></h3>\n    <p><em>Wabi-Sabi pendant lights</em> can also beautifully enhance other areas of your home, such as hallways, entryways, or home offices.</p>\n    <p>In entryways, a pendant with a <strong>rugged or handcrafted design</strong> can create a memorable first impression, welcoming guests with its natural elegance. For hallways, choose fixtures that offer subtle yet effective illumination, complementing the space’s understated beauty.</p>\n\n    <h2 id=\"best-wabi-sabi-pendant-light-designs-you-can-find-in-rowabi\"><strong>Best Wabi-Sabi pendant light designs you can find in Rowabi</strong></h2>\n    <p>At Rowabi, we incorporate Wabi-Sabi principles into our designs, focusing on sustainability, natural materials, and unique craftsmanship. Our collections, from <a href=\"https://www.rowabi.com/collections/rattan-pendant-lights\">rattan pendant lights</a> to <a href=\"https://www.rowabi.com/collections/contemporary-pendant-lights\">modern designs</a>, highlight eco-friendly materials that enhance your space with a modest yet serene beauty.</p>\n    <p>Each piece offers exclusivity and limited availability, ensuring a unique statement for your home.</p>\n\n    <h3 id=\"cloud-shaped-pendant-light-for-a-softer-look\"><strong>Cloud-shaped pendant light for a softer look</strong></h3>\n    <p>When we think of organic shapes, we naturally envision elements of nature such as mountains, trees, and clouds. <strong>Rattan</strong> is an ideal material to capture these forms. Not only is it a sustainable, natural resource, but it is also incredibly flexible, making it perfect for crafting soft, flowing curves.</p>\n    <p>For example, the <strong>cloud-inspired rattan pendant light</strong> showcases the material’s versatility. Its graceful, undulating design replicates the serene image of floating clouds, with each bend perfectly crafted to evoke a sense of calm and airy elegance. This highlights rattan’s unique ability to bring nature's beauty into any space.</p>\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-sepherina-rattan-pendant-light-is-a-cloud-inspired-statement-piece.jpg\" alt=\"the sepherina rattan pendant light is a cloud inspired statement piece\"><br /><em>A customer described the <span style=\"text-decoration: underline;\"><a href=\"https://www.rowabi.com/products/sepherina-rattan-pendant-light-1\">Sepherina Rattan Pendant Light</a></span> as \"truly a statement piece,\" highlighting its cloud-inspired design. Source: Rowabi</em></p>\n\n    <h3 id=\"bloom-like-a-flower-with-a-unique-rattan-pendant-light\"><strong>Bloom like a flower with a unique rattan pendant light</strong></h3>\n    <p>The <strong>floral design</strong> is a more <strong>feminine expression</strong> of traditional Wabi-Sabi aesthetics. Crafting such delicate, airy petals requires intricate weaving techniques that ensure the petals appear light, flowing, and gracefully curved.</p>\n    <p>Despite their organic form and uneven texture, these designs maintain a sense of balance and elegance, perfectly capturing the essence of Wabi-Sabi. The petals evoke a natural, fluid beauty that feels both dynamic and serene, showcasing the craftsmanship and skill that bring this organic yet sophisticated style to life.</p>\n    \n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-lotus-rattan-pendant-light-captures-the-essence-of-a-lotus-flower.jpg\" alt=\"the lotus rattan pendant light captures the essence of a lotus flower\"><br /><em>The <a href=\"https://www.rowabi.com/products/lotus-pad-rattan-pendant-light-stock\">Lotus Rattan Pendant Light</a> beautifully captures the essence of the lotus flower. Source: Rowabi </em></p>\n\n    <h3 id=\"add-in-the-majestic-vibe-of-highlands\"><strong>Add in the majestic vibe of highlands</strong></h3>\n    <p>Inspired by the majestic highlands of <strong>Ninh Bình, Vietnam</strong>, Rowabi created a pendant light that perfectly <strong>blends elegance with raw, natural beauty</strong>. One customer review raves, \"It is so gorgeous and looks perfect over my round dining room table. The quality is amazing.\"</p>\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/the-highland-heaven-pendant-light-features-durable-rattan-and-skilled-weaving.jpg\" alt=\"the highland heaven pendant light features durable rattan and skilled weaving\"><br /><em>The <a href=\"https://www.rowabi.com/products/highland-heaven-pendant-light-1\">Highland Heaven Pendant Light</a> uses durable round rattan and skilled weaving to create a distinctive design. Source: Rowabi </em></p>\n    <p>Indeed, this pendant light enhances the dining room's ambiance, highlighting the beauty of wooden tables, particularly those in matching tones. Its stunning presence elevates the space, creating a warm and inviting atmosphere while maintaining a touch of rustic charm.</p>\n\n    <h3 id=\"blend-between-simplistic-and-modern-elements\"><strong>Blend between simplistic and modern elements</strong></h3>\n    <p>By combining a touch of modernity, we’ve created a simple yet <strong>sophisticated and playful design</strong>, like the <a href=\"https://www.rowabi.com/products/lanesra-pendant-light\">Lanesra Pendant Light</a>. It retains the characteristic small cone shape, but instead of straight lines, we’ve added soft, flowing curves. The exposed large bulb further enhances its unique aesthetic appeal, adding a distinct visual charm.</p>\n    <p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0629/8576/5122/files/group-small-lights-in-pairs-or-trios-for-unique-visual-effects.jpg\" alt=\"group small lights in pairs or trios for unique visual effects\"><br /><em>These small lights can be grouped in pairs or trios to create a unique visual effect. Source: Rowabi</em></p>\n\n    <h2 id=\"advantages-of-opting-for-wabi-sabi-pendant-lights\"><strong>Advantages of Opting for Wabi-Sabi pendant lights</strong></h2>\n    <p>Wabi-Sabi pendant lights are an ideal choice for nearly every home style, offering a blend of functional benefits and aesthetic appeal.</p>\n    <p>So, what makes them stand out? Here are the three biggest advantages:</p>\n\n    <ul>\n        <li><strong>Unique and handcrafted:</strong> Wabi-Sabi pendant lights are celebrated for their individuality and artisanal craftsmanship. Each piece is often handcrafted, showcasing unique imperfections and characteristics that set it apart.</li>\n        <li><strong>Sustainability:</strong> Embracing Wabi-Sabi means opting for materials and processes that respect the environment. Many Wabi-Sabi pendant lights are made from sustainable resources like reclaimed wood, bamboo, rattan or natural fibers. These eco-friendly choices reduce waste and support sustainable practices, making them a responsible option for environmentally conscious homeowners.</li>\n        <li><strong>Timeless appeal:</strong> Wabi-Sabi pendant lights exude a timeless charm that transcends fleeting trends. Their focus on organic forms, subtle imperfections, and natural materials ensures they remain stylish and relevant over time.</li>\n    </ul>\n    <h2 id=\"conclusion\"><strong>Conclusion</strong></h2>\n    <p>So, ready to bring the tranquil charm of Wabi-Sabi into your home after <strong>Rowabi’s </strong>recommendations? <strong>Wabi-Sabi pendant lights</strong> are more than just lighting—they represent natural beauty and thoughtful craftsmanship.</p>\n    <p>Whether enhancing your living room or adding rustic elegance to your dining space, <strong>Wabi-Sabi lights </strong>perfectly balance style and simplicity.</p>\n    <p><strong>Source:</strong></p>\n\n    <ul>\n        <li>[1]: https://img-va.myshopline.com/image/store/2000214656/1650260984394/3_602.jpeg</li>\n        <li>[2]: https://img-va.myshopline.com/image/store/1721959733427/9.png</li>\n        <li>[3]: https://img-va.myshopline.com/image/store/1721959733427/6-46196c73-0690-4643-af16-f79139279ce6.png</li>\n    </ul>",
+        "text_alignment": "start",
+        "height": 1000,
+        "read_more": "Read more",
+        "read_less": "Read less"
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "slideshow_popup_6TRLAP",
+    "fafc8a2e-74c9-44e8-b202-6a25c6203a3b",
+    "46a6d0b9-8e9a-478c-8707-bfcf4d8f3831",
+    "main",
+    "e772ddcc-d740-4d0c-ad91-1f1b36694a97"
+  ]
+}

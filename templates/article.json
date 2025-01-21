@@ -1,0 +1,139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "5cf7bded-4984-4963-a323-eeef60892384": {
+      "type": "breadcrumbs",
+      "custom_css": [],
+      "settings": {
+        "padding_top": 15,
+        "padding_bottom": 15
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "f5659fce-6ead-44b5-b372-7d5341611944": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/liora-semi-annual-sale-sidebar-banner.jpg",
+            "link": "https://www.rowabi.com/collections/contemporary-pendant-lights?utm_source=website&utm_medium=sidebar-blog&utm_campaign=holiday-lighting"
+          }
+        },
+        "banner_Cgc46Y": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/sepherina-semi-annual-sale-sidebar-banner.jpg",
+            "link": "https://www.rowabi.com/collections/pendant-lighting?utm_source=website&utm_medium=sidebar-blog&utm_campaign=holiday-lighting"
+          }
+        },
+        "29b4c3b1-6d6d-4c3a-a67f-bf908d7a68b2": {
+          "type": "prev-next-blog-posts",
+          "disabled": true,
+          "settings": {
+            "title": "<strong>Related Posts</strong>",
+            "show_excerpt": true
+          }
+        }
+      },
+      "block_order": [
+        "f5659fce-6ead-44b5-b372-7d5341611944",
+        "banner_Cgc46Y",
+        "29b4c3b1-6d6d-4c3a-a67f-bf908d7a68b2"
+      ],
+      "settings": {
+        "top_banner": "shopify://shop_images/liora-semi-annual-sale-blog-banner.jpg",
+        "top_banner_link": "https://www.rowabi.com/collections/pendant-lighting?utm_source=website&utm_medium=top-blog&utm_campaign=holiday-lighting",
+        "bottom_banner": "shopify://shop_images/liora-semi-annual-sale-blog-banner.jpg",
+        "bottom_banner_link": "https://www.rowabi.com/collections/contemporary-pendant-lights?utm_source=website&utm_medium=bottom-blog&utm_campaign=holiday-lighting",
+        "show_image": false,
+        "enable_parallax": true,
+        "image_size": "small",
+        "content_width": "lg",
+        "show_date": true,
+        "show_category": false,
+        "show_author": true,
+        "show_share_buttons": false,
+        "show_sticky_bar": true,
+        "background": "#1c1c1c",
+        "text_color": "#ffffff"
+      }
+    },
+    "prev-next-blog-posts": {
+      "type": "prev-next-blog-posts",
+      "settings": {
+        "separate_section_with_border": true,
+        "subheading": "",
+        "title": "<strong>Read more</strong>",
+        "show_category": false,
+        "show_excerpt": false,
+        "show_read_more": false,
+        "background": "#705840",
+        "text_color": "#ffffff"
+      }
+    },
+    "422cbd5a-34f0-4dca-89ec-5dfbe776aaa4": {
+      "type": "article-contact",
+      "blocks": {
+        "caef551e-e532-44b9-9629-39468c1223a0": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Business Focus *",
+            "values": "Restaurants/ Cafes/ Tea Houses;Hotels/ Resorts/ Airbnb;Spa & Health Retreats; Event/ Wedding Planning; Interior Designers/ Architects;Furniture Dealer/ Online Retailer;Builders/ Real Estate Construction/ Brokers;Others",
+            "required": true
+          }
+        },
+        "6d6a51f4-4bb2-4289-bb7d-3ca904fe5f3a": {
+          "type": "dropdown",
+          "settings": {
+            "title": "Type of collab *",
+            "values": "Trade Program;Consignment Program;Partnership;Franchise/ Agency;White Label;Wholesale; Others",
+            "required": true
+          }
+        },
+        "90c97440-f89f-47eb-b5d5-9e126ca7101d": {
+          "type": "dropdown",
+          "settings": {
+            "title": "How did you hear about us? *",
+            "values": "Social Media;Search Engine;Friend/ Family recommendation;Other",
+            "required": true
+          }
+        },
+        "dropdown_6LeXDJ": {
+          "type": "dropdown",
+          "settings": {
+            "title": "I would like to receive catalog *",
+            "values": "Physical Catalog; Digital Catalog; I Don't Need It",
+            "required": true
+          }
+        }
+      },
+      "block_order": [
+        "caef551e-e532-44b9-9629-39468c1223a0",
+        "6d6a51f4-4bb2-4289-bb7d-3ca904fe5f3a",
+        "90c97440-f89f-47eb-b5d5-9e126ca7101d",
+        "dropdown_6LeXDJ"
+      ],
+      "settings": {
+        "id_section": "",
+        "separate_section_with_border": true,
+        "subheading": "",
+        "title": "<strong>Seize low-risk, timely business opportunities. Now!</strong>",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "5cf7bded-4984-4963-a323-eeef60892384",
+    "main",
+    "prev-next-blog-posts",
+    "422cbd5a-34f0-4dca-89ec-5dfbe776aaa4"
+  ]
+}

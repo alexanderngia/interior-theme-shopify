@@ -1,0 +1,92 @@
+{%- if section.settings.liquid != blank -%}
+  <div class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+    <div class="{% unless section.settings.remove_horizontal_spacing %}container{% endunless %}">
+      <read-more data-height="{{ section.settings.height }}" data-read-more="{{ section.settings.read_more }}" data-read-less="{{ section.settings.read_less }}">
+        <div class="prose text-{{ section.settings.text_alignment }} section--read-more" data-content>
+          {{- section.settings.liquid -}}
+        </div>
+        <a class="button read-more--button" data-action>{{ section.settings.read_more }}</a>
+      </read-more>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Read more",
+  "class": "shopify-section--custom-liquid",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "t:global.section.separate_section_with_border",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_vertical_spacing",
+      "label": "t:global.spacing.remove_vertical_spacing",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_horizontal_spacing",
+      "label": "t:global.spacing.remove_horizontal_spacing",
+      "default": false
+    },
+    {
+      "type": "liquid",
+      "id": "liquid",
+      "label": "t:global.code.liquid",
+      "default": "<p>Write or copy/paste Liquid code</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "t:global.text.alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "t:global.position.left"
+        },
+        {
+          "value": "center",
+          "label": "t:global.position.center"
+        },
+        {
+          "value": "end",
+          "label": "t:global.position.right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "number",
+      "id": "height",
+      "label": "Height content",
+      "default": 300
+    },
+    {
+      "type": "text",
+      "id": "read_more",
+      "label": "Read more",
+      "default": "Read more"
+    },
+    {
+      "type": "text",
+      "id": "read_less",
+      "label": "Read less",
+      "default": "Read less"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Read more"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,15 @@
+{%- liquid 
+   assign robots = true
+   if article.handle == 'news/popular-rattan-furniture-styles-for-modern-homes'
+     assign robots = false
+   elsif collection.handle == 'details'
+     assign robots = false
+   elsif page.handle == 'kloe-14inch'
+     assign robots = false
+   endif
+-%}
+{%- if robots -%}
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+{%- else -%}
+  <meta name="robots" content="noindex, nofollow"/>
+{%- endif -%}

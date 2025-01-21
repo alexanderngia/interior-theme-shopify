@@ -1,0 +1,113 @@
+<div class="rowabi-mx-[16px] md:rowabi-mx-[98px] rowabi-flex rowabi-flex-col rowabi-justify-center rowabi-items-center rowabi-p-[16px] md:rowabi-p-[32px] rowabi-border-2 rowabi-border-[#EFE6DA] rowabi-rounded-lg md:rowabi-mt-1 rowabi-mb-8 md:rowabi-mb-[60px]">
+  {% if section.settings.heading1 != blank and section.settings.sub1 != blank %}
+  <p style='font-family: "Sainte Colombe", serif;' class="rowabi-text-sm md:rowabi-text-2xl rowabi-text-[#49392B] rowabi-text-center rowabi-capitalize">{{ section.settings.heading1 }}</p>
+  <div class="rowabi-h-[1px] rowabi-bg-[#DDD6C5] rowabi-w-full rowabi-my-[12px] md:rowabi-my-[20px]"> </div>
+  <p class="rowabi-text-xs rowabi-leading-[19px] md:rowabi-text-base rowabi-text-[#727272]">{{ section.settings.sub1 }}</p>
+  {% endif %}
+  {% if section.settings.button_link1 != blank %}
+  <a href="{{ section.settings.button_link1 }}" class="rowabi-text-[11px] md:rowabi-text-sm rowabi-text-[#A4915D] rowabi-font-bold rowabi-flex rowabi-items-center rowabi-gap-[5px] rowabi-w-full rowabi-mt-[6px] md:rowabi-mt-[8px]">
+    Show more
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><mask id="mask0_851_7082" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12"><rect y="12" width="12" height="12" transform="rotate(-90 0 12)" fill="#C4C4C4"/></mask><g mask="url(#mask0_851_7082)"><path d="M4.26639 1.49352C4.39762 1.49173 4.52561 1.53256 4.62966 1.60943L10.2795 5.8716C10.3473 5.9228 10.4023 5.98797 10.4404 6.06233C10.4786 6.13669 10.4989 6.21835 10.5 6.3013C10.501 6.38425 10.4827 6.46639 10.4464 6.54169C10.4102 6.61698 10.3568 6.68351 10.2903 6.73639L4.77273 11.1158C4.71416 11.1622 4.64669 11.197 4.57416 11.2183C4.50163 11.2396 4.42546 11.2469 4.35001 11.2399C4.19763 11.2257 4.0574 11.1539 3.96018 11.0402C3.86296 10.9264 3.81671 10.7802 3.8316 10.6335C3.84648 10.4869 3.9213 10.3519 4.03958 10.2583L9.00308 6.31948L3.917 2.48511C3.82301 2.41431 3.75421 2.31716 3.72011 2.20707C3.68602 2.09698 3.6883 1.97939 3.72666 1.87054C3.76501 1.76168 3.83754 1.66695 3.93422 1.59941C4.03091 1.53187 4.14697 1.49487 4.26639 1.49352Z" fill="#A4915D" stroke="#A4915D" stroke-width="0.2"/></g></svg>
+  </a>
+  {% endif %}
+
+  {% if section.settings.heading2 != blank and section.settings.sub2 != blank %}
+  <p style='font-family: "Sainte Colombe", serif;' class="rowabi-text-sm md:rowabi-text-2xl rowabi-text-[#49392B] rowabi-text-center rowabi-capitalize rowabi-mt-[32px]">{{ section.settings.heading2 }}</p>
+  <div class="rowabi-h-[1px] rowabi-bg-[#DDD6C5] rowabi-w-full rowabi-my-[12px] md:rowabi-my-[20px]"> </div>
+  <p class="rowabi-text-xs rowabi-leading-[19px] md:rowabi-text-base rowabi-text-[#727272]">{{ section.settings.sub2 }}</p>
+  {% endif %}
+  {% if section.settings.button_link2 != blank %}
+  <a href="{{ section.settings.button_link2 }}" class="rowabi-text-[11px] md:rowabi-text-sm rowabi-text-[#A4915D] rowabi-font-bold rowabi-flex rowabi-items-center rowabi-gap-[5px] rowabi-w-full rowabi-mt-[6px] md:rowabi-mt-[8px]">
+    Show more
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><mask id="mask0_851_7082" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12"><rect y="12" width="12" height="12" transform="rotate(-90 0 12)" fill="#C4C4C4"/></mask><g mask="url(#mask0_851_7082)"><path d="M4.26639 1.49352C4.39762 1.49173 4.52561 1.53256 4.62966 1.60943L10.2795 5.8716C10.3473 5.9228 10.4023 5.98797 10.4404 6.06233C10.4786 6.13669 10.4989 6.21835 10.5 6.3013C10.501 6.38425 10.4827 6.46639 10.4464 6.54169C10.4102 6.61698 10.3568 6.68351 10.2903 6.73639L4.77273 11.1158C4.71416 11.1622 4.64669 11.197 4.57416 11.2183C4.50163 11.2396 4.42546 11.2469 4.35001 11.2399C4.19763 11.2257 4.0574 11.1539 3.96018 11.0402C3.86296 10.9264 3.81671 10.7802 3.8316 10.6335C3.84648 10.4869 3.9213 10.3519 4.03958 10.2583L9.00308 6.31948L3.917 2.48511C3.82301 2.41431 3.75421 2.31716 3.72011 2.20707C3.68602 2.09698 3.6883 1.97939 3.72666 1.87054C3.76501 1.76168 3.83754 1.66695 3.93422 1.59941C4.03091 1.53187 4.14697 1.49487 4.26639 1.49352Z" fill="#A4915D" stroke="#A4915D" stroke-width="0.2"/></g></svg>
+  </a>
+  {% endif %}
+
+  {% if section.settings.heading3 != blank and section.settings.sub3 != blank %}
+  <p style='font-family: "Sainte Colombe", serif;' class="rowabi-text-sm md:rowabi-text-2xl rowabi-text-[#49392B] rowabi-text-center rowabi-capitalize rowabi-mt-[32px]">{{ section.settings.heading3 }}</p>
+  <div class="rowabi-h-[1px] rowabi-bg-[#DDD6C5] rowabi-w-full rowabi-my-[12px] md:rowabi-my-[20px]"> </div>
+  <p class="rowabi-text-xs rowabi-leading-[19px] md:rowabi-text-base rowabi-text-[#727272]">{{ section.settings.sub3 }}</p>
+  {% endif %}
+  {% if section.settings.button_link3 != blank %}
+  <a href="{{ section.settings.button_link3 }}" class="rowabi-text-[11px] md:rowabi-text-sm rowabi-text-[#A4915D] rowabi-font-bold rowabi-flex rowabi-items-center rowabi-gap-[5px] rowabi-w-full rowabi-mt-[6px] md:rowabi-mt-[8px]">
+    Show more
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><mask id="mask0_851_7082" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12"><rect y="12" width="12" height="12" transform="rotate(-90 0 12)" fill="#C4C4C4"/></mask><g mask="url(#mask0_851_7082)"><path d="M4.26639 1.49352C4.39762 1.49173 4.52561 1.53256 4.62966 1.60943L10.2795 5.8716C10.3473 5.9228 10.4023 5.98797 10.4404 6.06233C10.4786 6.13669 10.4989 6.21835 10.5 6.3013C10.501 6.38425 10.4827 6.46639 10.4464 6.54169C10.4102 6.61698 10.3568 6.68351 10.2903 6.73639L4.77273 11.1158C4.71416 11.1622 4.64669 11.197 4.57416 11.2183C4.50163 11.2396 4.42546 11.2469 4.35001 11.2399C4.19763 11.2257 4.0574 11.1539 3.96018 11.0402C3.86296 10.9264 3.81671 10.7802 3.8316 10.6335C3.84648 10.4869 3.9213 10.3519 4.03958 10.2583L9.00308 6.31948L3.917 2.48511C3.82301 2.41431 3.75421 2.31716 3.72011 2.20707C3.68602 2.09698 3.6883 1.97939 3.72666 1.87054C3.76501 1.76168 3.83754 1.66695 3.93422 1.59941C4.03091 1.53187 4.14697 1.49487 4.26639 1.49352Z" fill="#A4915D" stroke="#A4915D" stroke-width="0.2"/></g></svg>
+  </a>
+  {% endif %}
+</div>
+
+
+{% if section.settings.show_border == true %}
+<div class="rowabi-h-[1px] rowabi-bg-[#4441394D] rowabi-mt-[4%]"> </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Rowabi question",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_border",
+      "label": "Separate section with border",
+      "default": false
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading1",
+      "label": "Heading 1",
+      "default": "What are pendant lights rattan?"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "sub1",
+      "label": "Subtitle 1",
+      "default": "Rattan pendant lights are a modern lighting fixture that adds an instant design upgrade to your interior. Like other ceiling lights, they have essential things, including a ceiling rose, suspension cord, and a lamp holder. We all know that the primary function of light is lighting. Yet due to their soft glow, these lights also function as an especially stylish and distinctive complement to your decor."
+    },
+    {
+      "type": "url",
+      "id": "button_link1",
+      "label": "Button link 1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading2",
+      "label": "Heading 2",
+      "default": "5 Advantages of pendant lights rattan for modern house"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "sub2",
+      "label": "Subtitle 2",
+      "default": "Rattan has been employed in interior design for decades, especially in Asian nations with strong wellness cultures. Rattan pendant lights have evolved into the perfect ornamental items for contemporary homes because of their blend of charming and natural beauty. Below are a few of the many advantages of pendant lights rattan in addition to their beauty."
+    },
+    {
+      "type": "url",
+      "id": "button_link2",
+      "label": "Button link 2"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading3",
+      "label": "Heading 3",
+      "default": "Inspirational Rattan Pendant Lights for the Home"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "sub3",
+      "label": "Subtitle 3",
+      "default": "Rattan pendant lights are an excellent option to adorn your living spaces. Here are 5 inspirational pendant lights rattan you should consider before purchasing a light decor."
+    },
+    {
+      "type": "url",
+      "id": "button_link3",
+      "label": "Button link 3"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Rowabi question",
+    }
+  ]
+}
+{% endschema %}

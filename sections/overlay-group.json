@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "custom.overlay",
+  "name": "Overlay group",
+  "sections": {
+    "cart-drawer": {
+      "type": "cart-drawer",
+      "settings": {
+        "show_cart_note": true,
+        "show_shipping_text": true,
+        "show_view_cart_button": true,
+        "show_checkout_button": true,
+        "show_price_in_checkout_button": true
+      }
+    },
+    "newsletter-popup": {
+      "type": "newsletter-popup",
+      "disabled": true,
+      "settings": {
+        "apparition_delay": 15,
+        "show_only_on_index": false,
+        "hide_for_account_holders": false,
+        "show_only_once": false,
+        "title": "Signup for our newsletter",
+        "content": "Describe what your customers will receive when subscribing to your newsletter.",
+        "button_text": "Subscribe",
+        "background": "#aa9a88",
+        "text_color": "#ffffff",
+        "button_background": "#fcf9f5",
+        "button_text_color": "#705840"
+      }
+    },
+    "privacy-banner": {
+      "type": "privacy-banner",
+      "settings": {
+        "title": "🍪 Cookie policy",
+        "content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.</p>",
+        "background": "#fcf9f5",
+        "text_color": "#705840"
+      }
+    }
+  },
+  "order": [
+    "cart-drawer",
+    "newsletter-popup",
+    "privacy-banner"
+  ]
+}
